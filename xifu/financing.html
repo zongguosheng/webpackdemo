@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>融资</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#tel").focusout(function(){
+					var pattern = /^1[34578]\d{9}$/;
+					var phone = $("#tel").val();
+		
+					if (pattern.test(phone) && phone != null ) {
+		
+						$(".form-template .tip").hide();
+					}else{
+		
+						$(".form-template .tip").show();
+		
+					}
+				
+					
+				});
+		
+			})
+		
+		</script>
+	</head>
+	<body style="background: #f7f8fc;">
+		
+		<!--头部导航-->
+		<div class="header clearfix">
+			<div class="logo pull-left"><img src="images/common/logo.png" /></div>
+			<div class="navbar pull-right">
+				<ul class="nav-list pull-left">
+					<li><a href="#" >首页</a></li>
+					<li><a href="#" >投资</a></li>
+					<li><a href="#" >融资</a></li>
+					<li>
+						<a href="#" >关于喜蚨   <span class="dropdown"></span> </a>
+						
+						<ol class="subnavlist">
+							<li><a href="#">关于我们</a> </li>
+							<li><a href="#">关于我们</a> </li>
+						</ol>
+						
+					</li>
+					<li><a href="#" >安全保障</a></li>
+				</ul>
+				
+				<div class="login pull-right" >
+					<a href="#">登录 <i class="glyphicon glyphicon-triangle-right" ></i> </a>
+					<a href="#">注册 <i class="glyphicon glyphicon-triangle-right" ></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="h649"></div>
+		<div class="banner1">
+			<img src="images/banner2.jpg" />
+		</div>
+		<!--发起项目-->
+		<div class="w1300">
+			<div class="title-plate">
+				<h2><span>Initiate project</span><b>发起项目</b></h2>
+			</div>
+			
+			<div class="project-information">
+				<h2>个人信息</h2>
+				<ul class="personinfo clearfix">
+					<li>
+						<div class="form-template">
+						    <label for="exampleInputName2">姓名</label>
+						    <input type="text" name="name" id="name" placeholder="请输入姓名">
+						</div>
+					</li>
+					<li>
+						<div class="form-template">
+					    	<label for="exampleInputEmail2">手机</label>
+					    	<input type="text" id="tel" name="mobile" placeholder="请输入11位手机号">
+					    	<span class="tip">请输入正确的手机号</span>
+					  	</div>
+
+					</li>
+					<li>
+						<div class="form-template">
+					    	<label for="exampleInputEmail2">微信号</label>
+					    	<input type="text" name="wxNo" id="wxNo" placeholder="选填">
+					  	</div>
+						
+					</li>
+
+				</ul> 
+
+
+				<h2>项目信息</h2>
+				<ul class="personinfo clearfix">
+					<li>
+						<div class="form-template">
+						    <label for="exampleInputName2">项目名称</label>
+						    <input type="text" maxlength="20" name="projectName" id="projectName" placeholder="请输入项目名字，20字以内">
+						</div>
+					</li>
+					<li>
+						<div class="form-template">
+					    	<label for="exampleInputEmail2">资金需求量</label>
+					    	<input type="text" name="amount" id="amount" placeholder="RMB">
+					  	</div>
+					</li>
+					<li>
+						<div class="form-template">
+					    	<label for="exampleInputEmail2">预计期限</label>
+					    	<input type="text" name="termCount" id="termCount" placeholder="月">
+					  	</div>
+						
+					</li>
+
+				</ul>
+
+				<h2>其他</h2>
+				<ul class="personinfo clearfix">
+					<li>
+						<div class="form-template">
+						    <label for="exampleInputName2">备注</label>
+						    <textarea type="text" name="remark" id="remark" placeholder="请输入备注，100字以内"></textarea>  
+						</div>
+					</li>
+				</ul>
+				<button type="button" class="btn btn-primary btn-block" id="save" data-toggle="modal" data-target="#wait"> 提交</button>
+			</div><!--project-information-->
+			
+			
+		</div><!--w1300-->
+		<!--常见问题-->
+		<div class="common-problem">
+			<div class="question">
+				<img src="images/img1.png" />
+				
+				<ul class="common-problemlist">
+					<li>
+						<a href="#">项目登记成功后做什么？</a>
+					</li>
+					<li>
+						<a href="#">项目融资需要多长时间？</a>
+					</li>
+					<li>
+						<a href="#">房屋抵押融资需要准备哪些材料？ </a>
+					</li>
+					<li>
+						<a href="#">企业融资需要哪些材料？</a>
+					</li>
+					<li>
+						<a href="#">融资款项到账需要多长时间？</a>
+					</li>
+				</ul>
+				
+			</div>
+			<div class="servicer">
+				<img src="images/img2.png" />
+				<ul class="servicerlist">
+					<li><span class="telicon" ></span>客服电话  <strong> 400-8162-262</strong></li>
+					<li><span class="onlineicon" ></span>在线客服</li>
+				</ul>
+			</div>
+		</div><!--common-problem-->
+		
+		
+		<!--项目投资-->
+		<div class="cfff mt40">
+		<div class="w1300">
+			<div class="title-plate">
+				<h2><span>Financing process</span><b>融资流程</b></h2>
+			</div>
+		</div><!--w1300-->
+		</div>
+		<div class="cefefef">
+			<div class="w1300">
+				<div class="step">
+					<div class="finanstep sprites1"></div>
+					<div class="stepinfo">
+						<div class="sub-title">
+							<h3>项目预约：</h3>
+							<span>Project reservation!</span>
+						</div>
+						<p>融资项目发起人线上登记项目信息、联系方式</p>
+						<p>等待喜蚨平台工作人员联系进行下一步项目审核</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cfff">
+			<div class="w1300">
+				<div class="step">
+					<div class="finanstep sprites2"></div>
+					<div class="stepinfo">
+						<div class="sub-title">
+							<h3>风控审核：</h3>
+							<span>Wind control audit!</span>
+						</div>
+						<p>平台工作人员接到项目预约，邀约融资项目发起人携带融资项目
+相关材料配合风控团队面审</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cefefef">
+			<div class="w1300">
+				<div class="step">
+					<div class="finanstep sprites3"></div>
+					<div class="stepinfo">
+						<div class="sub-title">
+							<h3>项目过审：</h3>
+							<span>Project review!</span>
+						</div>
+						<p>过审融资项目发布至喜蚨官网供意向投资人选投，融资期限截止前
+						投资进度满额即可进行现场签约</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cfff">
+			<div class="w1300">
+				<div class="step">
+					<div class="finanstep sprites4"></div>
+					<div class="stepinfo">
+						<div class="sub-title">
+							<h3>现场签约：</h3>
+							<span>On-site signing!</span>
+						</div>
+						<p>满额融资项目安排具体签约日期邀约投融双方进行现场签约，签订
+融资项目投融资合同</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cefefef">
+			<div class="w1300">
+				<div class="step">
+					<div class="finanstep sprites5"></div>
+					<div class="stepinfo">
+						<div class="sub-title">
+							<h3>融资成功：</h3>
+							<span>Successful financing!</span>
+						</div>
+						<p>合同签订后对应款项转至融资人对应账户，完成该项融资</p>
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="c272727 mt40">
+			<div class="w1300">
+				<div class="footer">
+					<div class="footer-nav clearfix">
+						
+						<ul class="footernavlist">
+							<div class="bottomline"></div>
+							<li> <a href="#">首页 </a>  </li>
+							<li><a href="#">投资 </a></li>
+							<li><a href="#">融资  </a></li>
+							<li><a href="#">喜蚨动态 </a></li>
+							<li><a href="#">关于我们 </a></li>
+							<li><a href="#">帮助中心 </a></li>
+							<li><a href="#">加入我们 </a></li>
+							<li><a href="#">风险揭示 </a></li>
+						</ul>
+						<ul class="contact-list">
+							<div class="bottomline"></div>
+							<li><a href="#">联系我们</a> </li>
+						</ul>
+					</div>
+					<div class="net-police">
+						<ul class="policelist">
+							<li><a href="#"><img src="images/common/img3.png" /></a></li>
+							<li><a href="#"><img src="images/common/img4.png" /></a></li>
+							<li><a href="#"><img src="images/common/img5.png" /></a></li>
+							
+						</ul>
+						<p> ©2014喜蚨投资  豫ICP备15000769号-1  豫公网安备 41030502000166号</p>
+						<p><label class="tel">400-8162-262</label><label class="qq">2858745435</label></p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

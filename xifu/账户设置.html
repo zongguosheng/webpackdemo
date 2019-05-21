@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>账户设置</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+	</head>
+	<body style="background: #f7f8fc;">
+		
+		<!--头部导航-->
+		<div class="header clearfix">
+			<div class="logo pull-left"><img src="images/common/logo.png" /></div>
+			<div class="navbar pull-right">
+				<ul class="nav-list pull-left">
+					<li><a href="#" >首页</a></li>
+					<li><a href="#" >投资</a></li>
+					<li><a href="#" >融资</a></li>
+					<li>
+						<a href="#" >关于喜蚨   <span class="dropdown"></span> </a>
+						
+						<ol class="subnavlist">
+							<li><a href="#">关于我们</a> </li>
+							<li><a href="#">关于我们</a> </li>
+						</ol>
+						
+					</li>
+					<li><a href="#" >安全保障</a></li>
+				</ul>
+				
+				<div class="login pull-right"  style="display: none;">
+					<a href="#">登录 <i class="glyphicon glyphicon-triangle-right" ></i> </a>
+					<a href="#">注册 <i class="glyphicon glyphicon-triangle-right" ></i></a>
+				</div>
+				<div class="login pull-right" >
+					<a href="#" class="myaccount" > <i class="userimg"><img src="images/tmp/img1.png"> </i> 我的账户 > </a>
+					<a href="#">退出</a>
+				</div>
+			</div>
+		</div>
+		<div class="h510"></div>
+		<div class="banner4">
+			<div class="accountnav">
+				 <ul>
+				 	<li ><a href="#">账户总览</a> </li>
+				 	<li><a href="#">预约记录</a></li>
+				 	<li><a href="#">消息中心</a></li>
+				 	<li><a href="#">邀请好友</a></li>
+				 	<li class="active"><a href="#">账户设置</a></li>
+				 </ul>
+			</div>
+			<div class="w1170">
+				<div class="accoune-safe">
+					<ul class="person-safe">
+						<li>
+							<span>实名认证 已绑定（131****2597）</span>
+							<p>认证后，忘记密码或手机丢失都可通过实名信息找回，提高账户安全性</p>
+						</li>
+						<li>
+							<img src="images/tmp/img6.png" >
+							<p class="safelevel">安全等级：<i>高</i></p>
+						</li>
+						<li>
+							<span>绑定手机 已绑定（131****2597）</span>
+							<p>保障账户中重要信息，在设置、修改登录密码等都需要手机短信验证及接收异常消息</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<!--预约记录-->
+		<div class="w1170">
+			<div class="accoune-safe">
+				<h2 class="title">安全认证</h2>
+				<table class="usersettable">
+					<tbody>
+						<tr>
+							<th width="20%">登录密码</th>
+							<td width="60%">
+								<p id="password" >登录喜蚨网时输入的密码，为了您的密码安全，建议定期更换密码</p>
+								<ul class="restlist" style="display: none;">
+									<li><label>原 密 码</label><input maxlength="30" type="password" id="password" placeholder="请输入原密码" onblur="checkPass()" class="oldpwd"><i>原密码错误</i></li>
+									<li><label>新 密 码</label><input maxlength="30" type="password" id="password_regiest" placeholder="密码必须为字母和数字组合" onblur="checkNewPass()" class="newpaw"><i>请输入新密码</i></li>
+									<li><label>确认密码</label><input type="password" id="pdwuri" onblur="reCheckNewPass()" placeholder="密码一至" class="renewpaw"><i>两次密码不一致</i></li>
+									<li><input type="button" onclick="updateLoginPass()" value="保存" class="save-btn"></li>
+								</ul>
+								
+							</td>
+							<td width="10%"><i class="icon icon1"></i>已设置</td>
+							<td width="10%"><a href="javascript:;" class="resetpw " >立即修改</a></td>
+						</tr>
+						<tr>
+							<th width="20%">手机绑定</th>
+							<td width="60%">
+								<p id="tel"  >您绑定的手机号码：18336708881（已认证）</p>
+								<ul class="revisetel" style="display: none;">
+									<li><label>新手机号</label>
+									<input type="text" onblur="checkMobile()" id="mobilePhone" value="15038634740" class="tel">
+									<input type="button" onclick="getVerifycodeMobile()" id="num" value="获取验证码" class="getcode"><i></i></li>
+									<li>
+										<label>验 证 码</label>
+										<input type="text" id="verifycode" class="code">
+										<input type="button" onclick="bindMobile()" value="确认" class="sure-btn"></li>
+								</ul>
+							
+							</td>
+							<td width="10%"><i class="icon icon2"></i>已绑定</td>
+							<td width="10%"><a href="javascript:;" class="resetpw ">立即修改</a></td>
+						</tr>
+						<tr>
+							<th width="20%">风险评测</th>
+							<td width="60%">大数云融为您量身打造了风险承受能力评估体系，以获得最佳的投资体验</td>
+							<td width="10%"><i class="icon icon1"></i>为测评</td>
+							<td width="10%"><a href="javascript:;">测评</a></td>
+						</tr>
+					</tbody>
+				</table>
+				<h2 class="title">个人信息</h2>
+				<table class="usersettable">
+					<tbody>
+						<tr>
+							<th width="20%">用户名</th>
+							<td width="60%">
+								<input type="text" value="Xifu8336708881"  class="retusername" readonly="readonly" />
+							</td>
+							<td width="10%"><i class="icon icon1"></i>已设置</td>
+							<td width="10%"><a href="javascript:;" class="resetusername" >立即修改</a></td>
+						</tr>
+						<tr>
+							<th width="20%">学历</th>
+							<td width="60%">
+								<select name="edu" id="edu" class="text-280">
+								    <option value="" selected="selected">请选择</option>
+								    <option value="中专">中专</option>
+								    <option value="高中">高中</option>
+								    <option value="大专">大专</option>
+								    <option value="本科&nbsp;">本科&nbsp;</option>
+								    <option value="硕士">硕士</option>
+								    <option value="博士">博士</option>
+								</select>
+							</td>
+							<td width="10%"><i class="icon icon2"></i>未选择</td>
+							<td width="10%"><a href="javascript:;">请选择</a></td>
+						</tr>
+						<tr>
+							<th width="20%">所在行业</th>
+							<td width="60%">
+								<select name="industry" id="industry" class="text-280">
+								    <option value="" selected="selected">请选择</option>
+								    <option value="通信">通信</option>
+								    <option value="电子">电子</option>
+								    <option value="互联网">互联网</option>
+								    <option value="金融业">金融业</option>
+								    <option value="房地产">房地产</option>
+								    <option value="建筑业">建筑业</option>
+								    <option value="商业服务">商业服务</option>
+								    <option value="贸易">贸易</option>
+								    <option value="零售">零售</option>
+								    <option value="租赁业">租赁业</option>
+								    <option value="文体教育">文体教育</option>
+								    <option value="工艺美术">工艺美术</option>
+								    <option value="生产制造">生产制造</option>
+								    <option value="交通运输|">交通运输|</option>
+								    <option value="物流仓储">物流仓储</option>
+								    <option value="服务业">服务业</option>
+								    <option value="文化传媒">文化传媒</option>
+								    <option value="娱乐">娱乐</option>
+								    <option value="体育">体育</option>
+								    <option value="能源">能源</option>
+								    <option value="矿产">矿产</option>
+								    <option value="环保">环保</option>
+								    <option value="政府">政府</option>
+								    <option value="非盈利机构">非盈利机构</option>
+								    <option value="农林牧渔">农林牧渔</option>
+								</select>
+							</td>
+							<td width="10%"><i class="icon icon2"></i>未选择</td>
+							<td width="10%"><a href="javascript:;">请选择</a></td>
+						</tr>
+						<tr>
+							<th width="20%">月收入</th>
+							<td width="60%">
+								<select name="income" id="income" class="text-280">
+								    <option value="" selected="selected">请选择</option>
+								    <option value="1000-2000元 ">1000-2000元 </option>
+								    <option value="2000-3000元 ">2000-3000元 </option>
+								    <option value="3000-5000元 ">3000-5000元 </option>
+								    <option value="5000-8000元 ">5000-8000元 </option>
+								    <option value="8000-12000元 ">8000-12000元 </option>
+								    <option value="12000-20000元 ">12000-20000元 </option>
+								    <option value="20000-25000元 ">20000-25000元 </option>
+								    <option value="25000元以上 ">25000元以上 </option>
+								</select>
+							</td>
+							<td width="10%"><i class="icon icon2"></i>未选择</td>
+							<td width="10%"><a href="javascript:;">请选择</a></td>
+						</tr>
+						<tr>
+							<th width="20%">QQ</th>
+							<td width="60%"><input type="text" name="qqUId" value="" placeholder="请输入" class="text-280"></td>
+							<td width="10%"><i class="icon icon2"></i>未选择</td>
+							<td width="10%"><a href="javascript:;">请输入</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+		</div><!--w1170-->
+		
+		<div class="c272727 mt40">
+			<div class="w1300">
+				<div class="footer">
+					<div class="footer-nav clearfix">
+						
+						<ul class="footernavlist">
+							<div class="bottomline"></div>
+							<li> <a href="#">首页 </a>  </li>
+							<li><a href="#">投资 </a></li>
+							<li><a href="#">融资  </a></li>
+							<li><a href="#">喜蚨动态 </a></li>
+							<li><a href="#">关于我们 </a></li>
+							<li><a href="#">帮助中心 </a></li>
+							<li><a href="#">加入我们 </a></li>
+							<li><a href="#">风险揭示 </a></li>
+						</ul>
+						<ul class="contact-list">
+							<div class="bottomline"></div>
+							<li><a href="#">联系我们</a> </li>
+						</ul>
+					</div>
+					<div class="net-police">
+						<ul class="policelist">
+							<li><a href="#"><img src="images/common/img3.png" /></a></li>
+							<li><a href="#"><img src="images/common/img4.png" /></a></li>
+							<li><a href="#"><img src="images/common/img5.png" /></a></li>
+							
+						</ul>
+						<p> ©2014喜蚨投资  豫ICP备15000769号-1  豫公网安备 41030502000166号</p>
+						<p><label class="tel">400-8162-262</label><label class="qq">2858745435</label></p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

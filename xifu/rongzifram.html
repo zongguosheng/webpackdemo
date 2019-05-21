@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>房产融资</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script src="https://webapi.amap.com/maps?v=1.4.10&key=b67d51c73157b67461bb0605cae6df82&plugin=AMap.Autocomplete,AMap.PlaceSearch,AMap.AdvancedInfoWindow"></script>
+		<script type="text/javascript" src="http://webapi.amap.com/demos/js/liteToolbar.js"></script>
+		<script src="https://webapi.amap.com/ui/1.0/main.js"></script>
+		<style>
+		
+		</style>
+	</head>
+	<body>
+				<div>
+					<div class="w1170">
+						<div class="searchbar clearfix">
+				            <div class="item-after"> 
+				            	<input class="item-input"  type="text" placeholder="请输入本人名下房产所在小区" />
+				            	<ul class="item-list" style="">
+				            		<li>华阳国际</li>
+				            		<li>美丽家园</li>
+				            		<li>升龙广场</li>
+				            		<li>开元壹号</li>
+				            	</ul>
+				            </div>
+				            <div class="item-title">洛阳</div>
+			            </div>
+			        </div>
+				</div>
+				<div class="content">
+					<div id="container" ></div>
+				</div>
+				<div class="floorinfo">
+					<div class="modal-text">地址： 滨河南路61号（东方今典花样年华）东方今典花样年华</div>
+					<div class="modal-buttons ">
+						<select class="modal-button">
+							<option>选择楼栋</option>
+							<option>1</option>
+						</select>
+						<select class="modal-button">
+							<option>选择楼层</option>
+							<option>1</option>
+						</select>
+						<select class="modal-button">
+							<option>选择房号</option>
+							<option>1</option>
+						</select>
+						<label>房屋面积：</label> <input type="text" placeholder="输入房屋面积"  /> <label>㎡</label> 
+						<button class="p-btn">评估</button>
+				
+					</div>
+				</div>
+		<div class="modal-overlay ">
+		</div>
+		<div class="modal " >
+			<ul class="valuation-list">
+				<li>
+					<div class="list-title">估值价格：</div>
+					<div class="list-after">"+price+"元</div>
+				</li>
+				<li>
+					<div class="list-title">房屋价值：</div>
+					<div class="list-after">"+allPrice+"元</div>
+				</li>
+				<li>
+					<div class="list-title">建设时间：</div>
+					<div class="list-after">"+data.buildCompleteTime</div>
+				</li>
+				<li>
+					<label>联系方式：</label>
+					<input type="tel" placeholder="请输入联系方式/手机号" />
+				</li>
+				<li>
+					<button class="list-button">确定</button>
+				</li>
+			</ul>
+		</div>
+		<div class="modalerweima " >
+			<div class="erweima">
+				<img src="images/tmp/dingyue.jpg">
+			</div>
+		</div>
+		
+		<script>
+			var  map = new AMap.Map('container', {
+	            resizeEnable: true
+	       
+	     	});
+		</script>
+	</body>
+</html>

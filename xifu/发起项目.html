@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>发起项目</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+	</head>
+	<body style="background: #f7f8fc;">
+		
+		<!--头部导航-->
+		<div class="header clearfix">
+			<div class="logo pull-left"><img src="images/common/logo.png" /></div>
+			<div class="navbar pull-right">
+				<ul class="nav-list pull-left">
+					<li><a href="#" >首页</a></li>
+					<li><a href="#" >投资</a></li>
+					<li><a href="#" >融资</a></li>
+					<li>
+						<a href="#" >关于喜蚨   <span class="dropdown"></span> </a>
+						
+						<ol class="subnavlist">
+							<li><a href="#">关于我们</a> </li>
+							<li><a href="#">关于我们</a> </li>
+						</ol>
+						
+					</li>
+					<li><a href="#" >安全保障</a></li>
+				</ul>
+				
+				<div class="login pull-right"  style="display: none;">
+					<a href="#">登录 <i class="glyphicon glyphicon-triangle-right" ></i> </a>
+					<a href="#">注册 <i class="glyphicon glyphicon-triangle-right" ></i></a>
+				</div>
+				<div class="login pull-right" >
+					<a href="#" class="myaccount" > <i class="userimg"><img src="images/tmp/img1.png"> </i> 我的账户 > </a>
+					<a href="#">退出</a>
+				</div>
+			</div>
+		</div>
+		<div class="h510"></div>
+		<div class="banner4">
+			<div class="accountnav">
+				 <ul>
+				 	<li ><a href="#">账户总览</a> </li>
+				 	<li class="active"><a href="#">发起记录</a></li>
+				 	<li><a href="#">预约记录</a></li>
+				 	<li><a href="#">消息中心</a></li>
+				 	<li><a href="#">邀请好友</a></li>
+				 	<li><a href="#">账户设置</a></li>
+				 </ul>
+			</div>
+			<div class="w1170">
+				<div class="invite-friends">
+					 <p class="text">快速发起项目，一键申请助您融资成功</p>
+					<img src="images/tmp/img7.png" class="inviteimg" >
+				</div>
+			</div>
+		</div>
+		<!--预约记录-->
+		<div class="w1170">
+			<!--发起项目-->
+			<div class="createproject pt20">
+				<h2 class="title">选择身份</h2>
+				<ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a href="#appointmenting" aria-controls="appointmenting" role="tab" data-toggle="tab"><i class="icon"></i> 企业用户</a> <span class="arrow1"></span></li>
+				    <li role="presentation"><a href="#appointment" aria-controls="profile" role="tab" data-toggle="tab"><i class="icon"></i>个人用户</a><span class="arrow2"></span></li>
+			    </ul>
+			  <!-- Tab panes -->
+				<div class="tab-content">
+				    <div role="tabpanel" class="tab-pane active" id="appointmenting">
+				    	<div class="createprojectinfo">
+				    		
+				    		<h3>项目封面图 <i>*</i></h3>
+				    		<div class="fileonloade">
+				    			<span>+上传图片</span>
+				    			<p>尺寸300px*200px，格式jpg、png，分辨率72像素 / 英寸，不大于3MB</p>
+				    			<input type="file" />
+				    		</div>
+				    		<p class="tip">图片应简洁清晰展示主题，图中除Logo外的其他介绍文字禁止出现。 <a href="#">推荐案例</a> </p>
+				    		
+				    		
+				    		<h3>项目标题 <i>*</i></h3>
+				    		<input type="text" class="text-700" placeholder="请输入项目标题，最多18个字" />
+				    		<p class="tip">标题中需带有产品名称及类别，可添加宣传语作为副标题。</p>
+				    		
+				    		<h3>项目简介 <i>*</i></h3>
+				    		<textarea class="area-700" placeholder="请输入项目简介，最多30个字"></textarea>
+				    		<p class="tip">简介需清晰准确地阐述项目核心内容，会随项目被分享到平台。 <a href="#">推荐案例</a> </p>
+				    		
+				    		<h3>发起城市 <i>*</i></h3>
+				    		
+				    		<div class="selectgroup">
+				    			<select class="text-338 mr20">
+				    				<option  disabled selected>选择省/直辖市 </option>
+				    				<option>河南</option>
+				    			</select>
+				    			<select class="text-338 ">
+				    				<option  disabled selected>选择市/区 </option>
+				    				<option>河南</option>
+				    			</select>
+				    		</div>
+				    		
+				    		<div class="input-inline">
+					    		<div class="input-group mr20">
+					    			<h3>公司名称 <i>*</i></h3>
+					    			<input type="text" class="text-338" placeholder="请输入项目标题，最多18个字" />
+					    		</div>
+					    		<div class="input-group">
+					    			<h3>法人姓名/身份证号 <i>*</i></h3>
+					    			<input type="text" class="text-338" placeholder="请输入项目标题，最多18个字" />
+					    		</div>
+				    		</div>
+				    		
+				    		<h3>公司地址  <i>*</i></h3>
+				    		<input type="text" class="text-700" placeholder="请输入公司详细地址" />
+				    		
+				    		<h3>经营范围  <i>*</i></h3>
+				    		<textarea class="area-700" placeholder="请输入企业经营范围"></textarea>
+				    		
+				    		<h3>项目金额  <i>*</i></h3>
+				    		<input type="text" class="text-700" placeholder="请输入您欲融资的项目金额" />
+				    		
+				    		<h3>项目期限   <i>*</i></h3>
+				    		<input type="text" class="text-700" placeholder="请输入您期望的融资时长" />
+				    		
+				    		<input type="button" value="提交发起" class="btn-start" />
+				    		
+				    	</div>
+				    	
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="appointment">
+				    	<div class="createprojectinfo">
+				    		
+				    		<h3>项目封面图 <i>*</i></h3>
+				    		<div class="fileonloade">
+				    			<span>+上传图片</span>
+				    			<p>尺寸300px*200px，格式jpg、png，分辨率72像素 / 英寸，不大于3MB</p>
+				    			<input type="file" />
+				    		</div>
+				    		<p class="tip">图片应简洁清晰展示主题，图中除Logo外的其他介绍文字禁止出现。 <a href="#">推荐案例</a> </p>
+				    		
+				    		
+				    		<h3>项目标题 <i>*</i></h3>
+				    		<input type="text" class="text-700" placeholder="请输入项目标题，最多18个字" />
+				    		<p class="tip">标题中需带有产品名称及类别，可添加宣传语作为副标题。</p>
+				    		
+				    		<h3>项目简介 <i>*</i></h3>
+				    		<textarea class="area-700" placeholder="请输入项目简介，最多30个字"></textarea>
+				    		<p class="tip">简介需清晰准确地阐述项目核心内容，会随项目被分享到平台。 <a href="#">推荐案例</a> </p>
+				    		
+				    		<h3>发起城市 <i>*</i></h3>
+				    		
+				    		<div class="selectgroup">
+				    			<select class="text-338 mr20">
+				    				<option  disabled selected>选择省/直辖市 </option>
+				    				<option>河南</option>
+				    			</select>
+				    			<select class="text-338 ">
+				    				<option  disabled selected>选择市/区 </option>
+				    				<option>河南</option>
+				    			</select>
+				    		</div>
+				    		
+				    		<div class="input-inline">
+					    		<div class="input-group mr20">
+					    			<h3>个人姓名 <i>*</i></h3>
+					    			<input type="text" class="text-338" placeholder="请输入姓名" />
+					    		</div>
+					    		<div class="input-group">
+					    			<h3>电话 <i>*</i></h3>
+					    			<input type="text" class="text-338" placeholder="例：陈伟/410305198205065173" />
+					    		</div>
+				    		</div>
+				    		
+				    		
+				    		
+				    		<h3>身份证号  <i>*</i></h3>
+				    		<textarea class="area-700" placeholder="请输入身份证号"></textarea>
+				    		
+				    		<h3>家庭地址  <i>*</i></h3>
+				    		<input type="text" class="text-700" placeholder="请输入家庭详细地址" />
+				    		
+				    		<h3>项目金额  <i>*</i></h3>
+				    		<input type="text" class="text-700" placeholder="请输入您欲融资的项目金额" />
+				    		
+				    		<h3>项目期限   <i>*</i></h3>
+				    		<input type="text" class="text-700" placeholder="请输入您期望的融资时长" />
+				    		
+				    		<input type="button" value="提交发起" class="btn-start" />
+				    		
+				    	</div>
+				   	</div>
+				</div>
+			</div>
+		   
+			
+			
+		</div><!--w1170-->
+		
+		<div class="c272727 mt40">
+			<div class="w1300">
+				<div class="footer">
+					<div class="footer-nav clearfix">
+						
+						<ul class="footernavlist">
+							<div class="bottomline"></div>
+							<li> <a href="#">首页 </a>  </li>
+							<li><a href="#">投资 </a></li>
+							<li><a href="#">融资  </a></li>
+							<li><a href="#">喜蚨动态 </a></li>
+							<li><a href="#">关于我们 </a></li>
+							<li><a href="#">帮助中心 </a></li>
+							<li><a href="#">加入我们 </a></li>
+							<li><a href="#">风险揭示 </a></li>
+						</ul>
+						<ul class="contact-list">
+							<div class="bottomline"></div>
+							<li><a href="#">联系我们</a> </li>
+						</ul>
+					</div>
+					<div class="net-police">
+						<ul class="policelist">
+							<li><a href="#"><img src="images/common/img3.png" /></a></li>
+							<li><a href="#"><img src="images/common/img4.png" /></a></li>
+							<li><a href="#"><img src="images/common/img5.png" /></a></li>
+							
+						</ul>
+						<p> ©2014喜蚨投资  豫ICP备15000769号-1  豫公网安备 41030502000166号</p>
+						<p><label class="tel">400-8162-262</label><label class="qq">2858745435</label></p>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
