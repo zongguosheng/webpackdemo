@@ -3,7 +3,7 @@
 
 .loginbg .wrap {height: 533px;	position: relative;}
 
-.loginarea {background: rgba(0, 0, 0, 0.7);	width: 300px; height: 360px;	position: absolute;	right: 20px; top: 37px;	z-index: 22;	padding-top: 10px;	font-family: "微软雅黑";}
+.loginarea {background: rgba(0, 0, 0, 0.7);	width: 360px; height: 460px;	position: absolute;	right: 20px; top: 37px;	z-index: 22;	padding-top: 10px;	font-family: "微软雅黑";}
 .loginarea .erweimalogin{ text-align: center; padding: 30px;}
 .loginarea .loginerweima{ width: 150px; height: 150px; margin: 0 auto; background: #fff;}
 .loginarea span{ display: block; width: 60px; height: 60px; background: url(../images/common/erweima1.png) no-repeat; position: absolute; top: 0; right: 0; z-index: 99; cursor: pointer;}
@@ -25,6 +25,7 @@
 .login-list .forget {	float: right;	color: #fbf207;}
 .login-list .btn {	width: 100%;	background: #32bbf8;	color: #fff;}
 .login-list .quickregist {	float: right;	color: #fff;}
+.login-list .weixin{ display: inline-block; width: 24px; height: 24px; background: url(../images/common/weixin.png) no-repeat; background-size: contain; vertical-align: middle; margin-right: 5px;}
 
 /*==注册==*/
 .fl{ float:left;}

@@ -1,0 +1,149 @@
+
+html{overflow-x: hidden;}
+input[type="input"], button, select, textarea {	outline: none;	-webkit-appearance: none;}li {list-style: none; }
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{	margin: 0;	padding: 0;}
+
+/* 头部 */
+.header{ background: url(../images/common/bg.png) repeat-x; height: 90px; vertical-align: middle; line-height: 90px; padding:0 25px; }
+.header .am-fl img{ display: inline-block;}
+.user-list li{ float: left; margin-left: 15px;}
+.user-list .userimg{ width: 40px; height: 40px; display: inline-block; border-radius: 50%; overflow: hidden; vertical-align: middle; }
+.user-list .userimg img{max-width: 100%; display: block;}
+.user-list .admin{ color: #fff;}
+/* 侧边导航栏 */
+
+.left-sidebar { transition: all 0.4s ease-in-out; width: 275px; min-height: 760px;  position: absolute;  z-index: 1104;  top: 90px;  left: 0px; }
+.left-sidebar.xs-active { left: 0px; }
+.left-sidebar.active {  left: -275px; }
+.sidebar-nav .sidebar-nav-link.active{ background: #fff; }
+.sidebar-nav .sidebar-nav-link.active .sidebar-nav-sub-title { color: #15518c;}
+
+.sidebar-nav-link a {display: block; color: #fff; padding: 0 17px;  font-size: 20px; font-weight: normal;  cursor: pointer; font-family: "黑体"; }
+.sidebar-nav li{  margin-bottom: 1px; height: 60px; line-height: 60px;}
+.sidebar-nav-sub{ padding-left: 4px; margin: 0; background: #fff; border-bottom: 1px solid #fff;}
+.sidebar-nav-sub li{ background: #15518c;}
+.sidebar-nav-sub .sub-active{ background: #217dd9;}
+
+.sidebar-nav-link .sidebar-nav-link-logo{ display: inline-block; vertical-align: middle; width: 30px; height: 30px; background: url(../images/common/sprites.png) no-repeat;}
+.sidebar-nav-link .icon-home{ background-position: 0 0;}
+.sidebar-nav-link .icon-work{ background-position: -30px 0;}
+.sidebar-nav-link .icon-desktop{ background-position: -60px 0;}
+.sidebar-nav-link .icon-todo{ background-position: -90px 0;}
+.sidebar-nav-link .icon-doing{ background-position: -120px 0;}
+.sidebar-nav-link .icon-done{ background-position: -150px 0;}
+.sidebar-nav-link .icon-accdoing{ background-position: -180px 0;}
+.sidebar-nav-link .icon-mandoing{ background-position: -210px 0;}
+.sidebar-nav-link .icon-draft{ background-position: -240px 0;}
+.sidebar-nav-link .icon-new{ background-position: -270px 0;}
+
+/* 内容区域 */
+.content-wrapper {  transition: all 0.4s ease-in-out;  position: relative;  margin-left: 275px;  z-index: 1101;  min-height: 922px;  border-bottom-left-radius: 3px;}
+
+/* 标题 */
+.row-content .content-title{ background: #f0f6fc; height: 60px; line-height: 60px; border-bottom:1px solid #c3ccdd; padding: 0 20px 0 48px;}
+.row-content .content-title span{ font-size: 20px; display: inline-block; height: 60px; line-height: 60px; color: #217dd9; border-bottom: 2px solid #3184d6;}
+.tool-list li {float: left; height: 60px; line-height: 60px; margin-right: 15px; cursor: pointer;}
+.tool-list li .icon-tool{ display: inline-block; width: 30px; height: 30px; background: url(../images/common/sprites.png) no-repeat; vertical-align: middle; }
+.tool-list li .icon-refresh{ background-position: 0 -30px;}
+.tool-list li .icon-theme{ background-position: -30px -30px;}
+.tool-list li .icon-remind{ background-position: -60px -30px;}
+.tool-list li .icon-setting{ background-position: -90px -30px;}
+
+
+
+
+
+
+
+
+
+
+
+/* 主题 */
+.theme-blue .left-sidebar{ background: #15518c;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+.left-sidebar {  padding-top: 111px;   }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
