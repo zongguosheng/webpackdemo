@@ -1,0 +1,54 @@
+html{overflow-x: hidden;}html,body{ height: 100%;}
+input[type="input"], button, select, textarea {	outline: none;	-webkit-appearance: none;}li {list-style: none; }
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{	margin: 0;	padding: 0;}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body{ background: url(../images/bg.jpg) no-repeat; background-size: cover;}
+.mr7{ margin-right: 7px;}.mr30{margin-right: 30px;}.mr8{ margin-right: 8px;}.mr9{ margin-right: 9px;}
+
+header{ height: 70px; line-height: 70px; background: url(../images/headerbg.png) right center no-repeat; }
+.user-list{ float: right; margin-right: 40px;}
+.user-list li{ color: #999; float: left; line-height: 70px; font-size: 26px;  cursor: pointer; padding: 0 20px;}
+.user-list li:hover{ color: #fff;}
+.user-list li i{ display: inline-block; width: 38px; height: 36px; background: url(../images/img1.png) no-repeat; vertical-align: middle; margin-right: 10px;}
+.user-list li i.icon-change{ background-position: -38px 0;}
+.user-list li i.icon-out{ background-position: -76px 0;}
+.title {text-align: center; margin-top: 115px;}
+.clearfix::after,.clearfix::before{ clear: both;  content: " ";
+    display: table;}
+.w1114{ width: 1114px; margin: 0 auto;}
+.home-list{padding-top: 90px;}
+.home-list li{ float: left; margin-bottom: 6px;}
+.home-list li a{ display: block; background: rgba(44, 70, 115, 0.5); border: 1px solid #8297b2; text-align: center; text-decoration: none; color: #fff; position: relative;}
+.home-list li a:hover{background: rgba(63, 99, 155, 0.5); }
+.home-list li .w320{ width: 320px; height: 320px; }
+.home-list li .w430{ width: 430px; height: 320px;}
+.home-list li .w155{ width: 155px; height: 155px;}
+.home-list li .w210{ width: 210px; height: 155px;}
+.home-list li .w320 p,.home-list li .w430 p{ font-family: "黑体"; font-size: 30px; line-height: 70px;}
+.home-list li .icon-h160{  display: inline-block; width: 145px; height: 160px; background: url(../images/sprite.png) no-repeat; margin-top: 28px;}
+.home-list li .icon-h160.icon2{ background-position: -145px 0;}
+.home-list li .icon-h160.icon3{ background-position: -290px 0;}
+.home-list li .icon-h64{ display: inline-block; width: 75px; height: 64px; background: url(../images/sprite.png) no-repeat; margin-top: 28px;}
+.home-list li .icon-h64.icon1{  background-position: -0 -160px;}
+.home-list li .icon-h64.icon2{  background-position: -75px0 -160px;}
+.home-list li .icon-h64.icon3{  background-position: -150px -160px;}
+.home-list li .icon-h64.icon4{  background-position: -225px -160px;}
+.home-list li .icon-h64.icon5{  background-position: -300px -160px;}
+.home-list li .icon-h64.icon6{  background-position: -375px -160px;}
+.home-list li .w155 p,.home-list li .w210 p{ font-family: "黑体"; font-size: 20px; line-height: 50px;}
+
+.home-list li a .top-left ,.home-list li a .top-right,.home-list li a .bottom-left,.home-list li a .bottom-right{ position: absolute; display: block; width: 40px; height: 40px; background: url(../images/horn.png) no-repeat;}
+.home-list li a .top-left{ background-position: 0 0; left: -1px; top: -1px; }
+.home-list li a .top-right{background-position: -40px 0;  right:-1px; top: -1px;}
+.home-list li a .bottom-left{background-position: 0 -40px; left: -1px; bottom: -1px; }
+.home-list li a .bottom-right{background-position: -40px -40px;  right: -1px; bottom: -1px;}
+
+.copyright{ font-size: 20px; color: #fff;  font-family: "黑体"; text-align: center; margin-top: 50px;}
+
+
+
