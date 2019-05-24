@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>福清市</title>
+    <title>福清市跟踪服务企业双保行动工作平台</title>
     <link rel="stylesheet" type="text/css" href="css/amazeui.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     
@@ -20,7 +20,28 @@
             <div class="am-fr">
                 <ul class="user-list" >
                     <li><i class="userimg"><img src="images/tmp/user.png"  ></i></li>
-                    <li> <a href="javascript:;" class="admin" > 管理员 <i class="am-icon-chevron-down"></i> </a></li>
+                    <li class="am-dropdown person-dropdown" data-am-dropdown> 
+                        <a href="javascript:;" class="admin am-dropdown-toggle" data-am-dropdown-toggle > 管理员 <i class="am-icon-chevron-down"></i> </a>
+                        <ul class="am-dropdown-content person-dropdown-content">
+                                <li class="person-dropdown-menu-messages">
+                                    <a href="javascript:;" class="person-dropdown-menu-messages-item am-cf">
+                                       <i class="am-icon-user" ></i> 用户信息
+                                    </a>
+                                </li>
+
+                                <li class="person-dropdown-menu-messages">
+                                    <a href="javascript:;" class="person-dropdown-menu-messages-item am-cf">
+                                        <i class="am-icon-unlock-alt" ></i> 修改密码
+                                    </a>
+                                </li>
+                                <li class="person-dropdown-menu-messages">
+                                    <a href="javascript:;" class="person-dropdown-menu-messages-item am-cf">
+                                        <i class="am-icon-power-off"></i> 退出
+                                    </a>
+                                </li>
+                            </ul>
+                    </li>
+
                 </ul>
             </div>
         </header>
@@ -29,73 +50,58 @@
             <!-- 菜单 -->
             <ul class="sidebar-nav">
                 <li class="sidebar-nav-link">
-                    <a href="index.html" class="active">
+                    <a href="index.html" >
                         <i class="icon-home sidebar-nav-link-logo"></i> 系统菜单
                     </a>
                 </li>
-                <li class="sidebar-nav-link active">
-                    <a href="javascript:;" class="sidebar-nav-sub-title ">
-                        <i class="icon-work sidebar-nav-link-logo"></i> 我的工作
-                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                <li class="sidebar-nav-link">
+                    <a href="index.html" class="active">
+                        <i class="icon-desktop sidebar-nav-link-logo"></i> 我的桌面
                     </a>
-                    <ul class="sidebar-nav sidebar-nav-sub">
-                        <li class="sidebar-nav-link">
-                            <a href="#" class="sub-active">
-                                <span class="icon-desktop sidebar-nav-link-logo "></span> 我的桌面
-                            </a>
-                        </li>
-
-                        <li class="sidebar-nav-link">
-                            <a href="#">
-                                <span class="icon-todo sidebar-nav-link-logo"></span> 待受理问题列表
-                            </a>
-                        </li>
-
-                        <li class="sidebar-nav-link">
-                            <a href="#">
-                                <span class="icon-doing sidebar-nav-link-logo"></span> 处理中问题列表
-                            </a>
-                        </li>
-
-                        <li class="sidebar-nav-link">
-                            <a href="#">
-                                <span class="icon-done sidebar-nav-link-logo"></span> 收到待处理商请函
-                            </a>
-                        </li>
-
-                        <li class="sidebar-nav-link">
-                            <a href="#">
-                                <span class="icon-accdoing sidebar-nav-link-logo"></span> 收到处理中商请函
-                            </a>
-                        </li>
-
-                        <li class="sidebar-nav-link">
-                            <a href="#">
-                                <span class="icon-mandoing sidebar-nav-link-logo"></span> 经办人处理中商请函
-                            </a>
-                        </li>
-
-                        <li class="sidebar-nav-link">
-                            <a href="#">
-                                <span class="icon-draft sidebar-nav-link-logo"></span> 草稿箱
-                            </a>
-                        </li>
-                        <li class="sidebar-nav-link">
-                            <a href="#">
-                                <span class="icon-new sidebar-nav-link-logo"></span> 新建问题
-                            </a>
-                        </li>
-
-                    </ul>
                 </li>
-              
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-todo sidebar-nav-link-logo"></i> 待受理问题列表
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-doing sidebar-nav-link-logo"></i> 处理中问题列表
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-accdoing sidebar-nav-link-logo"></i> 收到待处理商请函
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-doing sidebar-nav-link-logo"></i> 收到处理中商请函
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-mandoing sidebar-nav-link-logo"></i> 经办人处理中商请函
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-draft sidebar-nav-link-logo"></i> 草稿箱
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-new sidebar-nav-link-logo"></i> 新建问题
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- 内容区域 -->
         <div class="content-wrapper">
             <div class="row-content am-cf">
                <h2 class="content-title" > 
-                    <span>我的桌面</span>   
+                    <span>我的桌面 <i class="icon-close"></i> </span> 
+                    <span>新建问题</span>   
                     <ul class="tool-list am-fr">    
                         <li><i class="icon-tool icon-refresh"></i></li>
                         <li><i class="icon-tool icon-theme"></i></li>
