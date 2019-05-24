@@ -27,7 +27,7 @@ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,s
 
 .sidebar-nav { margin: 0; background: #fff; border-bottom: 1px solid #fff;}
 .sidebar-nav .sidebar-nav-link{background: #15518c; }
-.sidebar-nav .sidebar-nav-link.active{ background: #fff; }
+.sidebar-nav .sidebar-nav-link a.active{ background: #217dd9; }
 .sidebar-nav .sidebar-nav-link.active .sidebar-nav-sub-title { color: #15518c;}
 .sidebar-nav  .sidebar-nav-link a {display: block; color: #fff; padding: 0 17px;  font-size: 20px; font-weight: normal;  cursor: pointer; font-family: "黑体"; }
 .sidebar-nav li{  margin-bottom: 1px; height: 60px; line-height: 60px;}
@@ -48,7 +48,8 @@ body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,s
 
 /* 标题 */
 .row-content .content-title{ background: #f0f6fc; height: 60px; line-height: 60px; border-bottom:1px solid #c3ccdd; padding: 0 20px 0 48px;}
-.row-content .content-title span{ font-size: 20px; display: inline-block; height: 60px; line-height: 60px; padding: 0 20px; color: #217dd9; border-bottom: 2px solid #3184d6;}
+.row-content .content-title span{ font-size: 20px; display: inline-block; height: 60px; line-height: 60px; padding: 0 20px; color: #217dd9; border-bottom: 2px solid #3184d6; position: relative;}
+.row-content .content-title span .icon-close{ display: inline-block; width: 32px; height: 32px; background: url(../images/common/close.png) no-repeat; cursor: pointer; position: absolute; top: 0; right: -10px;}
 .tool-list li {float: left; height: 60px; line-height: 60px; margin-right: 15px; cursor: pointer;}
 .tool-list li .icon-tool{ display: inline-block; width: 30px; height: 30px; background: url(../images/common/sprites.png) no-repeat; vertical-align: middle; }
 .tool-list li .icon-refresh{ background-position: 0 -30px;}
