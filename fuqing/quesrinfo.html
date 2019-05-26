@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>福清市跟踪服务企业双保行动工作平台</title>
+    <link rel="stylesheet" type="text/css" href="css/amazeui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/jquery.min.js" ></script>
+    <script>
+        $(function(){
+
+            $(".icon-setting").click(function(){
+                   // $(".setting")
+                //    console.log($(".setting").css("display","none" ));
+                //     if(1 ){
+                //         console.log( );
+                //         $(".setting").show();
+                //     }else{
+                //         $(".setting").hide();
+                //     }
+                $(".setting").toggle();
+            });
+        
+        });
+    
+    </script>
+</head>
+<body class="theme-blue" >
+    <div class="am-g">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="am-fl">
+                    <a href="javascript:;"><img src="images/common/logo.png" alt=""></a>
+            </div>
+            <div class="am-fr">
+                <ul class="user-list" >
+                    <li><i class="userimg"><img src="images/tmp/user.png"  ></i></li>
+                    <li class="am-dropdown person-dropdown" data-am-dropdown> 
+                        <a href="javascript:;" class="admin am-dropdown-toggle" data-am-dropdown-toggle > 管理员 <i class="am-icon-chevron-down"></i> </a>
+                        <ul class="am-dropdown-content person-dropdown-content">
+                                <li class="person-dropdown-menu-messages">
+                                    <a href="javascript:;" class="person-dropdown-menu-messages-item am-cf">
+                                       <i class="am-icon-user" ></i> 用户信息
+                                    </a>
+                                </li>
+
+                                <li class="person-dropdown-menu-messages">
+                                    <a href="javascript:;" class="person-dropdown-menu-messages-item am-cf">
+                                        <i class="am-icon-unlock-alt" ></i> 修改密码
+                                    </a>
+                                </li>
+                                <li class="person-dropdown-menu-messages">
+                                    <a href="javascript:;" class="person-dropdown-menu-messages-item am-cf">
+                                        <i class="am-icon-power-off"></i> 退出
+                                    </a>
+                                </li>
+                            </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </header>
+        <!-- 侧边导航栏 -->
+        <div class="left-sidebar">
+            <!-- 菜单 -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-link">
+                    <a href="index.html" >
+                        <i class="icon-home sidebar-nav-link-logo"></i> 系统菜单
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html" >
+                        <i class="icon-desktop sidebar-nav-link-logo"></i> 我的桌面
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-todo sidebar-nav-link-logo"></i> 待受理问题列表
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html" class="active">
+                        <i class="icon-doing sidebar-nav-link-logo"></i> 处理中问题列表
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-accdoing sidebar-nav-link-logo"></i> 收到待处理商请函
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-doing sidebar-nav-link-logo"></i> 收到处理中商请函
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-mandoing sidebar-nav-link-logo"></i> 经办人处理中商请函
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-draft sidebar-nav-link-logo"></i> 草稿箱
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="index.html">
+                        <i class="icon-new sidebar-nav-link-logo"></i> 新建问题
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 内容区域 -->
+        <div class="content-wrapper">
+            <div class="am-tabs content-area" data-am-tabs="{noSwipe: 1}" id="doc-tab-demo-1">
+                <ul class="am-tabs-nav am-nav am-nav-tabs content-title">
+                    <li class=" "><span class="icon-close"></span><a href="javascript: void(0)">我的桌面</a></li>
+                    <li class="am-active"><span class="icon-close"></span><a href="javascript: void(0)">新建问题</a></li>
+                    <ol class="tool-list am-fr">    
+                        <li><i class="icon-tool icon-refresh"></i></li>
+                        <li><i class="icon-tool icon-theme"></i></li>
+                        <li><i class="icon-tool icon-remind"></i></li>
+                        <li><i class="icon-tool icon-setting"></i><div class="setting">设置</div></li>
+                    </ol> 
+                </ul>
+                
+                <div class="am-tabs-bd content-tab">
+                    <div class="am-tab-panel">
+                         <div class="content-area">
+
+                         </div>
+                       
+                    </div>
+                    <div class="am-tab-panel am-active">
+                        <div class="content-area">
+                             <div class="addquest">
+                                 <div class="title">
+                                    <h2>问题基本信息</h2>
+                                 </div>
+                                 <div class="quserfrom am-cf">
+                                     <div class="am-cf">
+                                     <ul class="list-w730 am-fl">
+                                         <li><label class="cdce6fa">企业名称</label><div class="stle-select"><select class="data-am-selected"><option>福建铭发水产开发有限公司</option><option>福建铭发水产开发有限公司</option></select> </div></li>
+                                         <li><label>问题标题</label><input type="text" placeholder="点击输入问题标题" > </li>
+                                         <li><label class="cdce6fa">问题类型</label><input type="text" placeholder="点击输入问题标题" > </li>
+                                         <li><label class="h270">详细信息</label><textarea placeholder="点击输入问题详细内容"></textarea> </li>
+                                         
+                                     </ul>
+                                     <ul class="list-w490 am-fl">
+                                         <li><label>附件</label>
+                                            <div class="w425">
+                                                 <a href="javajavascript:;" class="upload"> <input type="file" > <b>未选择任何文件</b> <span>选择文件</span> </a> 
+                                                 <ol class="file-list">
+                                                     <li> <a href="#"> 1.XXXX企业问题XXXX企业问题XXXX企业问题 </a> <span class="delete">删除</span></li>
+                                                     <li> <a href="#"> 1.XXXX企业问题 </a> <span class="delete">删除</span></li>
+                                                     <li> <a href="#"> 1.XXXX企业问题 </a> <span class="delete">删除</span></li>
+                                                </ol>
+                                            </div>
+                                        </li>
+                                     </ul>
+                                    </div>
+                                     <div class="btn-bar">
+                                         <a href="#" class="btn-save" >保存</a>
+                                         <a href="#" class="btn-submit" >提交</a>
+                                         <a href="#" class="btn-cancel">取消</a>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+                   </div>
+                </div>
+            </div><!-- tabs  -->
+            
+
+        </div><!-- content-wrapper -->
+        <div class="foot">
+            <p class="am-fl" > 双保系统 v1.0</p>
+            
+        </div>
+    </div><!-- am-g -->
+   
+
+    <script type="text/javascript" src="js/amazeui.min.js" ></script>
+    <script type="text/javascript" src="js/app.js" ></script>
+    <script>
+            $(function() {
+              var tabCounter = 0;
+              var $tab = $('#doc-tab-demo-1');
+              var $nav = $tab.find('.am-tabs-nav');
+              var $bd = $tab.find('.am-tabs-bd');
+          
+              function addTab() {
+                var nav = '<li><span class="icon-close"></span>' +
+                  '<a href="javascript: void(0)">标签 ' + tabCounter + '</a></li>';
+                var content = '<div class="am-tab-panel">动态插入的标签内容' + tabCounter + '</div>';
+          
+                $nav.append(nav);
+                $bd.append(content);
+                tabCounter++;
+                $tab.tabs('refresh');
+              }
+          
+              // 动态添加标签页
+              $('.js-append-tab').on('click', function() {
+                addTab();
+              });
+          
+              // 移除标签页
+              $nav.on('click', '.icon-close', function() {
+                var $item = $(this).closest('li');
+                var index = $nav.children('li').index($item);
+          
+                $item.remove();
+                $bd.find('.am-tab-panel').eq(index).remove();
+          
+                $tab.tabs('open', index > 0 ? index - 1 : index + 1);
+                $tab.tabs('refresh');
+              });
+            });
+          </script>
+</body>
+</html>

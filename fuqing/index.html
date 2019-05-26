@@ -100,13 +100,13 @@
         <div class="content-wrapper">
             <div class="am-tabs content-area" data-am-tabs="{noSwipe: 1}" id="doc-tab-demo-1">
                 <ul class="am-tabs-nav am-nav am-nav-tabs content-title">
-                    <li class="am-active"><a href="javascript: void(0)">我的桌面</a></li>
+                    <li class="am-active"><span class="icon-close"></span><a href="javascript: void(0)">我的桌面</a></li>
                     
                     <ol class="tool-list am-fr">    
                         <li><i class="icon-tool icon-refresh"></i></li>
                         <li><i class="icon-tool icon-theme"></i></li>
                         <li><i class="icon-tool icon-remind"></i></li>
-                        <li><i class="icon-tool icon-setting"></i></li>
+                        <li><i class="icon-tool icon-setting"></i><div class="setting">设置</div></li>
                     </ol> 
                 </ul>
                 
@@ -261,7 +261,7 @@
         </div><!-- content-wrapper -->
         <div class="foot">
             <p class="am-fl" > 双保系统 v1.0</p>
-            <span class="am-fr">CopyRight2016 uikaker.com 版权所有 </span>
+            <!-- <span class="am-fr">CopyRight2016 uikaker.com 版权所有 </span> -->
         </div>
     </div><!-- am-g -->
    
@@ -276,7 +276,7 @@
               var $bd = $tab.find('.am-tabs-bd');
           
               function addTab() {
-                var nav = '<li><span class="am-icon-close"></span>' +
+                var nav = '<li><span class="icon-close"></span>' +
                   '<a href="javascript: void(0)">标签 ' + tabCounter + '</a></li>';
                 var content = '<div class="am-tab-panel">动态插入的标签内容' + tabCounter + '</div>';
           
@@ -292,7 +292,7 @@
               });
           
               // 移除标签页
-              $nav.on('click', '.am-icon-close', function() {
+              $nav.on('click', '.icon-close', function() {
                 var $item = $(this).closest('li');
                 var index = $nav.children('li').index($item);
           
