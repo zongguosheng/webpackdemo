@@ -91,22 +91,23 @@ header .user-list li:hover i.icon-out{ background-position: -76px 0;}
 .sub-title .tool-list li i.icon6{background-position: -140px 0;}
 .sub-title .tool-list li i.icon7{background-position: -168px 0;}
 
+/* isade */
+
+.left-isder{ min-height: 700px; background: url(../images/bg1.jpg) repeat; padding-top: 30px; max-width: 390px;}
+.left-isder .am-tabs{width: 95%;  margin: 0 auto; }
+.left-isder .am-nav-tabs>li>a,.left-isder .am-nav-tabs>li>a:focus,.left-isder .am-nav-tabs>li>a:hover{ color: #fff;}
+.left-isder .am-nav-tabs>li.am-active>a,.left-isder .am-nav-tabs>li.am-active>a:focus,.left-isder .am-nav-tabs>li.am-active>a:hover{ background: #233453; color: #23a1fa;     border: 1px solid #1091de; border-bottom-color: transparent;}
+.left-isder .am-nav-tabs{border-bottom: 1px solid #1091de;}
+.left-isder .am-tabs-bd{border: 1px solid #1091de; border-top: none; background: #233453;}
+.left-isder .am-nav>li>a:focus,.left-isder .am-nav>li>a:hover{ background: #233453; border-bottom: 1px solid #1091de;}
+.left-isder .am-nav-tabs>li>a {  border: 1px solid transparent; }
+
+.contentinfo .mapcontent{max-height: 700px; overflow: hidden; position: relative;}
+.contentinfo .mapcontent img{max-width: 100%;}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.layer-plant{ background: #0c1f3b; width: 370px; height: 450px; position: absolute;}
+.layer-plant .layer-title{ height: 30px; line-height: 30px; font-size: 14px; font-family: "宋体"; color: #fff; background: #23a3fd;  padding-left: 10px;}
 
 
 
