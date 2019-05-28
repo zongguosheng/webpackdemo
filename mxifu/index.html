@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var clearFlag1 = false;
+		function onCheck(e, treeId, treeNode) {
+			count1();
+			if (clearFlag1) {
+				clearCheckedOldNodes1();
+			}
+		}
+		function clearCheckedOldNodes1() {
+			var zTree1 = $.fn.zTree1.getzTree1Obj("treeDemo1"),
+			nodes1 = zTree1.getChangeCheckedNodes();
+			for (var i=0, l=nodes.length; i<l; i++) {
+				nodes1[i].checkedOld = nodes1[i].checked;
+			}
+		}
+		function count1() {
+			var zTree1 = $.fn.zTree1.getzTree1Obj("treeDemo1"),
+			checkCount1 = zTree1.getCheckedNodes(true).length,
+			nocheckCount1 = zTree1.getCheckedNodes(false).length,
+			changeCount1 = zTree1.getChangeCheckedNodes().length;
+			$("#checkCount").text(checkCount1);
+			$("#nocheckCount").text(nocheckCount1);
+			$("#changeCount").text(changeCount1);
+
+		}
+		function createTree1() {
+			$.fn.zTree1.init($("#treeDemo1"), setting, zNodes);
+			count1();
+			clearFlag1 = $("#last").attr("checked");
+		}
+
+		$(document).ready(function(){
+			createTree1();			
+			$("#init").bind("change", createTree1);
+			$("#last").bind("change", createTree1);
+		});</script>
+    
+</body>
+</html>

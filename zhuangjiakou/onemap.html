@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>评估预警平台 </title>
+    <link rel="stylesheet" type="text/css" href="css/amazeui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/zTreeStyle.css"/>
+    <script type="text/javascript" src="js/jquery.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.ztree.core.js" ></script>
+    <script type="text/javascript" src="js/jquery.ztree.excheck.js" ></script>
+    <SCRIPT type="text/javascript">
+		
+		var setting = {
+			view: {
+				selectedMulti: false
+			},
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onCheck: onCheck
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"规划成果", open:true},
+			    { id:11, pId:1, name:"总体规划",open:true },
+			        { id:111, pId:11, name:"2001-2020年"},
+                        { id:1111, pId:111, name:"随意勾选"},
+                    { id:112, pId:11, name:"2001-2030年"},
+                         { id:1111, pId:112, name:"随意勾选"},
+			    { id:12, pId:1, name:"控制性详细规划规划", open:true},
+			        { id:121, pId:12, name:"2010版", open:true},
+		    	        { id:122, pId:121, name:"规划界限"},
+                        { id:123, pId:121, name:"规划界限"},
+                        { id:124, pId:121, name:"规划界限"},
+                        { id:125, pId:121, name:"规划界限"},
+                        { id:126, pId:121, name:"规划界限"},
+                    { id:131, pId:12, name:"专项规划"},
+                        { id:132, pId:131, name:"规划界限"},
+
+		];
+
+		var clearFlag = false;
+		function onCheck(e, treeId, treeNode) {
+			count();
+			if (clearFlag) {
+				clearCheckedOldNodes();
+			}
+		}
+		function clearCheckedOldNodes() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			nodes = zTree.getChangeCheckedNodes();
+			for (var i=0, l=nodes.length; i<l; i++) {
+				nodes[i].checkedOld = nodes[i].checked;
+			}
+		}
+		function count() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			checkCount = zTree.getCheckedNodes(true).length,
+			nocheckCount = zTree.getCheckedNodes(false).length,
+			changeCount = zTree.getChangeCheckedNodes().length;
+			$("#checkCount").text(checkCount);
+			$("#nocheckCount").text(nocheckCount);
+			$("#changeCount").text(changeCount);
+
+		}
+		function createTree() {
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			count();
+			clearFlag = $("#last").attr("checked");
+		}
+
+		$(document).ready(function(){
+			createTree();			
+			$("#init").bind("change", createTree);
+			$("#last").bind("change", createTree);
+		});
+		
+	</SCRIPT>
+</head>
+<body>
+    <div class="am-g">
+        <div class="header">
+            <div class="headernav">
+                <ul class="am-fr user-list">
+                    <li><a href="#"> <span class="icon-user"></span>admin </a> </li>
+                    <li><a href="#"><span class="icon-home"></span>主页</a> </li>
+                </ul>
+                <ul class="header-list am-fr">
+                    <li class="active"><a href="#">查询定位</a></li>
+                    <li><a href="#">行政区划</a></li>
+                    <li><a href="#">专题图</a></li>
+                    <li><a href="#">叠加分析</a></li>
+                    <li><a href="#">对比分析</a></li>
+                    <li><a href="#">查询统计</a></li>
+                    <li><a href="#">合规审查</a></li>
+                </ul>
+            </div>
+            <div class="sub-title">
+                <ul class="am-fr tool-list">
+                    <li><a href="#" ><i class="icon1"></i>放大 </a> </li>
+                    <li><a href="#" ><i class="icon2"></i>缩小 </a> </li>
+                    <li><a href="#" ><i class="icon3"></i>全图 </a> </li>
+                    <li><a href="#" ><i class="icon4"></i>测距 </a> </li>
+                    <li><a href="#" ><i class="icon5"></i>面积 </a> </li>
+                    <li><a href="#" ><i class="icon6"></i>清除 </a> </li>
+                    <li><a href="#" ><i class="icon7"></i>属性 </a> </li>
+                </ul>
+            </div>
+            <div class="title">
+                <h2>国土空间规划监测评估预警系统   </h2>
+                <span><i class="img"><img src="images/img2.png" > </i> 一张图 </span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left-isder">
+                <div class="am-tabs" data-am-tabs>
+                    <ul class="am-tabs-nav am-nav am-nav-tabs">
+                      <li class="am-active"><a href="#tab1">恣意</a></li>
+                      <li><a href="#tab2">等候</a></li>
+                      <li><a href="#tab3">流浪</a></li>
+                    </ul>
+                  
+                    <div class="am-tabs-bd">
+                        <ul id="treeDemo" class="ztree"></ul>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="contentinfo">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
