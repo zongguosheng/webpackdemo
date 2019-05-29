@@ -89,9 +89,9 @@
                         <i class="icon-draft sidebar-nav-link-logo"></i> 草稿箱
                     </a>
                 </li>
-                <li class="sidebar-nav-link">
-                    <a href="index.html">
-                        <i class="icon-new sidebar-nav-link-logo"></i> 新建问题
+                <li class="sidebar-nav-link addquestion">
+                    <a href="index.html" >
+                        <i class="icon-new sidebar-nav-link-logo "></i> 新建问题
                     </a>
                 </li>
             </ul>
@@ -284,12 +284,21 @@
                 $nav.append(nav);
                 $bd.append(content);
                 tabCounter++;
-                $tab.tabs('refresh');
+                // $tab.tabs('refresh');
               }
           
               // 动态添加标签页
               $('.js-append-tab').on('click', function() {
                 addTab();
+               
+              });
+              // 新建问题
+              $('.addquestion').on('click', function() {
+
+
+
+                addTab();
+               
               });
           
               // 移除标签页
