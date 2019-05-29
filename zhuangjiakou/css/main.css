@@ -106,11 +106,13 @@ header .user-list li:hover i.icon-out{ background-position: -76px 0;}
 .contentinfo .mapcontent img{max-width: 100%;}
 
 
-.layer-plant{ background: #0c1f3b; width: 370px; height: 450px; position: absolute;}
-.layer-plant .layer-title{ height: 30px; line-height: 30px; font-size: 14px; font-family: "宋体"; color: #fff; background: #23a3fd;  padding-left: 10px;}
-
-
-
+.layer-plant{ background: #0c1f3b;position: absolute;}
+.layer-plant.location{ width: 370px; height: 450px; }
+.layer-plant .layer-title{position: relative; height: 30px; line-height: 30px; font-size: 14px; font-family: "宋体"; color: #fff; background: #23a3fd;  padding-left: 10px;}
+.location .layer-title span{position: absolute; right: 10px; top: 0px; cursor: pointer;}
+.location .serch-result{border: 2px solid #23a3fd; width: 330px; height: 315px; margin: 0 auto;}
+.location .search-bar{ margin: 15px auto; width: 330px;}
+.location .search-bar input{ height: 40px; line-height: 40px; border: 0; padding-left: 10px;   border-radius: 10px; width: 330px;}
 
 
 
