@@ -26,7 +26,8 @@
 				}
 			},
 			callback: {
-				onCheck: onCheck
+                onCheck: onCheck,
+                onCheckall: onCheckall
 			}
 		};
 
@@ -36,16 +37,32 @@
 			        { id:111, pId:11, name:"2001-2020年"},
                         { id:1111, pId:111, name:"随意勾选"},
                     { id:112, pId:11, name:"2001-2030年"},
-                         { id:1111, pId:112, name:"随意勾选"},
+                         { id:1112, pId:112, name:"随意勾选"},
 			    { id:12, pId:1, name:"控制性详细规划规划", open:true},
 			        { id:121, pId:12, name:"2010版", open:true},
-		    	        { id:122, pId:121, name:"规划界限"},
-                        { id:123, pId:121, name:"规划界限"},
-                        { id:124, pId:121, name:"规划界限"},
-                        { id:125, pId:121, name:"规划界限"},
-                        { id:126, pId:121, name:"规划界限"},
+		    	        { id:1211, pId:121, name:"规划界限"},
+                        { id:1212, pId:121, name:"规划界限"},
+                        { id:1213, pId:121, name:"规划界限"},
+                        { id:1214, pId:121, name:"规划界限"},
+                        { id:1215, pId:121, name:"规划界限"},
                     { id:131, pId:12, name:"专项规划"},
                         { id:132, pId:131, name:"规划界限"},
+
+            { id:2, pId:0, name:"规划成果", open:true},
+			{ id:21, pId:2, name:"总体规划",open:true },
+			        { id:211, pId:21, name:"2001-2020年"},
+                        { id:2111, pId:211, name:"随意勾选"},
+                    { id:212, pId:21, name:"2001-2030年"},
+                         { id:2121, pId:212, name:"随意勾选"},
+			{ id:22, pId:2, name:"控制性详细规划规划", open:true},
+			        { id:221, pId:22, name:"2010版", open:true},
+		    	        { id:2211, pId:221, name:"规划界限"},
+                        { id:2212, pId:221, name:"规划界限"},
+                        { id:2213, pId:221, name:"规划界限"},
+                        { id:2214, pId:221, name:"规划界限"},
+                        { id:2215, pId:221, name:"规划界限"},
+                    { id:222, pId:22, name:"专项规划"},
+                        { id:2222, pId:222, name:"规划界限"},
 
 		];
 
@@ -57,14 +74,14 @@
 			}
 		}
 		function clearCheckedOldNodes() {
-			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			var zTree = $.fn.zTree.getZTreeObj("common"),
 			nodes = zTree.getChangeCheckedNodes();
 			for (var i=0, l=nodes.length; i<l; i++) {
 				nodes[i].checkedOld = nodes[i].checked;
 			}
 		}
 		function count() {
-			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			var zTree = $.fn.zTree.getZTreeObj("common"),
 			checkCount = zTree.getCheckedNodes(true).length,
 			nocheckCount = zTree.getCheckedNodes(false).length,
 			changeCount = zTree.getChangeCheckedNodes().length;
@@ -74,7 +91,7 @@
 
 		}
 		function createTree() {
-			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$.fn.zTree.init($("#common"), setting, zNodes);
 			count();
 			clearFlag = $("#last").attr("checked");
 		}
@@ -83,7 +100,44 @@
 			createTree();			
 			$("#init").bind("change", createTree);
 			$("#last").bind("change", createTree);
-		});
+        });
+        
+        //========================
+        var clearFlagall = false;
+		function onCheckall(e, treeId, treeNode) {
+			countall();
+			if (clearFlagall) {
+				clearCheckedOldNodes();
+			}
+		}
+		function clearCheckedOldNodes() {
+			var zTreeall = $.fn.zTree.getZTreeObj("all"),
+			nodes = zTreeall.getChangeCheckedNodes();
+			for (var i=0, l=nodes.length; i<l; i++) {
+				nodes[i].checkedOld = nodes[i].checked;
+			}
+		}
+		function countall() {
+			var zTreeall = $.fn.zTree.getZTreeObj("all"),
+			checkCountall = zTreeall.getCheckedNodes(true).length,
+			nocheckCountall = zTreeall.getCheckedNodes(false).length,
+			changeCountall = zTreeall.getChangeCheckedNodes().length;
+			$("#checkCountall").text(checkCountall);
+			$("#nocheckCountall").text(nocheckCountall);
+			$("#changeCountall").text(changeCountall);
+
+		}
+		function createTreeall() {
+			$.fn.zTree.init($("#all"), setting, zNodes);
+			countall();
+			clearFlagall = $("#lastall").attr("checked");
+		}
+
+		$(document).ready(function(){
+			createTreeall();			
+			$("#initall").bind("change", createTreeall);
+			$("#lastall").bind("change", createTreeall);
+        });
 		
 	</SCRIPT>
 </head>
@@ -122,25 +176,41 @@
             </div>
         </div>
         <div class="content">
-            <div class="left-isder">
+            <div class="left-isder am-fl am-u-lg-4">
                 <div class="am-tabs" data-am-tabs>
                     <ul class="am-tabs-nav am-nav am-nav-tabs">
-                      <li class="am-active"><a href="#tab1">恣意</a></li>
-                      <li><a href="#tab2">等候</a></li>
-                      <li><a href="#tab3">流浪</a></li>
+                      <li class="am-active"><a href="#tab1">常用图层</a></li>
+                      <li><a href="#tab2">所有图层</a></li>
+                      <li><a href="#tab3">规划文本</a></li>
                     </ul>
                   
                     <div class="am-tabs-bd">
-                        <ul id="treeDemo" class="ztree"></ul>
+                        <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                            <ul id="common" class="ztree"></ul>
+                        </div>
+                        <div class="am-tab-panel am-fade" id="tab2">
+                            <ul id="all" class="ztree"></ul>
+                        </div>
+                        <div class="am-tab-panel am-fade" id="tab3">
+                    
+                        </div>
+                       
                     </div>
                   </div>
             </div>
 
-            <div class="contentinfo">
-
+            <div class="contentinfo am-fl am-u-lg-8">
+                <div class="mapcontent">
+                    <div class="layer-plant">
+                         <h2 class="layer-title">查询定位 <span>x</span> </h2>
+                         
+                    </div>
+                    <img src="images/map.jpg" >
+                </div>
             </div>
 
         </div>
     </div>
+    <script type="text/javascript" src="js/amazeui.min.js" ></script>
 </body>
 </html>
