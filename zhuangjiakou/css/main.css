@@ -174,8 +174,15 @@ header .user-list li:hover i.icon-out{ background-position: -76px 0;}
 .assess-table{ border: 1px solid #21d4fd; width: 100%; margin-top: 20px; }
 .assess-table th{ color: #fff; text-align: center; background: #23a3fd; height: 40px; line-height: 40px;}
 .assess-table td{ color: #fff; text-align: center; height: 40px; line-height: 40px; border-bottom: 1px dashed #498d9c;}
-.assess-table .bg0a3d5c td{ background: #0a3d5c}
-.assess-table .bg0a3d5c .bgnone{background: none;}
+
+
+.table-head{ padding-right: 17px; margin-top: 20px; background-color:#23a3fd; color:#fff; height: 40px; line-height: 40px; }
+.table-head th{ text-align: center; border: 1px solid #fff;}
+.table-body{width:100%; height:739px;overflow-y:scroll; color: #fff; border: 1px solid #21d4fd; }
+.table-body table td{text-align: center; border-bottom: 1px dashed #498d9c; height: 40px; line-height: 40px; }
+.table-head table,.table-body table{width:100%;}
+.table-body tr:hover .bgnone{background: none;}
+.table-body tr:hover td{ background: #0a3d5c}
 
 
 /* 预警 */
