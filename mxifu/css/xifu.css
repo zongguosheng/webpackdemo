@@ -10,8 +10,9 @@
 
 
 .isade-nav .logo img{ max-width: 100%;}
-
-
+.isade-nav .login-regedit span{ display: block; width: 50px; height: 50px; }
+.isade-nav .login-regedit span img{max-width: 100%;}
+.isade-nav .login-regedit a{ display: inline-block; text-align: center;}
 
 
 
