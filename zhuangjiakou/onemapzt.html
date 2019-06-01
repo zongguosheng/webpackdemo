@@ -11,10 +11,23 @@
     <script type="text/javascript" src="js/jquery.min.js" ></script>
     <script type="text/javascript" src="js/jquery.ztree.core.js" ></script>
     <script type="text/javascript" src="js/jquery.ztree.excheck.js" ></script>
+    <script type="text/javascript" src="js/jquery.ztree.exedit.js" ></script>
+    
     <SCRIPT type="text/javascript">
-		
+
+        var IDMark_Switch = "_switch",
+		IDMark_Icon = "_ico",
+		IDMark_Span = "_span",
+		IDMark_Input = "_input",
+		IDMark_Check = "_check",
+		IDMark_Edit = "_edit",
+		IDMark_Remove = "_remove",
+		IDMark_Ul = "_ul",
+		IDMark_A = "_a";
+
 		var setting = {
 			view: {
+                addDiyDom: addDiyDom,
 				selectedMulti: false
 			},
 			check: {
@@ -34,8 +47,12 @@
 		var zNodes =[
 			{ id:1, pId:0, name:"规划成果", open:true},
 			    { id:11, pId:1, name:"总体规划",open:true },
-			        { id:111, pId:11, name:"2001-2020年"},
-                        { id:1111, pId:111, name:"随意勾选"},
+			        { id:111, pId:11, name:"2001-2020年",
+                        children:[
+                        {id:1111, pId:111, name:"随意勾选"}
+                        
+                    ]},
+                     
                     { id:112, pId:11, name:"2001-2030年"},
                          { id:1112, pId:112, name:"随意勾选"},
 			    { id:12, pId:1, name:"控制性详细规划规划", open:true},
@@ -138,8 +155,94 @@
 			$("#initall").bind("change", createTreeall);
 			$("#lastall").bind("change", createTreeall);
         });
+
+        function addDiyDom(treeId, treeNode) {
+			if (treeNode.parentNode && treeNode.parentNode.id!=1) return;
+			var aObj = $("#" + treeNode.tId + IDMark_A);
+			if (treeNode.id == 1111) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.append(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			} else if (treeNode.id == 1112) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			} else if (treeNode.id == 1211) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			} else if (treeNode.id == 1212) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 1213) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 1214) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 1215) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 2111) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 2121) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 2211) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 2212) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 2213) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 2214) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}else if (treeNode.id == 2222) {
+				var editStr = "<span class='demoIcon' id='diyBtn_" +treeNode.id+ "' title='"+treeNode.name+"' onfocus='this.blur();'><span class='button icon01'></span></span>";
+				aObj.after(editStr);
+				var btn = $("#diyBtn_"+treeNode.id);
+				if (btn) btn.bind("click", function(){alert("diy Button for " + treeNode.name);});
+			}
+            
+		}
+
+        $(document).ready(function(){
+			$.fn.zTree.init($("#common"), setting, zNodes);
+		});
 		
-	</SCRIPT>
+    </SCRIPT>
+    <style>
+        .ztree li span.demoIcon{padding:0 2px 0 10px; }
+        /* .ztree li span.button.icon01{ margin: 0; background: #999; display: inline-block } */
+        .ztree li span.button.icon01{margin:0; width: 31px; height: 14px;  background: url(images/icon11.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+    </style>
 </head>
 <body>
     <div class="am-g">
