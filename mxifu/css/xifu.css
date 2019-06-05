@@ -1,6 +1,6 @@
 .header .center{ width: 50%;}
 .header .center img{max-width: 100%;}
-
+.navbar{ background: #425383;}
 
 .swiper-slide img{max-width: 100%;}
 .navbar-fixed.index .page-content{ padding-top: 0;}
@@ -8,44 +8,67 @@
 
 .xifuinfo{ background: #425383; color: #fff; text-align: center; padding: 10px 15px; font-family: "microsoft yahei"; font-size: 12px; line-height: 22px; position: relative; margin-top: -90px; z-index: 99;}
 
-
+.navbar-fixed .isade-nav{ padding-top: 0;}
 .isade-nav .logo img{ max-width: 100%;}
-.isade-nav .login-regedit span{ display: block; width: 50px; height: 50px; }
+.isade-nav .login-regedit{text-align: center; margin-top: 20px;}
+.isade-nav .login-regedit span{ display: block; width: 50px; height: 50px; margin-bottom: 5px; }
 .isade-nav .login-regedit span img{max-width: 100%;}
 .isade-nav .login-regedit a{ display: inline-block; text-align: center;}
+.isade-nav .content-block{ margin: 20px auto;}
+.isade-nav .close-panel .icon{ width: 40px; height: 40px; background: url(../images/common/sprites.png) no-repeat;}
+
+.isade-nav .close-panel .icon1{background-position: 0 0;}
+.isade-nav .close-panel .icon2{background-position: -40px 0;}
+.isade-nav .close-panel .icon3{background-position: -80px 0;}
+.isade-nav .close-panel .icon4{background-position: -120px 0;}
+.isade-nav .close-panel .icon5{background-position: -160px 0;}
+.isade-nav .close-panel .icon6{background-position: -200px 0;}
+.isade-nav .list-block .close-panel .item-title{ color: #898989;}
+.isade-nav .list-block .close-panel.active .item-title{ color: #425283; }
+.isade-nav .list-block{ margin: 20px auto;}
+.isade-nav .list-block .active{ background: #f7f7f7;}
+.isade-nav .list-block .active .close-panel .icon1{background-position: 0 -40px;}
+.isade-nav .list-block .active .close-panel .icon2{background-position: -40px -40px;}
+.isade-nav .list-block .active .close-panel .icon3{background-position: -80px -40px;}
+.isade-nav .list-block .active .close-panel .icon4{background-position: -120px -40px;}
+.isade-nav .list-block .active .close-panel .icon5{background-position: -160px -40px;}
+.isade-nav .list-block .active .close-panel .icon6{background-position: -200px -40px;}
+
+.isade-nav .list-block .item-inner:after{background: none;}
+.isade-nav .list-block ul:before{background: none;}
+/* 动态新闻 */
+.newimg img{max-width: 100%;}
+.news-list .text-right{width: 50%; }
+.news-list .item-inner .item-title{ color: #333; text-overflow: -o-ellipsis-lastline;  overflow: hidden;  text-overflow: ellipsis;  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; white-space:normal; }
+.news-list .item-inner .item-subtitle{  color: #666; line-height: 24px;}
+.news-list .item-inner .item-text{ color: #666; line-height: 24px; margin-top: 5px;}
+.content-block .list-block.news-title ,.content-block .list-block.news-list{margin: 0 auto;}
+/* 加载 */
+.infinite-scroll-preloader {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+.infinite-scroll-preloader .preloader {
+    width:34px;
+    height:34px;
+  }        
+/* 联系我们 */
+
+  .facebook-card .card-header {  display: block;   padding: 10px; }
+  .facebook-card .facebook-avatar {   float: left;  }
+  .facebook-card .facebook-name {margin-left: 44px; font-size: 14px; font-weight: 500;  }
+  .facebook-card .facebook-date {margin-left: 44px; font-size: 13px; color: #8e8e93;  }
+  .facebook-card .card-footer {  background: #fafafa; }
+  .facebook-card .card-footer a { color: #81848b;  font-weight: 500; }
+  .facebook-card .card-content img {  display: block; }
+  .facebook-card .card-content-inner { padding: 15px 10px; }  
+
+.erweima{width: 60%; margin: 0 auto;}
+.erweima img{ max-width: 100%; display: block;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.leavmassage{ width: 90%; padding-left: 10px; height: 30px; line-height: 30px;}
 
 
 
