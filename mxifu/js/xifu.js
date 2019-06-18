@@ -26,7 +26,7 @@ var mySwiper3 = myApp.swiper('.swiper-3', {
 var loading = false;
  
 // 上次加载的序号
-var lastIndex = $$('.list-block li').length;
+var lastIndex = $$('.news-list li').length;
  
 // 最多可加载的条目
 var maxItems = 20;
@@ -71,10 +71,10 @@ $$('.infinite-scroll').on('infinite', function () {
     }
  
     // 添加新条目
-    $$('.list-block ul').append(html);
+    $$('.news-list ul').append(html);
  
     // 更新最后加载的序号
-    lastIndex = $$('.list-block li').length;
+    lastIndex = $$('.news-list li').length;
   }, 1000);
 });          
 

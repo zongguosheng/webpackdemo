@@ -9,23 +9,17 @@
     <meta name="theme-color" content="#2196f3">
   	<link rel="stylesheet" href="css/framework7.material.css" />
   	<link rel="stylesheet" href="css/xifu.css" />
-    <link rel="icon" href="img/icon.png">
+    <!-- <link rel="icon" href="img/icon.png"> -->
   </head>
-<body class="">
+<body>
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay" ></div>
     <div class="panel panel-right panel-cover" >
-        <div class="view navbar-fixed" data-page="panel-right">
+      <div class="view navbar-fixed" data-page="panel-right">
         <div class="pages">
           <div data-page="panel-right" class="page">
-            <!-- <div class="navbar">
-              <div class="navbar-inner">
-                <div class="center">logo</div>
-              </div>
-            </div> -->
             <div class="page-content isade-nav">
               <div class="content-block">
-                <!--<p>喜蚨科技 <a href="#" class="close-panel">关闭</a> <a href="#" data-panel="right" class="open-panel">Right Panel</a></p>-->
                	<div class="logo"><img src="images/common/logo1.png"  /> </div>
               	<div class="row login-regedit">
                   <div class="col-50"><a href="#"> <span><img src="images/common/img1.jpg" /> </span>登录</a></div>
@@ -83,7 +77,8 @@
                         <div class="item-inner">
                           <div class="item-title">个人中心</div>
                         </div>
-                      </div></a></li>
+                      </div></a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -93,9 +88,9 @@
     </div>
     
     <div class="views">
-      <div class="view view-main" data-page="index">
-        <div class="pages navbar-fixed index">
-          <div data-page="index" class="page">
+      <div class="view view-main" data-page="dynamic">
+        <div class="pages navbar-fixed">
+          <div data-page="dynamic" class="page">
             <div class="navbar">
               <div class="navbar-inner header">
                 <div class="center"><img src="images/common/logo.png" /> </div>
@@ -103,59 +98,48 @@
               </div>
             </div>
             <div class="page-content">
-              <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide"><img src="images/tmp/banner1.jpg" /></div>
+                <div class="content-block">
+                    <div class="massageinfo">
+                        <h2 class="title">基本信息</h2>
+                        <div class="list-block">
+                            <ul>
+                              <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title">融资方</div>
+                                  <div class="item-after">景德镇市既下山有限公司</div>
+                                </div>
+                              </li>
+                              <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title">法人姓名  </div>
+                                  <div class="item-after">杨杰</div>
+                                </div>
+                              </li>
+                              <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title">证件号  </div>
+                                  <div class="item-after">410305198202036532</div>
+                                </div>
+                              </li>
+                              <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title">经营范围  </div>
+                                  <div class="item-after">住宿 、中式餐、茶馆，健身房 、酒吧、KTV、美容美发按摩、咖啡厅、销售食品，烟酒、停车场服务。会议服务。</div>
+                                </div>
+                              </li>
+                              <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title">担保机构  </div>
+                                  <div class="item-after">鑫融基投资担保有限公司</div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
                     </div>
-              </div>
-				
-              <div class="content-block">
-                  
-                  <div class="card facebook-card">
-                    <div class="card-header no-border">
-                      <div class="facebook-avatar"><img src="images/tmp/img3.jpg" width="34" height="34"></div>
-                      <div class="facebook-name">联系地址：</div>
-                      <div class="facebook-date">洛阳市涧西区中州西路26号鑫融基控股大厦</div>
-                    </div>
-                  </div>
-                  <div class="card facebook-card">
-                    <div class="card-header no-border">
-                      <div class="facebook-avatar"><img src="images/tmp/img4.jpg" width="34" height="34"></div>
-                      <div class="facebook-name">联系电话：</div>
-                      <div class="facebook-date">400-8162-262</div>
-                    </div>
-                  </div>
-                  <div class="card facebook-card">
-                    <div class="card-header no-border">
-                      <div class="facebook-avatar"><img src="images/tmp/img5.jpg" width="34" height="34"></div>
-                      <div class="facebook-name">客户服务邮箱：</div>
-                      <div class="facebook-date">xifutourong@163.com</div>
-                    </div>
-                  </div>
-                  <div class="card facebook-card">
-                    <div class="card-header no-border">
-                      <div class="facebook-avatar"><img src="images/tmp/img6.jpg" width="34" height="34"></div>
-                      <div class="facebook-name">联系QQ：</div>
-                      <div class="facebook-date">276037199</div>
-                    </div>
-                  </div>
-                  <div class="content-block-title">微信公众号</div>
-                  <div class="erweima">
-                    <img src="images/tmp/img7.jpg" />
-                  </div>
-
-                  <div class="content-block-title">在线留言</div>
-                  <div class="formitem">
-                     <input class="leavmassage" type="text"  placeholder="请输入姓名" >
-                  </div>
-                  <div class="formitem">
-                    <input class="leavmassage" type="text"  placeholder="联系电话" >
-                 </div>
-                 <div class="formitem">
-                    <textarea placeholder="在此输入您的问题或建议..."></textarea>
-                 </div>
-              </div>
-            </div>
+                </div>
+                <div class="bar"></div>
+            </div> <!-- page-content -->
+           
           </div>
         </div>
       </div>
