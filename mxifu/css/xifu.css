@@ -117,7 +117,7 @@
 .invesinfo .card-header img{ max-width: 100%;}
 .order-infom .col-33{ text-align: center; padding-top: 25px;}
 .order-infom .col-33 span{ color: #ee130c; font-weight: bold;}
-.order-infom .col-33 p{ margin: 0; color: #5d5d5f;}
+.order-infom .col-33 p{ margin: 0; color: #5d5d5f;  font-size: 12px;}
 .project-explain{ color: #999; height: 0.9rem; text-indent: -3.5rem; padding:2rem 0 2rem 4rem; 
   overflow: hidden;
   word-break: break-all;
@@ -153,11 +153,13 @@
 .headafter p{ color: #303030;}
 
 
+.bg122435{ background: #122435;}
+.bg122435 .title img{max-width: 100%;}
 
-
-
-
-
+.choicexifu .item-title-row .item-title{ color: #d94e4e;}
+.choicexifu .w70{width: 70%;}
+.choicexifu .item-subtitle{ color: #fff; -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; }
 
 
 

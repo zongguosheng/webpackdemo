@@ -103,5 +103,3 @@ $$('.infinite-scroll').on('infinite', function () {
 
 
 
-
-
