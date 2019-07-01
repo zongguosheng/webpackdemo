@@ -1,17 +1,18 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require('path');  // 首先要引入node.js中path 模块，用于处理文件与目录的路径
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require("webpack")
-var path = require('path');
+
 //   var htmlWebpackPlugin = require('html-webpack-plugin');
 //   var nodeExternals = require('webpack-node-externals');
 //   var CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports ={
 
-    entry: './js/index.js',
+    entry: './js/index.js',  // 指定入口文件
     output:{
         //把一个路径或路径片段的序列解析为一个绝对路径
-        path: path.resolve(__dirname,'./dist'),
-        filename : 'bundlezongguosheng.js'
+        path: path.resolve(__dirname,'./dist'),     // 指定出口文件的路径目录
+        filename : 'bundlezongguosheng.js'     // 制定出口文件的名称
     },
     plugins: [
         　　　　new ExtractTextPlugin('./dist/css/style.css'),
@@ -24,8 +25,8 @@ module.exports ={
         rules: [
     　　　　　　{ 
     　　　　　　　　test: /\.css$/, 
-    // 　　　　　　　　loader:ExtractTextPlugin.extract("style-loader","css-loader")
-
+        　　　　　 loader:ExtractTextPlugin.extract("style-loader","css-loader"),
+                  use: [ 'style-loader', 'css-loader' ],
                     loader: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
                         use: ['css-loader']
