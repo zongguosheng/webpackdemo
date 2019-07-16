@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="home-title">
+        <image mode="widthFix" src="../../images/home_title.png"></image>
+    </view>
+    <view class="bottom">
+        <image class="home-bg" mode="widthFix" src="../../images/home_bg.png"></image>
+        <view class="btn-wrapper">
+            <button bindgetuserinfo="start" class="btn" openType="getUserInfo">开始游戏</button>
+        </view>
+    </view>
+</view>

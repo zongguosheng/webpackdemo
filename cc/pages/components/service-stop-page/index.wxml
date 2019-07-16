@@ -1,0 +1,15 @@
+<view class="shieldLanzhou" wx:if="{{visible}}">
+    <view class="shieldLanzhou_inner">
+        <view class="title">小程序下线通知</view>
+        <view class="desc">很抱歉的通知大家,由于第三方数据授权的原因,导致车来了无法通过小程序给您提供服务，APP继续提供服务不受影响,请尽快下载APP以免影响使用。</view>
+        <block wx:if="{{iOS}}">
+            <view class="tips">提示: 点击下载后,回复 1,获取下载链接</view>
+            <button bind:tap="onClickDownload" class="download" openType="contact">下载APP</button>
+        </block>
+        <button bind:tap="onClickDownload" class="download" wx:else>下载APP</button>
+        <view class="sec-others" wx:if="{{showOtherCity}}">
+            <text>您还可以选择：</text>
+            <button bind:tap="onClickOther" class="sec-others-em">查看其他城市</button>
+        </view>
+    </view>
+</view>

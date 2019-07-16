@@ -1,0 +1,31 @@
+<view class="city-service-container bg-white">
+    <view class="swiper-container flex-row-center relative">
+        <swiper bindchange="onItemChanged" class="swiper" current="{{activeIndex}}">
+            <swiper-item wx:for="{{imgUrls}}" wx:key="index">
+                <view class="city-service-title flex-center f-16 fg-3" wx:if="{{activeIndex==1}}">方法2. 在发现界面
+                        <text class="fg-blue">「 点击小程序 」</text>
+                </view>
+                <view class="city-service-title flex-center f-16 fg-3" wx:if="{{activeIndex==2}}">方法3. 在我界面
+                        <text class="fg-blue">「 钱包 」</text>
+                        城市服务中查公交
+                    </view>
+                <view class="city-service-title flex-center f-16 fg-3" style="flex-direction: column;" wx:if="{{activeIndex==3}}">
+                    <view class="flex-center">方法4. 关注公众号车来了</view>
+                    <view class="flex-center">点击菜单
+                            <text class="fg-blue">「 线路查询 」</text>
+                    </view>
+                </view>
+                <image class="slide-image {{activeIndex===0?'first-image':''}}" mode="widthFix" src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+        <view class="dots-area">
+            <view class="dot {{index==activeIndex?'active':''}}" id="{{index}}" wx:for="{{imgUrls}}" wx:key="index"></view>
+        </view>
+    </view>
+    <view class="btn-box bg-white flex-row-center">
+        <navigator hoverClass="other-navigator-hover" openType="redirect" url="../main/main" wx:if="{{isLastStep}}">
+            <button class="next-step fg-white bg-blue">进入小程序</button>
+        </navigator>
+        <button bindtap="tapToNext" class="next-step fg-white bg-blue" wx:else>下一步</button>
+    </view>
+</view>

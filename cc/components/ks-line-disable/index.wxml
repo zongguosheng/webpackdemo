@@ -1,0 +1,13 @@
+<view class="item-section">
+    <view class="info-basic">
+        <view class="item-name">{{line.display.lineName}}</view>
+        <view class="item-direction">开往 {{line.display.endSn}}</view>
+        <view class="item-target-stop">候车站 {{line.display.sn}}</view>
+    </view>
+    <view class="info-main">
+        <view bind:tap="onTapDelAction" class="item-action" data-item="{{line}}">
+            <image class="item-action-del" src="../../resource/images/ic_delete@2x.png"></image>
+        </view>
+        <view class="item-status">站点已变更</view>
+    </view>
+</view>

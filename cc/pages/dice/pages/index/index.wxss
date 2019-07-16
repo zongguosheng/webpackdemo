@@ -1,0 +1,106 @@
+page {
+    height: 100%;
+    background: linear-gradient(180deg,rgba(39,41,110,1),rgba(49,99,156,1),rgba(86,144,201,1));
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.btn-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 64rpx;
+    width: 280rpx;
+    height: 114rpx;
+    background: linear-gradient(180deg,rgba(228,194,18,1),rgba(238,99,18,1));
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+    border-radius: 57rpx;
+}
+
+.btn-wrapper .btn {
+    position: relative;
+    top: -10rpx;
+    display: inline-block;
+    width: 280rpx;
+    height: 114rpx;
+    line-height: 114rpx;
+    background: linear-gradient(180deg,rgba(255,246,96,1),rgba(228,200,7,1));
+    box-shadow: 0px 0px 6px 0px rgba(255,255,255,0.5);
+    border-radius: 57rpx;
+    color: #BF2B17;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.kickout-dialog {
+    text-align: center;
+}
+
+.kickout-dialog .text {
+    margin: 110rpx 116rpx 84rpx;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.kickout-dialog .actions {
+    position: static;
+    margin-bottom: 70rpx;
+}
+
+.kickout-dialog .actions .btn-wrapper {
+    margin: 0 20rpx;
+}
+
+.join-dialog {
+    text-align: center;
+}
+
+.join-dialog .text {
+    margin: 110rpx 152rpx 84rpx;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.join-dialog .actions {
+    position: static;
+    margin-bottom: 70rpx;
+}
+
+.join-dialog .actions .btn-wrapper {
+    width: 240rpx;
+    margin: 0 20rpx;
+}
+
+.join-dialog .actions .btn-wrapper .btn {
+    width: 240rpx;
+}
+
+.qrcode-dialog {
+    text-align: center;
+}
+
+.qrcode-dialog .text {
+    margin: 132rpx 136rpx 84rpx;
+    font-size: 18px;
+    font-weight: bold;
+    color: #D3BF14;
+}
+
+.qrcode-dialog .image-wrapper {
+    display: inline-block;
+    width: 360rpx;
+    height: 360rpx;
+    margin-bottom: 174rpx;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+.qrcode-dialog .image-wrapper image {
+    width: 360rpx;
+    height: 360rpx;
+}

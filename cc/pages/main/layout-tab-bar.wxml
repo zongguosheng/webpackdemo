@@ -1,0 +1,38 @@
+<view class="tab-bar bg-white {{isIpx?'iphone-x-bottom-fix':''}}" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <form bindsubmit="tabClick" class="tab-bar-item" data-tab="main" reportSubmit="true">
+        <button class="tab-bar-item" formType="submit" hoverClass="none">
+            <view class="tab-bar-item-content">
+                <image class="tab-bar-icon" hidden="{{activeTab!=='main'}}" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/home_ic_h@2x.png"></image>
+                <image class="tab-bar-icon" hidden="{{activeTab==='main'}}" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/home_ic_n@2x.png"></image>
+                <view class="tab-bar-text {{activeTab==='main'&&!showShare?'fg-blue':'fg-a'}}">
+          首页
+        </view>
+            </view>
+        </button>
+    </form>
+    <form bindsubmit="tabClick" class="tab-bar-item" data-tab="transfer" reportSubmit="true">
+        <button class="tab-bar-item" formType="submit" hoverClass="none">
+            <view class="tab-bar-item-content">
+                <image class="tab-bar-icon" hidden="{{activeTab!=='transfer'}}" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/home_travel_ic_h@2x.png"></image>
+                <image class="tab-bar-icon" hidden="{{activeTab==='transfer'}}" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/home_travel_ic_n@2x.png"></image>
+                <view class="tab-bar-text {{activeTab==='transfer'?'fg-blue':'fg-a'}}">路线</view>
+            </view>
+        </button>
+    </form>
+    <button class="tab-bar-item" data-tab="share" openType="share" wx:if="{{suggestEnable}}">
+        <view class="tab-bar-item-content">
+            <image class="tab-bar-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/home_recommend_ic_n@2x.png"></image>
+            <view class="tab-bar-text fg-a">推荐</view>
+        </view>
+    </button>
+    <form bindsubmit="tabClick" class="tab-bar-item " data-tab="mine" reportSubmit="true">
+        <button class="tab-bar-item" formType="submit" hoverClass="none">
+            <view class="tab-bar-item-content">
+                <i class="ad-red-point" wx:if="{{mineTabShowRedPoint}}"></i>
+                <image class="tab-bar-icon" hidden="{{activeTab!=='mine'}}" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/personal_ic_h@2x.png"></image>
+                <image class="tab-bar-icon" hidden="{{activeTab==='mine'}}" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/personal_ic_n@2x.png"></image>
+                <view class="tab-bar-text {{activeTab==='mine'?'fg-blue':'fg-a'}}">我的</view>
+            </view>
+        </button>
+    </form>
+</view>

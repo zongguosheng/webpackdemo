@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "站点详情",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "ADBanner": "/components/adbanner/adbanner"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "collectformid": "/components/collectformid/collectformid",
+        "countdown-timer": "/pages/specialtopics/kanjia/components/countdown-timer/index",
+        "notice": "/pages/specialtopics/kanjia/components/notice/notice",
+        "c-mask": "/components/c-mask/index"
+    }
+}

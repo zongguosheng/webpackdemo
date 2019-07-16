@@ -1,0 +1,57 @@
+<template name="buses">
+    <block wx:for="{{lines}}" wx:key="lineId">
+        <view class="item-card bg-white f-light">
+            <view class="bus-card flex-row-base flex-between">
+                <view bindtap="goLineDetail" class="click-scope flex-row-base flex-between flex-auto text-ellipsis" data-line-id="{{item.line.lineId}}" data-line-name="{{item.line.name}}" data-target-order="{{item.targetStation.order}}">
+                    <view class="bus-card-line-info text-ellipsis">
+                        <view class="bus-card-line-name fg-3 f-16 text-ellipsis">
+              {{item.line.displayName}}
+            </view>
+                        <view class="fg-6 f-12 text-ellipsis">
+              {{item.nextStation.sn==='-1'?'终点站':'下一站 · '+item.nextStation.sn}}
+            </view>
+                    </view>
+                    <view class="bus-card-station-info text-right">
+                        <block wx:if="{{item.line.state_NORMAL}}">
+                            <view class="em-time">
+                                <text class="f-24 fg-3">{{item.displayBus.emTime.time}}</text>
+                                <text class="f-10 fg-3">{{item.displayBus.emTime.unit}}</text>
+                                <image class="icon_home_signal" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/signal_blue_ic_04@2x.png" wx:if="{{item.displayBus.emTime.rType}}"></image>
+                            </view>
+                            <view class="other-time">
+                                <block wx:if="{{item.displayBus.secondTime.time}}">
+                                    <text class="f-10 fg-6">{{item.displayBus.secondTime.time}}</text>
+                                    <text class="f-10 fg-6">{{item.displayBus.secondTime.unit}}</text>
+                                </block>
+                                <block wx:if="{{item.displayBus.thirdTime.time}}">
+                                    <text class="f-10 fg-6">; {{item.displayBus.thirdTime.time}}</text>
+                                    <text class="f-10 fg-6">{{item.displayBus.thirdTime.unit}}</text>
+                                </block>
+                            </view>
+                        </block>
+                        <block wx:elif="{{!item.line.state_NORMAL}}">
+                            <block wx:if="{{item.line.state<0}}">
+                                <view class="em-time lh-34">
+                                    <text class="f-20">--</text>
+                                </view>
+                                <view class="other-time fg-6 f-11">{{item.line.displayState}}</view>
+                            </block>
+                        </block>
+                    </view>
+                </view>
+                <view bindtap="reverseLine" class="bus-card-reverse-line flex-center" data-index="{{index}}" data-near-line-index="{{nearLineIndex}}">
+                    <image class="icon-reverse-line" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/divert_ic@2x.png" wx:if="{{item.reverseDirection>=0}}"></image>
+                    <image class="icon-reverse-line" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/divert_gray_ic@2x.png" wx:else></image>
+                    <view class="divider-line-column bg-black"></view>
+                </view>
+                <view bindtap="toggleFav" class="bus-card-reverse-line flex-none lh-40" data-fav-list-index="{{favListIndex}}" data-index="{{index}}" wx:if="{{item.source==='fav'}}">
+                    <view class="icon-save-fav" wx:if="{{item.fav===1}}"></view>
+                    <view class="icon-unsavefav" wx:else></view>
+                    <view class="divider-line-column bg-black"></view>
+                </view>
+            </view>
+            <view class="divider-line ml15" wx:if="{{index<lines.length-1}}"></view>
+        </view>
+        <view class="mb5" wx:if="{{index===lines.length-1}}"></view>
+    </block>
+</template>

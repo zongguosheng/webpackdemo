@@ -1,0 +1,32 @@
+<search-box-2 bindonBlur="formSubmit" bindonClickClear="clearInput" bindonSubmitSearch="formSubmit" placeholder="{{placeholder}}" searchValue="{{searchValue}}"></search-box-2>
+<view bindtap="myPositionClick" class="transfer-my-position-container bg-white" wx:if="{{!noSearchResult}}">
+    <image class="transfer-my-position-ico ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/cur_pos_blue_14px.png"></image>
+    <view class="transfer-my-position fg-blue f-14">我的位置</view>
+</view>
+<view class="search-result bg-fb fg-a f-13" wx:if="{{poiList.length>0}}">搜索结果</view>
+<view bindtap="poiClick" class="search-poi-list bg-white" data-poi="{{item}}" wx:if="{{poiList.length>0}}" wx:for="{{poiList}}" wx:key="{{index}}">
+    <view class="search-poi-ico-block">
+        <image class="search-poi-ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/poi_ic.png"></image>
+    </view>
+    <view class="search-poi-item text-ellipsis">
+        <view class="f-14 text-ellipsis">{{item.sn}}</view>
+        <view class="f-12 fg-6">{{item.address}}</view>
+    </view>
+</view>
+<block wx:if="{{poiSearchHistories.length>0&&poiList.length<1&&!noSearchResult}}">
+    <view class="search-result bg-fb fg-a f-13">搜索历史</view>
+    <view bindtap="poiClick" class="search-poi-list bg-white" data-poi="{{item}}" wx:for="{{poiSearchHistories}}" wx:key="{{index}}">
+        <view class="search-poi-ico-block">
+            <image class="search-poi-ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/poi_ic.png"></image>
+        </view>
+        <view class="search-poi-item text-ellipsis">
+            <view class="f-14 text-ellipsis">{{item.sn}}</view>
+            <view class="f-12 fg-6 text-ellipsis">{{item.address}}</view>
+        </view>
+    </view>
+    <list-footer bindonClick="showClearModel" text="清空搜索记录"></list-footer>
+</block>
+<view class="no-search-result-container" wx:if="{{noSearchResult}}">
+    <i class="none-search-pic"></i>
+    <div class="f-14 fg-a lh-20">暂无搜索结果</div>
+</view>

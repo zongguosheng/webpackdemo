@@ -1,0 +1,52 @@
+<collect>
+    <view class="container">
+        <home bind:start="start" wx:if="{{status===0}}"></home>
+        <room bind:deletePlayer="deletePlayer" bind:invite="invite" bind:onDiceChange="onDiceChange" bind:start="startPlay" diceNum="{{diceNum}}" isMaster="{{isMaster}}" players="{{players}}" roomId="{{roomId}}" wx:if="{{status===1}}"></room>
+        <dice bind:openConfirmCount="getResult" diceNum="{{diceNum}}" isMaster="{{isMaster}}" isOpen="{{isOpen}}" randArr="{{randArr}}" roomId="{{roomId}}" wx:if="{{status===2}}"></dice>
+        <result bind:exitGame="exitGame" bind:replay="replay" diceDetail="{{diceDetail}}" isMaster="{{isMaster}}" one="{{one}}" onePlus="{{onePlus}}" roomId="{{roomId}}" wx:if="{{status===3}}"></result>
+    </view>
+    <dialog isShow="{{isShowJoinDialog}}">
+        <view class="join-dialog">
+            <view class="text">确认进入房间？</view>
+            <view class="actions">
+                <view class="btn-wrapper">
+                    <button bindtap="cancelJoin" class="btn">取消</button>
+                </view>
+                <view class="btn-wrapper">
+                    <button bind:getuserinfo="confirmJoin" class="btn" openType="getUserInfo">确认</button>
+                </view>
+            </view>
+        </view>
+    </dialog>
+    <dialog isShow="{{isShowHistoryDialog}}">
+        <view class="join-dialog">
+            <view class="text">系统检测到您已断线，是否回到房间？</view>
+            <view class="actions">
+                <view class="btn-wrapper">
+                    <button bindtap="cancelJoin" class="btn">取消</button>
+                </view>
+                <view class="btn-wrapper">
+                    <button bind:getuserinfo="confirmJoin" class="btn" openType="getUserInfo">确认</button>
+                </view>
+            </view>
+        </view>
+    </dialog>
+    <dialog isShow="{{isShowKickOutDialog}}">
+        <view class="kickout-dialog">
+            <view class="text">你已被好友踢出房间</view>
+            <view class="actions">
+                <view class="btn-wrapper">
+                    <button bindtap="kickOut" class="btn">确认</button>
+                </view>
+            </view>
+        </view>
+    </dialog>
+    <dialog bind:close="hideQrCode" isShow="{{isShowQrCode}}" showClose="{{true}}">
+        <view class="qrcode-dialog">
+            <view class="text">邀请好友扫码加入</view>
+            <view class="image-wrapper">
+                <image src="{{qrCode}}"></image>
+            </view>
+        </view>
+    </dialog>
+</collect>

@@ -1,0 +1,52 @@
+@import "../../../../../__wuBaseWxss__/5.wxss";
+
+.fail-card {
+    width: 686rpx;
+    padding-bottom: 40rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    position: absolute;
+    top: 268rpx;
+    left: 32rpx;
+}
+
+.image-fail {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -124rpx;
+    width: 238rpx;
+    height: 212rpx;
+}
+
+.fail-title {
+    font-weight: 500;
+    height: 72rpx;
+    font-size: 48rpx;
+    color: #FD4140;
+    line-height: 72rpx;
+    margin-top: 104rpx;
+}
+
+.fail-desc-1 {
+    height: 34rpx;
+    font-size: 24rpx;
+    color: #ccc;
+    line-height: 34rpx;
+    margin-top: 16rpx;
+}
+
+.fail-desc-3 {
+    font-size: 28rpx;
+    color: #333;
+    line-height: 40rpx;
+    margin-top: 40rpx;
+}
+
+.btn-try {
+    width: 304rpx;
+    position: absolute;
+    bottom: 70rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,6 @@
+.compat-page {
+    position: relative;
+}
+
+.compat {
+}

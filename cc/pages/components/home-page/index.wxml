@@ -1,0 +1,72 @@
+<view class="top bg-white" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="city flex-column-center">
+        <view catchtap="goSwitchCity" class="city-name f-30 fg-3">{{cityName}}</view>
+        <image catchtap="goSwitchCity" class="city-name-arrow-down" src="../../resource/images/arrow_down_ic@2x.png" wx:if="{{switchCity}}"></image>
+    </view>
+    <form bindsubmit="goSearch" reportSubmit="true">
+        <button formType="submit" hoverClass="none" style="overflow: visible">
+            <view class="search bg-common flex-column-center relative">
+                <image class="search-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/frame_search_ic@2x.png"></image>
+                <view class="f-12 fg-a">搜索公交线路、车站、地点</view>
+            </view>
+        </button>
+    </form>
+    <ad-grid ads="{{mGridAds}}" bind:onTapAd="onTapTopAd" wx:if="{{mGridAds.length>0}}"></ad-grid>
+</view>
+<view class="container bg-common page-main">
+    <view class="city-switch-block" wx:if="{{showSwitchGpsCity}}">
+        <view bindtap="changeCity" class="city-switch bg-red flex-column-center f-14 fg-white">
+            你似乎位于{{gpsCity.cityName}}，点击此处切换城市
+        </view>
+        <image bindtap="hideChangeCity" class="city-close-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/close_white_ic@2x.png"></image>
+    </view>
+    <scroll-view class="channel" scrollX="true">
+        <view bindtap="tagClick" class="channel-item flex-center" data-tag="suggest">
+            <view class="channel-normal fg-6 f-12 flex-center {{activeTag==='suggest'?'channel-item-active':''}}">
+                推荐
+            </view>
+        </view>
+        <view bindtap="favTagClick" class="channel-item flex-center" data-index="{{index}}" data-tag="fav" wx:for="{{favTagList}}" wx:key="{{index}}">
+            <view class="channel-normal fg-6 f-12 flex-center {{activeTag==='fav'&&activeFavTagIndex===index?'channel-item-active':''}}">
+                {{item}}
+            </view>
+        </view>
+        <view bindtap="tagClick" class="channel-item flex-center" data-tag="history">
+            <view class="channel-normal fg-6 f-12 flex-center {{activeTag==='history'?'channel-item-active':''}}">
+                历史
+            </view>
+        </view>
+    </scroll-view>
+    <block wx:if="{{lines.length<1&&activeTag==='fav'}}">
+        <view class="ad-block" wx:if="{{!noShowAD&&!sessionNoShowAD&&!isNewUser}}">
+            <ADBanner adBannerOuter="ad-banner-type-2" adSite="0"></ADBanner>
+        </view>
+        <view class="line-empty-section">
+            <view class="line-empty-text">没有收藏线路</view>
+        </view>
+    </block>
+    <block wx:if="{{lines.length<1&&activeTag==='history'}}">
+        <view class="ad-block" wx:if="{{!noShowAD&&!sessionNoShowAD&&!isNewUser}}">
+            <ADBanner adBannerOuter="ad-banner-type-1" adSite="{{adSite}}"></ADBanner>
+        </view>
+        <view class="line-empty-section">
+            <view class="line-empty-text">没有历史线路</view>
+        </view>
+    </block>
+    <block wx:for="{{lines}}" wx:key="{{index}}">
+        <view class="ad-block" wx:if="{{index===0&&!userLoad&&!noShowAD&&!sessionNoShowAD&&!isNewUser}}">
+            <ADBanner adBannerOuter="ad-banner-type-1" adSite="{{adSite}}" id="adbanner"></ADBanner>
+        </view>
+        <line-disable-view bind:onTapDelAction="onTapDelFavAction" line="{{item}}" wx:if="{{activeTag==='fav'&&(item.line.state===1||item.line.state===2)}}"></line-disable-view>
+        <form bindsubmit="goLineDetail" data-line-id="{{item.line.lineId}}" data-line-name="{{item.line.name}}" data-target-order="{{item.targetStation.order}}" reportSubmit="true" wx:else>
+            <button formType="submit" hoverClass="none">
+                <line-view line="{{item}}"></line-view>
+            </button>
+        </form>
+    </block>
+    <form bindsubmit="goStationDetail" data-s-id="{{item.sId}}" data-sn="{{item.sn}}" reportSubmit="true" wx:for="{{stations}}" wx:key="{{index}}">
+        <button formType="submit" hoverClass="none">
+            <stop-view stop="{{item}}"></stop-view>
+        </button>
+    </form>
+</view>

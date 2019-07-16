@@ -1,0 +1,422 @@
+@import "../../../../../__wuBaseWxss__/5.wxss";
+
+.container {
+    padding: 78rpx 32rpx 162rpx 32rpx;
+}
+
+.load-error {
+    height: 100%;
+}
+
+.load-error-placeholder {
+    height: 33%;
+}
+
+.load-error-text {
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+
+.first-card {
+    border-radius: 16rpx;
+    background-color: white;
+    position: relative;
+    padding: 54rpx 20rpx 0rpx;
+}
+
+.avatar-url {
+    width: 96rpx;
+    height: 96rpx;
+    position: absolute;
+    left: 50%;
+    margin-left: -48rpx;
+    top: -48rpx;
+    border-radius: 50%;
+}
+
+.nick-name {
+    color: #262628;
+    font-size: 32rpx;
+    text-align: center;
+    margin: 0 auto 24rpx;
+    width: 422rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+}
+
+.goods-section {
+    background: rgba(247,247,247,1);
+    display: flex;
+    flex-direction: row;
+    border-radius: 8rpx;
+}
+
+.good-img-section {
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.good-image {
+    display: block;
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.goods-detail {
+    flex: 1;
+    padding: 24rpx 24rpx 24rpx 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.goods-desc {
+    flex: 1;
+}
+
+.good-title {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.goods-meta {
+    margin-top: 8rpx;
+    color: #AAAAAA;
+}
+
+.good-left {
+    display: flex;
+    align-items: baseline;
+}
+
+.good-money {
+    color: #FF7052;
+    font-weight: 700;
+    font-size: 40rpx;
+}
+
+.good-count {
+    flex: 1;
+    color: #FF7052;
+    font-size: 20rpx;
+    margin-left: 8rpx;
+}
+
+.go-shop {
+    color: #999999;
+    font-size: 20rpx;
+}
+
+.go-shop-icon {
+    width: 10rpx;
+    height: 18rpx;
+    vertical-align: middle;
+    margin: 0 8rpx;
+}
+
+.timecount-box {
+    margin-top: 24rpx;
+    height: 40rpx;
+    display: flex;
+    font-size: 28rpx;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-time-count {
+    display: inline-block;
+}
+
+.rate-img {
+    width: 50rpx;
+    height: 26rpx;
+}
+
+.mr-20 {
+    margin-right: 20rpx;
+}
+
+.ml-20 {
+    margin-left: 20rpx;
+}
+
+.rate-money {
+    color: #333;
+    font-size: 32rpx;
+    margin-top: 48rpx;
+    font-weight: 700;
+    text-align: center;
+}
+
+.rate-line {
+    position: relative;
+    width: 542rpx;
+    height: 16rpx;
+    background: rgba(235,235,235,1);
+    border-radius: 20rpx;
+    margin: 24rpx auto 0;
+}
+
+.rate-line-yellow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 16rpx;
+    background: rgba(255,212,81,1);
+    border-radius: 20rpx;
+}
+
+.goods-actions {
+    margin-top: 40rpx;
+}
+
+.helper-section {
+    margin-top: 84rpx;
+    padding: 0 12rpx;
+}
+
+.helper-header {
+    height: 34rpx;
+    font-size: 24rpx;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.helper-title {
+    margin: 0 20rpx;
+}
+
+.helper-divider {
+    height: 2rpx;
+    background: rgba(245,245,245,1);
+}
+
+.helper-title-divider {
+    flex: 1;
+    height: 2rpx;
+    background: rgba(245,245,245,1);
+}
+
+.helper-list-divider {
+    height: 2rpx;
+    background: rgba(245,245,245,1);
+    width: 100%;
+}
+
+.helper-info {
+    display: flex;
+    align-items: center;
+    height: 92rpx;
+}
+
+.helper-avatar {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-right: 24rpx;
+}
+
+.helper-nick-name {
+    flex: 1;
+    font-size: 28rpx;
+    margin-right: 28rpx;
+    color: #333;
+}
+
+.helper-help-money {
+    font-size: 24rpx;
+    color: #FF7052;
+    text-align: right;
+}
+
+.action-btns {
+    display: flex;
+}
+
+.action-btns .action-btn {
+    flex: 1;
+}
+
+.btn-wx-circle {
+    margin-right: 22rpx;
+}
+
+.btn-1 {
+    height: 96rpx;
+    margin: 16rpx 52rpx;
+}
+
+.btn-2 {
+    height: 96rpx;
+    width: 304rpx;
+    margin: 0;
+}
+
+.btn-box {
+    margin-top: 16rpx;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 101;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.maybe-friend {
+    margin-top: 32rpx;
+    background: rgba(255,255,255,1);
+    border-radius: 6px;
+    padding: 32rpx 40rpx;
+}
+
+.maybe-friend-item {
+    flex: none;
+    text-align: center;
+    margin-top: 32rpx;
+    width: 150rpx;
+    font-size: 20rpx;
+    color: #666;
+}
+
+.maybe-friend-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.maybe-friend-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    margin: 0 12rpx;
+}
+
+.maybe-friend-line {
+    width: 60rpx;
+    height: 2rpx;
+    background-color: #FB4235;
+    opacity: 0.2;
+}
+
+.maybe-friend-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.maybe-friend-avatar-url {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    width: 560rpx;
+    height: 660rpx;
+    background-color: white;
+    border-radius: 16rpx;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 102;
+}
+
+.dialog-header {
+    width: 560rpx;
+    height: 256rpx;
+}
+
+.dialog-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16rpx 16rpx 0 0;
+}
+
+.dialog-content {
+    flex: 1;
+}
+
+.dialog-footer {
+    padding-bottom: 60rpx;
+}
+
+.dialog-btn {
+    margin: 0 70rpx;
+}
+
+.dialog-close {
+    position: absolute;
+    bottom: -112rpx;
+    width: 64rpx;
+    height: 64rpx;
+    left: 50%;
+    margin-left: -32rpx;
+}
+
+.dialog-content-main {
+    margin-top: 50rpx;
+    color: #333333;
+    font-size: 40rpx;
+    text-align: center;
+    font-weight: 500;
+}
+
+.dialog-content-meta {
+    margin-top: 40rpx;
+    font-size: 32rpx;
+    color: #333333;
+    text-align: center;
+}
+
+.dialog-content-status {
+    margin-top: 80rpx;
+    color: #333333;
+    font-size: 40rpx;
+    text-align: center;
+    font-weight: 500;
+}
+
+.dialog-content-money {
+    color: #FF5046;
+    font-size: 64rpx;
+}
+
+.dialog-auth {
+    width: 560rpx;
+    height: 348rpx;
+    border-radius: 16rpx;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 102;
+}
+
+.dialog-auth-content {
+    margin-top: 96rpx;
+    font-size: 32rpx;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+.dialog-auth-action {
+    width: 420rpx;
+    margin-top: 66rpx;
+}

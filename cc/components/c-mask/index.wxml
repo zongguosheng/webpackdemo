@@ -1,0 +1,4 @@
+<view catchtouchmove bind:tap="onMaskTaped" class="c-mask"></view>
+<view bind:tap="onMaskTaped" class="c-mask-content c-mask-content-external">
+    <slot></slot>
+</view>

@@ -1,0 +1,52 @@
+.take-bus-container {
+    height: 202px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+.line {
+    height: 58px;
+}
+
+.share-bus {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.picker {
+    height: 46px;
+}
+
+.target-station {
+    height: 18px;
+    padding: 0 4px;
+    background-color: rgba(0,130,220,0.08);
+    border: 1px solid rgba(0,130,220,0.24);
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.arrow-down {
+    margin-left: 8px;
+    width: 6px;
+    height: 4px;
+}
+
+.enter-share {
+    height: 48px;
+    margin: 25px 16px 0 16px;
+    opacity: 0.5;
+    border-radius: 24px;
+}
+
+.active {
+    opacity: 1;
+}
+
+.one_line {
+    max-width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

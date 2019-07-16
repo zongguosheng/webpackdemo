@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "我的砍价成果",
+    "usingComponents": {
+        "prize-card": "/pages/specialtopics/kanjia/components/prize-card-2/index"
+    }
+}

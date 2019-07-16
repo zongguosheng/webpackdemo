@@ -1,0 +1,4 @@
+<view bind:tap="onClickChangeCity" class="city">
+    <view class="city-name">{{city.name}}</view>
+    <image class="city-name-arrow-down" src="../../../resource/images/arrow_down_ic@2x.png" wx:if="{{selectable}}"></image>
+</view>

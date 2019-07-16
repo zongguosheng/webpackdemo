@@ -1,0 +1,29 @@
+@import "../linedetail/linedetail.wxss";
+
+.card {
+    height: 126px;
+    margin: 0 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+    position: relative;
+    padding-top: 28px;
+}
+
+.avatar-url {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 50%;
+    margin-left: -24px;
+    top: -24px;
+    border-radius: 50%;
+}
+
+.nick-name {
+    text-align: center;
+}
+
+.line-name {
+    margin-top: 8px;
+    text-align: center;
+}

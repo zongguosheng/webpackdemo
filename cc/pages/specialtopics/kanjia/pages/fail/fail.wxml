@@ -1,0 +1,7 @@
+<view class="kanjia-bg">
+    <view class="fail-card text-center">
+        <image class="image-fail" src="/pages/specialtopics/kanjia/images/bargain@2x.png"></image>
+        <view class="fail-title">很遗憾，砍价失败</view>
+        <view class="fail-desc-1" wx:if="{{options.reason}}">{{options.reason}}</view>
+    </view>
+</view>

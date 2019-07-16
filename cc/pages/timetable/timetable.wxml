@@ -1,0 +1,30 @@
+<view class="container">
+    <view class="line-detail bg-fb">
+        <view class="line-sn f-12 fg-3 text-ellipsis">{{line.startSn}} → {{line.endSn}}</view>
+        <view class="line-runtime f-10 fg-6 text-ellipsis">首 {{line.firstTime}} 末 {{line.lastTime}}
+      <block wx:if="{{line.price}}"> · 票价{{line.price}}</block>
+        </view>
+    </view>
+</view>
+<view class="table-container">
+    <block wx:for="{{timetable}}" wx:for-item="time" wx:key="{{index}}">
+        <view bindtap="openTimeTable" class="times-list bg-white " data-index="{{index}}">
+            <view class="title bg-fb fg-6 fg-14">
+                <image class="time-table-ic" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/list_timetable_ic@2x.png"></image>
+        {{time.fTime}} ~ {{time.eTime}}
+        <view class="bd-red tag-type fg-red f-10 flex-center" wx:if="{{time.type}}">{{time.type===1?'早高峰':'晚高峰'}}
+        </view>
+                <image class="time-table-arrow {{time.open?'icon_timetable_open_rotate':''}}" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/list_arrow_down_ic@2x.png"></image>
+            </view>
+            <view style="margin-bottom:16px;margin-left: 16px;height: 1px;background-color: rgba(0, 0, 0, 0.04);" wx:if="{{time.open}}"></view>
+            <view class="block time-text fg-6 f-12" wx:if="{{time.open}}" wx:for="{{time.times}}" wx:for-index="idx" wx:key="unique">
+                <view class="circle bg-6" wx:if="{{time.isCurrent&&currY===idx}}"></view>
+        {{item}}
+      </view>
+        </view>
+        <view style="padding-bottom: 50px" wx:if="{{index===timetable.length-1}}"></view>
+    </block>
+</view>
+<view class="times-information fg-white bg-red flex-center f-12">
+  历史时刻表由车来了提供，仅供参考，请提前候车
+</view>

@@ -1,0 +1,109 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/search/search",
+    "pages/linedetail/linedetail",
+    "pages/stationdetail/stationdetail",
+    "pages/switch-city/switch-city",
+    "pages/web/index",
+    "pages/poisearch/poisearch",
+    "pages/transferplan/transferplan",
+    "pages/transferdetail/transferdetail",
+    "pages/takebus/takebus",
+    "pages/morebus/morebus",
+    "pages/ugc/ugc",
+    "pages/timetable/timetable",
+    "pages/bindPhoneNumber/bindPhoneNumber",
+    "pages/cityService/cityService",
+    "pages/dice/pages/index/index",
+    "pages/detail/detail",
+    "pages/directservice/directservice",
+    "pages/specialtopics/kanjia/pages/index/index",
+    "pages/specialtopics/kanjia/pages/live/live",
+    "pages/specialtopics/kanjia/pages/fail/fail",
+    "pages/specialtopics/kanjia/pages/goodsdetail/goodsdetail",
+    "pages/specialtopics/kanjia/pages/mine/index",
+    "pages/specialtopics/kanjia/pages/share/index",
+    "pages/remind-download/remind-download",
+    "pages/increase-download/index",
+    "pages/debug/index"
+   
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "subPackages": [
+    {
+      "root": "added/onlineBoard/",
+      "pages": [
+        "added/onlineBoard/pages/onlineBoard"
+      ]
+    },
+    {
+      "root": "added/plugin-nav/",
+      "pages": [
+        "added/plugin-nav/pages/index/index"
+      ]
+    },
+    {
+      "root": "added/pay/",
+      "pages": [
+        "added/pay/pages/guide/guide",
+        "added/pay/pages/AgreementChelaile/AgreementChelaile",
+        "added/pay/pages/AgreementBank/AgreementBank",
+        "added/pay/pages/autonym/autonym",
+        "added/pay/pages/bindBankCard/bindBankCard",
+        "added/pay/pages/reservedPhone/reservedPhone",
+        "added/pay/pages/address/address",
+        "added/pay/pages/accountsStatus/accountsStatus",
+        "added/pay/pages/busCode/busCode",
+        "added/pay/pages/personalCenter/personalCenter",
+        "added/pay/pages/accountExplain/accountExplain",
+        "added/pay/pages/range/range",
+        "added/pay/pages/notice/notice",
+        "added/pay/pages/transaction/transaction",
+        "added/pay/pages/help/help",
+        "added/pay/pages/recharge/recharge",
+        "added/pay/pages/payResult/payResult",
+        "added/pay/pages/drawMoney/drawMoney",
+        "added/pay/pages/drawResult/drawResult",
+        "added/pay/pages/account/account",
+        "added/pay/pages/feedback/feedback",
+        "added/pay/pages/noticeList/noticeList",
+        "added/pay/pages/expense/expense"
+      ]
+    },
+    {
+      "root": "added/game/",
+      "pages": [
+        "added/game/pages/adVideo/adVideo",
+        "added/game/pages/gameEnter/gameEnter"
+      ]
+    },
+    {
+      "root": "added/shareJourney/",
+      "pages": [
+        "added/shareJourney/journey/journey"
+      ]
+    },
+    {
+      "root": "added/activeToDownload/",
+      "pages": [
+        "added/activeToDownload/activeToDownload"
+      ]
+    }
+  ],
+  "navigateToMiniProgramAppIdList": [
+    "wx8f424dcb430355de",
+    "wxca1fe42a16552094",
+    "wx7a01aef90c714fe2",
+    "wx8c2f2c02a06b623a",
+    "wxde8ac0a21135c07d",
+    "wxbe832d707e3179ed",
+    "wx8f424dcb430355de"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

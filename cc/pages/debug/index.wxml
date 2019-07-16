@@ -1,0 +1,4 @@
+<view>
+    <button bind:tap="openDebug">开启调试</button>
+    <button bind:tap="closeDebug">关闭调试</button>
+</view>

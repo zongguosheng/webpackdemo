@@ -1,0 +1,8 @@
+<view class="timer timer-outer">
+    <view class="timer-number timer-number-outer">{{vHours}}</view>
+    <view class="timer-unit timer-unit-outer">时</view>
+    <view class="timer-number timer-number-outer">{{vMinutes}}</view>
+    <view class="timer-unit timer-unit-outer">分</view>
+    <view class="timer-number timer-number-outer">{{vSeconds}}</view>
+    <view class="timer-unit timer-unit-outer">秒</view>
+</view>

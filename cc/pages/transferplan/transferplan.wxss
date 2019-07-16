@@ -1,0 +1,73 @@
+.plan-tab-container {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+.plan-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.active-plan-tab {
+    border-bottom: 2px solid #0082dc;
+    color: #0082dc;
+}
+
+.plans-container {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.time-container {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.plans-detail {
+    padding: 15px 43px 15px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+
+.plan-icon {
+    width: 12px;
+    height: 14px;
+    margin-right: 2px;
+}
+
+.plan-arrow {
+    width: 16px;
+    height: 8px;
+    margin: 0 3px;
+}
+
+.walking-man {
+    width: 14px;
+    height: 14px;
+}
+
+.right-arrow {
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    right: 16px;
+    top: 50%;
+    margin-top: -6px;
+}

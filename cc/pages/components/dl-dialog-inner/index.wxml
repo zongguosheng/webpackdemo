@@ -1,0 +1,31 @@
+<c-mask cMaskContentExternal="mask-content" wx:if="{{visible}}">
+    <view class="container">
+        <image bind:tap="onClickDownload" class="dl-bg-img" src="./assets/dl-inner.png"></image>
+        <view class="dl-header" wx:if="{{header}}"></view>
+        <view class="dl-body" wx:if="{{body}}">
+            <view class="body-header">
+                <text>等车更方便 免费乘公交</text>
+            </view>
+            <block wx:if="{{isApple}}">
+                <view class="body-body">
+                    <text>为了让你享受更优质的服务，如：挤不挤、下车提醒、乘车赚车费等功能，回复“1”解锁更多功能p</text>
+                </view>
+                <view class="body-footer">
+                    <button bind:tap="onClickDownload" class="body-footer-action" openType="contact">我知道了</button>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="body-body">
+                    <text>为了让你享受更优质的服务，如：挤不挤、下车提醒、乘车赚车费等功能，下载车来了App</text>
+                </view>
+                <view class="body-footer">
+                    <button bind:tap="onClickDownload" class="body-footer-action">我知道了</button>
+                </view>
+            </block>
+        </view>
+        <view class="dl-footer" wx:if="{{footer}}"></view>
+        <view class="dl-close" wx:if="{{actions}}">
+            <image bind:tap="onClickClose" class="dl-close-action" src="./assets/dl-action-close.png"></image>
+        </view>
+    </view>
+</c-mask>

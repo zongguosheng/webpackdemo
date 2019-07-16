@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="line-detail bg-fb">
+        <view class="line-sn f-12 fg-3 text-ellipsis">{{line.startSn}} → {{line.endSn}}</view>
+        <view class="line-runtime f-10 fg-6 text-ellipsis">首 {{line.firstTime}} 末 {{line.lastTime}}
+      <block wx:if="{{line.price}}"> · 票价{{line.price}}</block>
+        </view>
+    </view>
+</view>
+<view class="bus-info bg-white" wx:for="{{buses}}" wx:key="index">
+    <view class="class-time">
+        <image class="icon_home_signal" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/signal_blue_ic_04@2x.png" wx:if="{{!item.rate}}"></image>
+        <text class="f-16 fg-3">{{item.moreBusTime}}</text>
+        <view class="tomorrow f-10 fg-blue flex-center" wx:if="{{item.showTomorrow}}">次日</view>
+    </view>
+    <view class="f-12 fg-6 bus-state" wx:if="{{item.display.time!=='已到站'}}">{{item.display.position}}{{item.display.distanceToTarget}}</view>
+    <view class="f-12 fg-6 bus-state" wx:if="{{item.display.time==='已到站'}}">{{item.display.time}}</view>
+    <view class="bus-id-delay-block">
+        <view class="bus-id flex-center fg-blue f-10" wx:if="{{item.licence}}">编号 {{item.licence}}</view>
+        <view class="bus-id flex-center fg-blue f-10" style="margin-left: 4px" wx:if="{{item.busDesc}}">{{item.busDesc}}</view>
+        <view class="bus-delay-time flex-center fg-a f-10" wx:if="{{item.showDelay}}">{{item.delayTime}}</view>
+        <image class="delay-ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/list_line_delay_ic@2x.png" wx:if="{{item.showDelay}}"></image>
+    </view>
+</view>

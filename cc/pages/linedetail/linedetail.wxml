@@ -1,0 +1,160 @@
+<import src="../template/fav/fav.wxml"></import>
+<!-- <import src="../template/modal/modal.wxml"></import> -->
+<scroll-view scrollY class="container" hidden="{{!loadSuccess}}">
+    <view class="line-detail" wx:if="{{line}}">
+        <line-profile class="profile-section" line="{{line}}"></line-profile>
+        <view bindtap="swap" class="swap_box" wx:if="{{canSwap}}">
+            <image class="swap_box_pic" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/line_change_ic_n@2x.png"></image>
+        </view>
+    </view>
+    <view class="line-panel">
+        <view class="line-detail-bus-container">
+            <block wx:if="{{lineState===0}}">
+                <block wx:for="{{Buses}}" wx:key="unique">
+                    <import src="../template/searchBubble/searchBubble.wxml"></import>
+                    <view class="flex-item">
+                        <view class="class-time">
+                            <template is="searchBubble" data="{{lineDetailFlag:lineDetailFlag}}" wx:if="{{index==0}}"></template>
+                            <test class="bus-desc f-10 fg-blue flex-center" wx:if="{{item.busDesc}}">
+              {{item.busDesc}}
+            </test>
+                            <image class="icon_home_signal" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/signal_red_ic_04@2x.png" wx:if="{{!bus.rate&&item.display.signal==='red'}}"></image>
+                            <image class="icon_home_signal" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/signal_blue_ic_04@2x.png" wx:if="{{!bus.rate&&item.display.signal==='blue'}}"></image>
+                            <text class="fw-500 {{item.display.timeClass}}">{{item.display.time}}</text>
+                            <text class="fw-500 {{item.display.unitClass}}">{{item.display.unit}}</text>
+                            <view class="tomorrow f-10 fg-blue flex-center" wx:if="{{item.showTomorrow}}">次日</view>
+                            <image bindtap="hidedelay" class="bus-delay-ico" data-index="{{index}}" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/list_line_delay_ic@2x.png" wx:if="{{item.showDelayIcon}}"></image>
+                        </view>
+                        <view class="{{item.display.unitClass}}" style="width: 100%;text-align: center;" wx:if="{{!item.showDelay}}">
+            {{item.display.position}}{{item.display.distanceToTarget}}
+          </view>
+                        <view class="bus-delay-block f-10 fg-a flex-center" wx:if="{{item.showDelay}}">
+            {{item.delayTime}}
+          </view>
+                    </view>
+                </block>
+                <view bindtap="goMoreBus" class="flex-item" wx:if="{{Buses.length>0}}">
+                    <view class="class-time">
+                        <image class="more-bus-ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/line_morecar_ic@2x.png"></image>
+                    </view>
+                    <view>
+                        <text class="fg-blue f-10 fw-500">更多车辆</text>
+                    </view>
+                </view>
+            </block>
+            <view class="flex-item" wx:elif="{{lineState===-1}}">
+                <view class="f-18 fg-blue" wx:if="{{line}}">{{line.desc}}</view>
+                <view class="f-12 fg-6" style="margin-top: 12px" wx:if="{{line}}">{{data.depDesc}}</view>
+                <view bindtap="goTimetable" class="time-table bg-blue fg-white f-10 flex-column-center text-ellipsis" wx:if="{{data.depTable===1}}">
+                    <image class="time-table-ic" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/line_timetable_ic@2x.png"></image>
+            历史时刻表
+          </view>
+            </view>
+            <view class="flex-item" wx:else>
+                <view class="f-16 fg-6" wx:if="{{line}}">{{line.desc}}</view>
+            </view>
+        </view>
+        <include src="./layout-station-ad.wxml"></include>
+        <view class="shelter left-shelter">
+            <view class="block-shelter"></view>
+            <view class="gradient-shelter"></view>
+        </view>
+        <view class="shelter right-shelter">
+            <view class="gradient-shelter"></view>
+            <view class="block-shelter"></view>
+        </view>
+    </view>
+    <scroll-view class="scroll-view_W" scrollLeft="{{leftPosition}}" scrollWithAnimation="true" scrollX="true" style="width: 100%;height:{{scrollHeight}}">
+        <view style="height: 43px"></view>
+        <view class="stations-detail" style="width:{{stationsScrollLine}}; padding:0 10rpx;">
+            <view class="traffics bg-blue" style="width:{{stationsScrollLine}}" wx:if="{{stations&&stations.length>0}}">
+                <block wx:for="{{traffics}}" wx:key="{{index}}">
+                    <view class="{{item.bgColor}}" style="width:35px" wx:if="{{index===0}}"></view>
+                    <view class="{{item.bgColor}}" style="width:35px" wx:if="{{index===traffics.length-1}}"></view>
+                    <view class="{{item.bgColor}}" style="width:{{item.l}}"></view>
+                </block>
+            </view>
+            <view class="station-ul">
+                <view class="scroll-view-item_W" wx:for="{{stations}}" wx:key="{{order}}">
+                    <view class="current-bg-cover" wx:if="{{item.arrowIcon}}">
+                        <image class="icon_linedetail_direction_ic" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/currentstop_ic@2x.png"></image>
+                    </view>
+                    <view class="current-location" wx:if="{{item.isCurrentIcon}}">
+                        <image class="icon_location" src="{{stad.pic}}" wx:if="{{stad}}"></image>
+                        <image class="icon_location" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/location_ic@2x.png" wx:if="{{!stad}}"></image>
+                    </view>
+                    <view class="current-arrow" wx:if="{{item.arrowIcon}}">
+                        <image class="icon_arrow_down" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/line_point@2x.png"></image>
+                    </view>
+                    <view bindtap="changeStation" class="station-item" data-index="{{index}}">
+                        <image class="station-direction-ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/direction_ic@2x.png"></image>
+                        <view class="{{item.numberClass}}">{{index+1}}</view>
+                        <view class="{{item.nameClass}}">{{item.displaySn}}</view>
+                    </view>
+                    <span class="{{item.busOnTheWayIconClass}}" wx:if="{{item.onTheWayNum>0}}"></span>
+                    <span class="{{item.busArriveIconClass}}" wx:if="{{item.arrivalNum>0}}"></span>
+                    <span class="{{item.busArriveCountClass}}" wx:if="{{item.arrivalNum>1}}">
+              {{item.arrivalNum}}辆
+            </span>
+                    <span class="{{item.busOnTheWayCountClass}}" wx:if="{{item.onTheWayNum>1}}">
+              {{item.onTheWayNum}}辆
+            </span>
+                    <image class="subway_ic" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/subway_ic.png" wx:if="{{item.metros&&item.metros.length>0}}"></image>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="over-scroll-bar" style="top: {{overScrollBarHeight}};"></view>
+    <view class="line-detail-btn {{isIpx?'iphone-x-bottom-fix':''}}">
+        <view bindtap="goStationDetail" class="btn-item">
+            <image class="tab-ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/line_more_samestation_ic@2x.png"></image>
+            <view class="f-10 fg-a">同站线路</view>
+        </view>
+        <view bindtap="refresh" class="btn-item">
+            <image class="tab-ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/refresh_ic_n@2x.png"></image>
+            <view class="f-10 fg-a">刷新</view>
+        </view>
+        <block wx:if="{{ifShowPay}}">
+            <import src="../template/searchBubble/searchBubble.wxml"></import>
+            <view bindtap="closePayBubble" class="btn-item">
+                <template is="searchBubble" data="{{payText:payText}}"></template>
+                <image class="tab-ico" src="../../resource/images/code_ic_grey.png"></image>
+                <view class="f-10 fg-a">乘车码</view>
+            </view>
+        </block>
+        <form bindsubmit="reportFormId" class="btn-item" reportSubmit="true" wx:if="{{isShowGame}}">
+            <button catchtap="enterGame" formType="submit" hoverClass="none">
+                <image class="tab-ico" src="../../resource/images/game_enter_icon.gif"></image>
+                <view class="f-10 fg-red">翻滚吧包子</view>
+            </button>
+        </form>
+        <view bindtap="goRemindDownload" class="btn-item" wx:if="{{remindEnable}}">
+            <image class="tab-ico" src="{{remindIcon}}"></image>
+            <view class="f-10 fg-a">{{remindName}}</view>
+            <view class="corner bg-red f-10 fg-white" wx:if="{{xctxDotEnable}}">{{xctxDotContent}}</view>
+        </view>
+        <view bindtap="toggleFav" class="btn-item" style="display: flex;flex-direction: column;align-items: center">
+            <view class="fav-inner-box relative">
+                <image class="tab-ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/favorite_ic_n@2x.png" wx:if="{{!isFav}}"></image>
+                <image class="tab-ico" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/favorite_ic_h@2x.png" wx:if="{{isFav}}"></image>
+                <view class="f-10 fg-a" wx:if="{{!isFav}}">收藏</view>
+                <view class="f-10 fg-blue" wx:if="{{isFav}}">已收藏</view>
+            </view>
+        </view>
+    </view>
+    <view class="game_enter_size game_enter {{isIpx?'iphone-x-game-fix':''}}" wx:if="{{isShowGame}}">
+        <image bindtap="enterGame" class="game_banner" src="http://cdn.web.chelaile.net.cn/res_mp/game_enter/banner.png"></image>
+    </view>
+    <view class="wx-ad-block {{isIpx?'line-detail-isIpx':''}}" wx:if="{{!noShowAD&&!isNewUser&&!isAdLoading&&!sessionNoShowAD&&!graphicItem&&!isShowGame}}">
+        <view class="wx-ad-item">
+            <ADBanner adBannerOuter="ad-banner-type-2" adSite="1" bindonClickAd="onClickBannerAd"></ADBanner>
+        </view>
+    </view>
+    <template is="fav" data="{{favTag:favTag}}" wx:if="{{favTag.show}}"></template>
+    <view catchtouchmove="emptyEvent" class="mask" style="z-index: 10000;" wx:if="{{favModal.show||favTagInput.show}}"></view>
+    <template is="modal" data="{{favModal:favModal}}" wx:if="{{favModal.show}}"></template>
+    <template is="modal1" data="{{favTagInput:favTagInput}}" wx:if="{{favTagInput.show}}"></template>
+    <template is="modal2" data wx:if="{{alertFavDialog}}"></template>
+    <template is="modal3" data="{{alertType:alertType}}" wx:if="{{alertLoginDialog}}"></template>
+</scroll-view>
+<dl-dialog-inner actions="{{true}}" bindonClickClose="onClickCloseDownload" bindonClickDownload="onClickDownload" body="{{true}}" visible="{{showDownloadDialog}}"></dl-dialog-inner>

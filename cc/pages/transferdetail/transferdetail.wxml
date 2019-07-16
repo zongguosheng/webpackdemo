@@ -1,0 +1,77 @@
+<view class="plan-detail-container bg-white">
+    <view class="starting-point-container text-ellipsis f-15">
+        <view class="plan-start"></view>
+        <view class="plan-point"></view>
+    {{depart.name}}
+  </view>
+    <block wx:for="{{segments}}" wx:key="index">
+        <view class="walk-container">
+            <image class="walking-man" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/plane_detail_walk_pic.png"></image>
+            <view class="walk-content fg-6" wx:if="{{!item.walking.sameTransfer}}">步行{{item.walking.distance}}
+        约{{item.walking.duration}}
+      </view>
+            <view class="walk-content fg-6" wx:if="{{item.walking.sameTransfer}}">同站换乘</view>
+        </view>
+        <view bindtap="goLineDetail" class="bus-container bg-bus" data-bus="{{item.bus}}" wx:if="{{item.bus}}">
+            <image class="bus-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/plan_detail_bus_ic.png"></image>
+            <view class="bus-content bd-bus">
+                <view class="go-up lh-44">
+                    <view class="bus-point"></view>
+                    <view class="f-15">{{item.bus.departure_stop.name}}</view>
+                    <view class="fg-6">上车</view>
+                </view>
+                <view class="bus-line">
+                    <view class="lh-27 line-con">
+                        <view>{{item.bus.name}} (开往{{item.bus.final_station}})</view>
+                    </view>
+                </view>
+                <view class="next-station lh-23 fg-6" wx:if="{{item.bus.via_stops&&item.bus.via_stops.length>0}}">
+                    <view class="station-name">下一站 · {{item.bus.via_stops[0].name}}</view>
+                    <view class="total-station" wx:if="{{item.bus.via_num>1}}">
+            {{item.bus.via_num}}站
+            </view>
+                    <view class="station-name" wx:if="{{idx!==0}}" wx:for="{{item.bus.via_stops}}" wx:for-index="idx" wx:for-item="stop" wx:key="{{idx}}">{{stop.name}}</view>
+                </view>
+                <div class="go-up lh-44">
+                    <i class="bus-point"></i>
+                    <span class="f-15">{{item.bus.arrival_stop.name}} </span>
+                    <span class="fg-6">下车</span>
+                </div>
+            </view>
+        </view>
+        <view class="bus-container bg-fb" wx:if="{{item.subway}}">
+            <image class="bus-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/plan_detail_subway_ic.png"></image>
+            <view class="bus-content bd-subway">
+                <view class="go-up lh-44">
+                    <view class="subway-point"></view>
+                    <view class="f-15">{{item.subway.departure_stop.name}}</view>
+                    <view class="fg-6" wx:if="{{item.subway.entrance}}">上车{{item.subway.entrance.name}}</view>
+                </view>
+                <view class="bus-line">
+                    <view class="line-con">
+            {{item.subway.name}} (开往{{item.subway.final_station}})
+            <view class="fg-blue pull-right time-refresh" wx:if="{{item.subway.subway_info}}">
+          {{item.subway.subway_info.interval}}/班</view>
+                    </view>
+                </view>
+                <view class="next-station lh-23 fg-6" wx:if="{{item.subway.via_stops&&item.subway.via_stops.length>0}}">
+                    <view class="subway-name">下一站 · {{item.subway.via_stops[0].name}}</view>
+                    <view class="total-station" wx:if="{{item.subway.via_num>1}}">
+            {{item.subway.via_num}}站
+          </view>
+                    <view class="station-name" wx:if="{{idx!==0}}" wx:for="{{item.subway.via_stops}}" wx:for-index="idx" wx:for-item="stop" wx:key="{{idx}}">{{stop.name}}</view>
+                </view>
+                <view class="go-up lh-44">
+                    <view class="subway-point"></view>
+                    <view class="f-15">{{item.subway.arrival_stop.name}}</view>
+                    <view class="fg-6" wx:if="{{item.subway.exit}}">下车{{item.subway.exit.name}}</view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="end-point-container text-ellipsis f-15">
+        <view class="end-line"></view>
+        <view class="end-point"></view>
+    {{arrive.name}}
+  </view>
+</view>

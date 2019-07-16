@@ -1,0 +1,18 @@
+.collect-form {
+    border: 0!important;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+
+.collect-form .form-btn {
+    border: 0!important;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    border-radius: 0;
+    line-height: normal;
+    position: static;
+    box-shadow: none;
+    background: transparent;
+}

@@ -1,0 +1,1 @@
+<view bindtap="onClick" class="list-footer">{{text}}</view>

@@ -1,0 +1,12 @@
+<view class="ad-banner-container" wx:if="{{showAd&&globalShow}}">
+    <view class="swiper-block">
+        <swiper autoplay="true" bindchange="onSwiperItemChanged" class="swiper-class" duration="1000" indicatorActiveColor="rgba(255, 255, 255, 1)" indicatorColor="rgba(255, 255, 255, .5)" indicatorDots="{{swiper.indicatorDots}}" interval="{{swiper.interval}}" wx:if="{{showSwiper}}">
+            <swiper-item wx:for="{{swiper.items}}" wx:key="{{index}}">
+                <image bindtap="onTapSwiperItem" class="slide-image ad-banner-outer" data-item="{{item}}" src="{{item.pic}}"></image>
+            </swiper-item>
+        </swiper>
+        <block wx:if="{{showWxAd}}">
+            <ad bindclose="onWxAdClose" binderror="onWxAdLoadError" bindload="onWxAdLoadSuccess" class="ad-banner-outer" unitId="{{adUnitId}}" wx:if="{{adUnitId}}"></ad>
+        </block>
+    </view>
+</view>

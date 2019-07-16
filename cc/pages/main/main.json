@@ -1,0 +1,17 @@
+{
+    "navigationBarTitleText": "",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "ADBanner": "/components/adbanner/adbanner",
+        "ad-grid": "/components/ad-grid/index",
+        "line-disable-view": "/components/ks-line-disable/index",
+        "stop-view": "/components/ks-stop/index",
+        "line-view": "/components/ks-line/index",
+        "dl-dialog-home": "/pages/components/dl-dialog-home/index",
+        "service-stop-page": "/pages/components/service-stop-page/index",
+        "search-box": "/pages/components/search-box/index",
+        "city-indicator": "/pages/components/city-indicator/index",
+        "warning": "/pages/components/warning/index",
+        "tags": "/pages/components/tags/index"
+    }
+}

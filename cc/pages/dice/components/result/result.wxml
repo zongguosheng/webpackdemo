@@ -1,0 +1,91 @@
+<view class="result-container">
+    <view class="result-panel">
+        <view class="result-title">
+            <view class="orgin">
+                <view class="title">点数</view>
+                <view class="content">
+                    <view wx:for="{{orgin}}" wx:key="{{index}}">{{item}}点</view>
+                </view>
+            </view>
+            <view class="plus">
+                <view class="title">加1点</view>
+                <view class="content">
+                    <view class="num" wx:for="{{onePlus}}" wx:key="{{index}}">{{item}}</view>
+                </view>
+            </view>
+            <view class="one">
+                <view class="title">不加1点</view>
+                <view class="content">
+                    <view wx:for="{{one}}" wx:key="{{index}}">{{item}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="result-dice">
+            <view class="dice-show" wx:for="{{diceDetail}}" wx:key="{{index}}">
+                <view class="header">
+                    <image class="pics" src="{{item.headImgUrl}}"></image>
+                    <view class="head-info">
+                        <text class="name">{{item.master?'房主':item.nickName}}</text>
+                    </view>
+                </view>
+                <view class="container">
+                    <block wx:for="{{item.points}}" wx:key="{{index}}">
+                        <view class="dice dice1" wx:if="{{item===1}}">
+                            <view class="item"></view>
+                        </view>
+                        <view class="dice dice2" wx:if="{{item===2}}">
+                            <view class="item"></view>
+                            <view class="item"></view>
+                        </view>
+                        <view class="dice dice3}}" wx:if="{{item===3}}">
+                            <view class="item"></view>
+                            <view class="item"></view>
+                            <view class="item"></view>
+                        </view>
+                        <view class="dice dice4" wx:if="{{item===4}}">
+                            <view class="row">
+                                <view class="item"></view>
+                                <view class="item"></view>
+                            </view>
+                            <view class="row">
+                                <view class="item"></view>
+                                <view class="item"></view>
+                            </view>
+                        </view>
+                        <view class="dice dice5" wx:if="{{item===5}}">
+                            <view class="row">
+                                <view class="item"></view>
+                                <view class="item"></view>
+                            </view>
+                            <view class="row">
+                                <view class="item"></view>
+                            </view>
+                            <view class="row">
+                                <view class="item"></view>
+                                <view class="item"></view>
+                            </view>
+                        </view>
+                        <view class="dice dice6" wx:if="{{item===6}}">
+                            <view class="row">
+                                <view class="item"></view>
+                                <view class="item"></view>
+                            </view>
+                            <view class="row">
+                                <view class="item"></view>
+                                <view class="item"></view>
+                            </view>
+                            <view class="row">
+                                <view class="item"></view>
+                                <view class="item"></view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="result-option">
+        <view bindtap="exitRoom" class="confirm-exit">退出</view>
+        <view bindtap="replayGame" class="confirm-replay">再来一局</view>
+    </view>
+</view>

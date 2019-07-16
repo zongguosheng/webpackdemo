@@ -1,0 +1,8 @@
+<!-- <wx-scope wx:scope-data="{{...mWxScopeData}}" wx:if="{{mShowWxScopeData}}">
+    <view></view>
+</wx-scope>
+<ADBanner adSite="6" wx:if="{{isAdEnable&&loadSuccess}}"></ADBanner> -->
+<import src="../template/bus/bus.wxml"></import>
+<view class="f-light container">
+    <template is="buses" data="{{lines:displayLines}}"></template>
+</view>

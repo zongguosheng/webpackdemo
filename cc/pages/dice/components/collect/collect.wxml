@@ -1,0 +1,5 @@
+<form bindsubmit="formSubmit" class="collect-form" reportSubmit="true">
+    <button class="form-btn" formType="submit" hoverClass="none" plain="true">
+        <slot></slot>
+    </button>
+</form>

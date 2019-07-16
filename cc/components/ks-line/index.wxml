@@ -1,0 +1,21 @@
+<view bindtap="onTapLine" class="line-item" data-item="{{line}}" data-line-id="{{line.line.lineId}}" data-line-name="{{line.line.name}}" data-target-order="{{line.targetStation.order}}">
+    <view class="line-name">{{line.display.lineName}}</view>
+    <view class="line-direction">开往 {{line.display.endSn}}</view>
+    <view class="line-target-stop">候车站 {{line.display.sn}}</view>
+    <view class="line-bus-arrive" wx:if="{{line.display.isArrived}}">已到站</view>
+    <block wx:else>
+        <view class="line-bus-time">
+            <view class="line-bus-block">
+                <image class="icon_home_signal" src="../../resource/images/signal_red_ic_04@2x.png" wx:if="{{line.display.signal==='red'}}"></image>
+                <image class="icon_home_signal" src="../../resource/images/signal_blue_ic_04@2x.png" wx:if="{{line.display.signal==='blue'}}"></image>
+                <view class="{{line.display.signal}}"></view>
+                <view class="line-display-time {{line.display.distanceClass}}" wx:if="{{line.display.unit}}">{{line.display.time}}<text class="line-display-time-unit">{{line.display.unit}}</text>
+                </view>
+                <view class="line-display-time-2 {{line.display.distanceClass}}" wx:else>{{line.display.time}}</view>
+            </view>
+        </view>
+        <view class="line-bus-distance">
+            <text class="line-display-distance {{line.display.distanceClass}}">{{line.display.distance}}</text>
+        </view>
+    </block>
+</view>

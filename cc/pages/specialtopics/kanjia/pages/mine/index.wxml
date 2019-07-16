@@ -1,0 +1,15 @@
+<view class="kanjia-bg">
+    <view class="page-content">
+        <view class="prize-list" wx:if="{{prizes.length>0}}">
+            <view bind:tap="tapPrize" class="prize-item" data-index="{{index}}" wx:for="{{prizes}}" wx:key="{{index}}">
+                <prize-card bind:onReceiveTaped="tapReceive" prize="{{item}}"></prize-card>
+            </view>
+            <view class="item-no-more">没有更多了</view>
+        </view>
+        <view class="prize-empty" wx:else>
+            <view class="empty-placeholder"></view>
+            <text class="empty-text">你竟然没有砍价成功的奖品
+邀请好友帮忙砍价就能免费拿哦～</text>
+        </view>
+    </view>
+</view>

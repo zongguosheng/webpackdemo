@@ -1,0 +1,3 @@
+<view class="compat-page">
+    <slot></slot>
+</view>
