@@ -1,0 +1,95 @@
+<view class="top bg-white" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <city-indicator bindonClick="goSwitchCity" city="{{selectedCity}}" selectable="{{switchCity}}"></city-indicator>
+    <search-box bindonClick="goSearch"></search-box>
+    <ad-grid ads="{{mGridAds}}" bind:onTapAd="onClickTopAd" wx:if="{{mGridAds.length>0}}"></ad-grid>
+</view>
+<view class="container bg-common page-main">
+    <warning bindonClickClose="hideChangeCity" bindonClickContent="changeCity" content="{{warningContent}}" wx:if="{{showSwitchGpsCity}}"></warning>
+    <tags activeTag="{{activeTag}}" bindonClickTag="onClickTag" tags="{{tags}}"></tags>
+    
+    <line-disable-view bind:onTapDelAction="onTapDelFavAction" line="{{item}}" wx:if=""></line-disable-view>
+
+    <form bindsubmit="goLineDetail" data-line-id="{{item.line.lineId}}" data-line-name="{{item.line.name}}" data-target-order="{{item.targetStation.order}}" reportSubmit="true" wx:else>
+        <button formType="submit" hoverClass="none">
+            <line-view line="{{item}}"></line-view>
+        </button>
+    </form>
+     <form bindsubmit="goLineDetail" data-line-id="{{item.line.lineId}}" data-line-name="{{item.line.name}}" data-target-order="{{item.targetStation.order}}" reportSubmit="true">
+        <button formType="submit" hoverClass="none">
+            <line-view line="{{item}}"></line-view>
+        </button>
+    </form>
+     <form bindsubmit="goLineDetail" data-line-id="{{item.line.lineId}}" data-line-name="{{item.line.name}}" data-target-order="{{item.targetStation.order}}" reportSubmit="true">
+        <button formType="submit" hoverClass="none">
+            <line-view line="{{item}}"></line-view>
+        </button>
+    </form>
+     <form bindsubmit="goLineDetail" data-line-id="{{item.line.lineId}}" data-line-name="{{item.line.name}}" data-target-order="{{item.targetStation.order}}" reportSubmit="true">
+        <button formType="submit" hoverClass="none">
+            <line-view line="{{item}}"></line-view>
+        </button>
+    </form>
+     <form bindsubmit="goLineDetail" data-line-id="{{item.line.lineId}}" data-line-name="{{item.line.name}}" data-target-order="{{item.targetStation.order}}" reportSubmit="true">
+        <button formType="submit" hoverClass="none">
+            <line-view line="{{item}}"></line-view>
+        </button>
+    </form>
+
+    <!-- <stop-view wx:if="1!=1"></stop-view> -->
+
+    <form bindsubmit="goStationDetail" data-s-id="{{item.sId}}" data-sn="{{item.sn}}" reportSubmit="true" wx:for="{{stations}}" wx:key="{{index}}">
+        <button formType="submit" hoverClass="none">
+            <stop-view stop="{{item}}"></stop-view>
+        </button>
+    </form>
+
+
+    <block wx:if="{{lines.length<1}}">
+
+        <view class="line-empty-section" wx:if="{{activeTag.type==='history'}}">
+            <view class="line-empty-text">没有历史线路</view>
+        </view>
+        <view class="line-empty-section" wx:else>
+            <view class="line-empty-text">没有收藏线路</view>
+        </view>
+    </block>
+</view>
+
+<!-- <view class="top bg-white" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <city-indicator bindonClick="goSwitchCity" city="{{selectedCity}}" selectable="{{switchCity}}"></city-indicator>
+    <search-box bindonClick="goSearch"></search-box>
+    <ad-grid ads="{{mGridAds}}" bind:onTapAd="onClickTopAd" wx:if="{{mGridAds.length>0}}"></ad-grid>
+</view>
+<view class="container bg-common page-main">
+    <warning bindonClickClose="hideChangeCity" bindonClickContent="changeCity" content="{{warningContent}}" wx:if="{{showSwitchGpsCity}}"></warning>
+    <tags activeTag="{{activeTag}}" bindonClickTag="onClickTag" tags="{{tags}}"></tags>
+    
+    
+    <block wx:for="{{lines}}" wx:key="{{index}}">
+  
+        <line-disable-view bind:onTapDelAction="onTapDelFavAction" line="{{item}}" wx:if="{{item.line.state===1||item.line.state===2}}"></line-disable-view>
+        <form bindsubmit="goLineDetail" data-line-id="{{item.line.lineId}}" data-line-name="{{item.line.name}}" data-target-order="{{item.targetStation.order}}" reportSubmit="true" wx:else>
+            <button formType="submit" hoverClass="none">
+                <line-view line="{{item}}"></line-view>
+            </button>
+        </form>
+    </block>
+
+
+    <form bindsubmit="goStationDetail" data-s-id="{{item.sId}}" data-sn="{{item.sn}}" reportSubmit="true" wx:for="{{stations}}" wx:key="{{index}}">
+        <button formType="submit" hoverClass="none">
+            <stop-view stop="{{item}}"></stop-view>
+        </button>
+    </form>
+
+
+    <block wx:if="{{lines.length<1}}">
+
+        <view class="line-empty-section" wx:if="{{activeTag.type==='history'}}">
+            <view class="line-empty-text">没有历史线路</view>
+        </view>
+        <view class="line-empty-section" wx:else>
+            <view class="line-empty-text">没有收藏线路</view>
+        </view>
+    </block>
+</view> -->

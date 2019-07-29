@@ -1,0 +1,10 @@
+<template name="collectBubble">
+    <view catchtap="emptyEvent" class="collect-bubble-tip fg-white fh-22 f-14 relative flex-column-center {{canSwap?'':'no-can-swap'}}">
+        <image class="collect-bubble-bus" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/lead_Collection.png"></image>
+        <view class="collect-bubble-content">
+            <view class="text-left">收藏常用线路</view>
+        </view>
+        <view class="collect-down-arraw {{canSwap?'':'no-can-swap'}}"></view>
+        <image catchtap="closeGuide" class="collect-close-icon" data-name="1" src="https://cdn.www.chelaile.net.cn/web_active/wmp/images/close_white_btn@2x.png"></image>
+    </view>
+</template>

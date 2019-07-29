@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "线路详情",
+  "usingComponents": {
+    "dl-dialog-inner": "/pages/components/dl-dialog-inner/index",
+    "line-profile": "/pages/components/line-profile/index"
+  }
+}

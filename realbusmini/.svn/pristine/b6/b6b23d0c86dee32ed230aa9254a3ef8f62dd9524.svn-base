@@ -1,0 +1,34 @@
+<template name="transfer">
+    <view class="transfer-form bg-white">
+        <view class="transfer-title f-30 fg-3 fw-500">路线
+      <image class="transfer-travel" src="../../images/travel_search_btn@2x.png" wx:if="{{!canTransfer}}"></image>
+            <image bindtap="goPlan" class="transfer-travel" src="../../images/travel_search_btn_h@2x.png" wx:if="{{canTransfer}}"></image>
+        </view>
+        <view class="transfer-center bg-common">
+            <view class="transfer-vertical-line bg-white"></view>
+            <view class="transfer-green-circle"></view>
+            <view class="transfer-red-circle bg-red"></view>
+            <view bindtap="goPoiSearch" class="transfer-mock-input text-ellipsis f-14 {{transfer.depart.name==='我的位置'?'fg-blue':'fg-3'}}" data-type="1">{{transfer.depart.name}}
+      </view>
+            <view bindtap="goPoiSearch" class="transfer-mock-input text-ellipsis f-14 fw-500 {{transfer.arrive.name==='我的位置'?'fg-blue':'fg-3'}}" data-type="2">{{transfer.arrive.name}}
+      </view>
+            <view bindtap="swapLocation" class="switch-container bg-white flex-center">
+                <image class="ico_swap_transfer" src="../../images/travel_change_btn@2x.png"></image>
+            </view>
+        </view>
+    </view>
+    <ADBanner adSite="3" bindonClickAd="onClickBannerAd" wx:if="{{!noShowAD&&!isNewUser}}"></ADBanner>
+    <block wx:if="{{transferPlanHistories.length>0}}">
+        <view class="title-description fw-500 f-12 fg-6 flex-column-center">搜索历史
+      <image bindtap="clearTransferPlan" class="transfer-remove-all" src="../../images/history_empty_ic@2x.png"></image>
+        </view>
+        <view style="padding-bottom: 110px">
+            <view class="bg-white transfer-history-container">
+                <view bindtap="transferPlanClick" class="transfer-history-item text-ellipsis f-14 fg-3" data-poi="{{item}}" wx:for="{{transferPlanHistories}}" wx:key="index">
+                    <image class="transfer-time-icon" src="../../images/history_time_ic@2x.png"></image>
+                    <text class="f-14 fg-6" style="margin-right: 4px">{{item.origin_name}} →</text>{{item.dest_name}}
+          </view>
+            </view>
+        </view>
+    </block>
+</template>

@@ -1,0 +1,22 @@
+<!-- 首页 -->
+<view class='classify'>
+   <text class='' >分类</text>
+</view>
+
+<view class="contentplan" wx:for="{{classList}}" wx:for-index="fid" wx:key="id">
+    <view bindtap="openClass" class="contenttitle" data-aid="{{fid}}"  >
+        <text>{{item.name}}</text>
+        <image class="{{isShow? 'routeimgopen' : 'routeimgopen' }}" src="../../image/arrow.png"></image>
+    </view>
+                  
+    <view class="contentrow" style="display:{{item.open?'':'none'}};" wx:for="{{item.list}}" wx:key="id"  wx:for-item="listname"  >
+        <view style="width:17px;"></view>
+        <view class="contentname" bindtap='goBooklist'  >
+            <view class="imgplan">
+                <image class="conimg" src="{{'../../image/lb/'+ listname.imgname+'.png' }}"> </image>
+                <text>{{listname.name}}</text>
+            </view>
+            <image class="arrimg" src="../../image/arrow.png"></image>
+        </view>
+    </view>
+</view>

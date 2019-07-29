@@ -1,0 +1,34 @@
+
+<block>
+    <include src="layout-home.wxml"></include>
+    <include src="../guide/guide.wxml"></include>
+</block>
+
+
+
+<!-- <block wx:elif="{{activeTab==='transfer'}}">
+    <import src="../template/transfer/transfer.wxml"></import>
+    <template is="transfer" data="{{transfer:transfer,transferPlanHistories:transferPlanHistories,canTransfer:canTransfer,isNewUser:isNewUser,noShowAD:noShowAD,adSite:adSite}}"></template>
+</block> -->
+
+
+<!-- <block wx:elif="{{activeTab==='mine'}}">
+    <import src="../template/mine/mine.wxml"></import>
+    <template is="mine" data="{{mineCenterAD:mineCenterAD,avatarUrl:avatarUrl,nickName:nickName,authorizationFlag:authorizationFlag,phoneNumber:phoneNumber,unionId:unionId,showCustomService:showCustomService,isNewUser:isNewUser,noShowAD:noShowAD,adSite:adSite,ifShowOfficial:ifShowOfficial,isIpx:isIpx}}"></template>
+</block> -->
+
+
+<!-- <import src="../template/ad/mainfloatlayer.wxml"></import> -->
+
+
+<!-- <template is="mainfloatlayer" data="{{aroundFloatLayerAD:aroundFloatLayerAD}}" wx:if="{{floatLayerAD&&!noShowAD}}"></template> -->
+
+
+<!-- <main-share-pic bindreceivefilePath="receiveFilePath" showPlacard="{{showPlacard}}" wx:if="{{placardEnable}}"></main-share-pic> -->
+
+
+<!-- <dl-dialog-home actions="{{true}}" bindonClickClose="onClickCloseDownload" bindonClickDownload="onClickDownload" body="{{true}}" visible="{{showDownloadDialog}}"></dl-dialog-home> -->
+
+
+
+<!-- <service-stop-page showOtherCity="{{showOtherCityService}}" visible="{{!serviceAvailable}}"></service-stop-page> -->

@@ -1,0 +1,25 @@
+<view wx:if="{{stad&&!noShowAD}}">
+    <view class="seg-line"></view>
+    <view bindtap="goStationAD" class="line-detail-banner-ad-container {{stad.displayClass.adblock}}">
+        <view class="left text-ellipsis flex-auto">
+            <view class="flex-none flex-center">
+                <view class="ad-tag-text f-11 fg-white" style="background-color: rgba({{stad.bannerInfo.tag.tagBG}})" wx:if="{{stad.bannerInfo.bannerType===1}}">
+                    {{stad.bannerInfo.tag.tagText}}
+                </view>
+                <image class="ad-tag-image" src="{{stad.bannerInfo.tag.tagPic}}" style="" wx:if="{{stad.bannerInfo.bannerType===2||stad.bannerInfo.bannerType===5}}"></image>
+            </view>
+            <view class="flex-none text-ellipsis" style="line-height: 48px;color: rgba({{stad.bannerInfo.color}})" wx:if="{{stad.bannerInfo.name}}">
+                {{stad.bannerInfo.name}}：
+            </view>
+            <view class="flex-auto text-ellipsis f-12" style="color: rgba({{stad.bannerInfo.sloganColor}})">
+                {{stad.bannerInfo.slogan}}
+            </view>
+        </view>
+        <view class="right flex-none flex-center">
+            <view class="ad-button-text" style="color: rgba({{stad.bannerInfo.button.buttonColor}});'background-color': rgba({{stad.bannerInfo.button.buttonBG}});'border-color':rgba({{stad.bannerInfo.button.buttonRim}}})" wx:if="{{stad.bannerInfo.bannerType===3}}">
+                {{stad.bannerInfo.button.buttonText}}
+            </view>
+            <image class="ad-button-image" src="{{stad.bannerInfo.button.buttonPic}}" wx:if="{{stad.bannerInfo.bannerType>=4}}"></image>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+<form bindsubmit="onSubmitSearch" reportSubmit="true">
+    <view class="top-bar">
+        <view class="top-imitate-search-bar">
+            <view class="imitate-search-bar-block">
+                <image class="search-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/frame_search_ic@2x.png"></image>
+                <input autoFocus bindblur="onBlur" bindconfirm="onSubmitSearch" class="search-input" confirmType="search" name="searchValue" placeholder="{{placeholder}}" placeholderClass="p-class" type="text" value="{{searchValue}}"></input>
+                <view catchtap="onClickClear" class="close-btn" hidden="{{!searchValue}}">
+                    <image class="close-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/close_white_ic@2x.png"></image>
+                </view>
+            </view>
+        </view>
+        <button class="searchSubmit" formType="submit">查询</button>
+    </view>
+</form>

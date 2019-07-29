@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/phonebooklist/phonebooklist",
+    "pages/phonedetail/phonedetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#F5F5F7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电话本",
+        "iconPath": "image/txl.png",
+        "selectedIconPath": "image/txls.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "image/fx1.png",
+        "selectedIconPath": "image/fx1s.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我",
+        "iconPath": "image/wd.png",
+        "selectedIconPath": "image/wds.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

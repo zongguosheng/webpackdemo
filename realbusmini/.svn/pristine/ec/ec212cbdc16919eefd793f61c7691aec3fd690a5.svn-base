@@ -1,0 +1,12 @@
+<view bind:tap="onTapStop" class="item">
+    <view class="item-name">七里河</view>
+    <view class="item-line">99路/K99、9路、9路K9路、45路K45路 </view>
+    <view class="item-distance">136 m</view>
+</view>
+
+
+<!-- <view bind:tap="onTapStop" class="item">
+    <view class="item-name">{{stop.sn}}</view>
+    <view class="item-line">{{stop.lineNames}}</view>
+    <view class="item-distance">{{stop.displayDis}}</view>
+</view> -->

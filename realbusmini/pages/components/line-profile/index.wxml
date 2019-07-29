@@ -1,0 +1,16 @@
+
+<view class="profile-box">
+    <view class="line-sn">龙门石窟 → 牡丹广场</view>
+    <view class="line-runtime">
+        首 {{line.firstTime}} 末 {{line.lastTime}}
+        <block>· 票价1.5元</block>
+    </view>
+</view>
+
+<!-- <view class="profile-box">
+    <view class="line-sn">{{line.startSn}} → {{line.endSn}}</view>
+    <view class="line-runtime">
+        首 {{line.firstTime}} 末 {{line.lastTime}}
+        <block wx:if="{{line.price}}">· 票价{{line.price}}</block>
+    </view>
+</view> -->

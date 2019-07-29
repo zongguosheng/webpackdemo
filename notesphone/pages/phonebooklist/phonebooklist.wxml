@@ -1,0 +1,28 @@
+<view class="contentplan">
+            <view class="contenttitle">
+                <text>{{curstate}}</text>
+                <text wx:if="{{stit!='附近'}}">就近{{curfanwei}}内{{curshopcounts}}个点（共{{sumrows}}）</text>
+                <text wx:if="{{stit=='附近'}}">就近{{curfanwei}}内{{curshopcounts}}个点</text>
+                <text bindtap="searchpoint" class="linkbtn">市区所有点</text>
+            </view>
+
+
+            <view class="contentrow" wx:for="{{classification}}" wx:for-index="cid" wx:for-item="curitem" wx:key="id">
+                <view style="width:40rpx;"></view>
+                <view bindtap="phoneclickcontent" class="contentname" data-id="{{cid}}" >
+                    <view class="imgplan">
+                        <image class="conimg" src="{{'../../image/lb/'+curitem.img+'.png'}}"></image>
+                        <view class="inforcon">
+                            <view style="display:block;">
+                                <text>{{curitem.name}}</text>
+                                <text catchtap="tonzhixufei" class="opentelinfor" data-rq="{{curitem.dqrq}}" data-tel="{{curitem.manaphone}}" style="margin-left:30rpx;display:none;">续费通知</text>
+                            </view>
+                            <text class="detailinfor" style="none;">{{curitem.num}}人使用过</text>
+                            <text class="detailinfor">距离：{{curitem.juli}}</text>
+                            
+                        </view>
+                    </view>
+                    <image class="arrimg" src="../../image/arrow.png"></image>
+                </view>
+            </view>
+        </view>

@@ -1,0 +1,168 @@
+<template name="mine">
+    <view class="mine-container">
+        <view class="user-info bg-white relative">
+            <button bindgetuserinfo="bindGetUserInfo" class="login-title btn-style-none f-30 fg-3 fw-500" openType="getUserInfo" wx:if="{{nickName?false:true}}">点击登录
+            </button>
+            <view class="login-title f-30 fg-3 fw-500" wx:else>{{nickName}}</view>
+            <view class="user-info-box" wx:if="{{nickName}}">
+                <view class="phoneNumber f-10 fg-blue" wx:if="{{phoneNumber}}">{{phoneNumber}}</view>
+                <button bindgetphonenumber="getPhoneNumber" class="bind-tel fg-6 fw-500 f-10 bg-common flex-center" openType="getPhoneNumber" wx:if="{{!phoneNumber&&authorizationFlag&&unionId}}">
+                    请绑定手机
+                    <image class="arrow-right" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/arrow_gray_right@2x.png"></image>
+                </button>
+            </view>
+            <view class="fail-box">
+                <view class="login-area">
+                    <button bindgetuserinfo="bindGetUserInfo" class="login-tip f-12 fg-a fw-500 btn-style-none" openType="getUserInfo" wx:if="{{!phoneNumber&&!authorizationFlag&&unionId}}">获取授权失败，请
+                        <text class="fg-blue">点击登录</text>
+                        授权
+                    </button>
+                </view>
+            </view>
+            <view class="head-portrait">
+                <image class="user-portrait" src="{{avatarUrl}}" wx:if="{{avatarUrl}}"></image>
+                <button bindgetuserinfo="bindGetUserInfo" class="btn-style-none" openType="getUserInfo">
+                    <image class="user-portrait" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/personal_user_img@2x.png" wx:if="{{avatarUrl?false:true}}"></image>
+                </button>
+            </view>
+        </view>
+        <view class="mine-ad-block" wx:if="{{!noShowAD&&!isNewUser}}">
+            <ADBanner adBannerOuter="ad-banner-type-1" adSite="2" bindonClickAd="onClickBannerAd"></ADBanner>
+        </view>
+        <view class="ad-area">
+            <view class="item-area bg-white fg-6 f-12">
+                <view bindtap="openCityServicePage" class="flex-item">
+                    <view class="bg-white fg-6 f-12 serviceBtn flex-column-center">
+                        <view class="left-area flex-column-center">
+                            <image class="item-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/guide_ic@2x.png"></image>
+                            <text class="f-14 fg-3">快捷指南</text>
+                        </view>
+                    </view>
+                </view>
+                <view bindtap="openContact" class="flex-item" wx:if="{{showCustomService}}">
+                    <button class="bg-white fg-6 f-12 serviceBtn flex-column-center" openType="contact">
+                        <view class="left-area flex-column-center">
+                            <image class="item-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/personal_customer_ic@2x.png"></image>
+                            <text class="f-14 fg-3">我的客服</text>
+                        </view>
+                    </button>
+                </view>
+
+                <!--  -->
+                <view bindtap="openCityServicePage" class="flex-item">
+                    <view class="bg-white fg-6 f-12 serviceBtn flex-column-center">
+                        <view class="left-area flex-column-center">
+                            <text class="f-14 fg-3">车牌号</text>
+                            <input class='carcard' placeholder='车牌号'></input>
+                        </view>
+                    </view>
+                </view>
+                 <view bindtap="openCityServicePage" class="flex-item">
+                    <view class="bg-white fg-6 f-12 serviceBtn flex-column-center">
+                        <view class="left-area flex-column-center">
+                            <text class="f-14 fg-3">手机号</text>
+                            <input class='carcard' placeholder='手机号'></input>
+                        </view>
+                    </view>
+                </view>
+                 <view bindtap="openCityServicePage" class="flex-item">
+                    <view class="bg-white fg-6 f-12 serviceBtn flex-column-center">
+                        <view class="left-area flex-column-center">
+                           <button class='searchbtn' >查询</button>
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+            <view class="item-area bg-white fg-6" wx:for="{{mineCenterAD}}" wx:for-index="idx" wx:for-item="advParent" wx:key="{{idx}}">
+                <view bindtap="goToMiniAppsOne" class="item-wrap" data-index="{{index}}" data-parent-index="{{idx}}" wx:for="{{advParent.advs}}" wx:key="{{index}}">
+                    <view class="flex-item">
+                        <view class="left-area flex-column-center">
+                            <image class="item-icon" src="{{item.iconUrl}}"></image>
+                            <text class="f-14 fg-3">{{item.title}}</text>
+                        </view>
+                        <view class="right-area flex-center f-12 fg-6">
+                                {{item.leadContent}}
+                                <view class="red-circle" wx:if="{{item.showRedPoint}}"></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="item-area" style="overflow:hidden;" wx:if="true">
+                <official-account class="public_account"></official-account>
+            </view>
+        </view>
+    </view>
+</template>
+
+
+<!-- <template name="mine">
+    <view class="mine-container">
+        <view class="user-info bg-white relative">
+            <button bindgetuserinfo="bindGetUserInfo" class="login-title btn-style-none f-30 fg-3 fw-500" openType="getUserInfo" wx:if="{{nickName?false:true}}">点击登录
+            </button>
+            <view class="login-title f-30 fg-3 fw-500" wx:else>{{nickName}}</view>
+            <view class="user-info-box" wx:if="{{nickName}}">
+                <view class="phoneNumber f-10 fg-blue" wx:if="{{phoneNumber}}">{{phoneNumber}}</view>
+                <button bindgetphonenumber="getPhoneNumber" class="bind-tel fg-6 fw-500 f-10 bg-common flex-center" openType="getPhoneNumber" wx:if="{{!phoneNumber&&authorizationFlag&&unionId}}">
+                    请绑定手机
+                    <image class="arrow-right" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/arrow_gray_right@2x.png"></image>
+                </button>
+            </view>
+            <view class="fail-box">
+                <view class="login-area">
+                    <button bindgetuserinfo="bindGetUserInfo" class="login-tip f-12 fg-a fw-500 btn-style-none" openType="getUserInfo" wx:if="{{!phoneNumber&&!authorizationFlag&&unionId}}">获取授权失败，请
+                        <text class="fg-blue">点击登录</text>
+                        授权
+                    </button>
+                </view>
+            </view>
+            <view class="head-portrait">
+                <image class="user-portrait" src="{{avatarUrl}}" wx:if="{{avatarUrl}}"></image>
+                <button bindgetuserinfo="bindGetUserInfo" class="btn-style-none" openType="getUserInfo">
+                    <image class="user-portrait" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/personal_user_img@2x.png" wx:if="{{avatarUrl?false:true}}"></image>
+                </button>
+            </view>
+        </view>
+        <view class="mine-ad-block" wx:if="{{!noShowAD&&!isNewUser}}">
+            <ADBanner adBannerOuter="ad-banner-type-1" adSite="2" bindonClickAd="onClickBannerAd"></ADBanner>
+        </view>
+        <view class="ad-area">
+            <view class="item-area bg-white fg-6 f-12">
+                <view bindtap="openCityServicePage" class="flex-item">
+                    <view class="bg-white fg-6 f-12 serviceBtn flex-column-center">
+                        <view class="left-area flex-column-center">
+                            <image class="item-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/guide_ic@2x.png"></image>
+                            <text class="f-14 fg-3">快捷指南</text>
+                        </view>
+                    </view>
+                </view>
+                <view bindtap="openContact" class="flex-item" wx:if="{{showCustomService}}">
+                    <button class="bg-white fg-6 f-12 serviceBtn flex-column-center" openType="contact">
+                        <view class="left-area flex-column-center">
+                            <image class="item-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/personal_customer_ic@2x.png"></image>
+                            <text class="f-14 fg-3">我的客服</text>
+                        </view>
+                    </button>
+                </view>
+            </view>
+            <view class="item-area bg-white fg-6" wx:for="{{mineCenterAD}}" wx:for-index="idx" wx:for-item="advParent" wx:key="{{idx}}">
+                <view bindtap="goToMiniAppsOne" class="item-wrap" data-index="{{index}}" data-parent-index="{{idx}}" wx:for="{{advParent.advs}}" wx:key="{{index}}">
+                    <view class="flex-item">
+                        <view class="left-area flex-column-center">
+                            <image class="item-icon" src="{{item.iconUrl}}"></image>
+                            <text class="f-14 fg-3">{{item.title}}</text>
+                        </view>
+                        <view class="right-area flex-center f-12 fg-6">
+                                {{item.leadContent}}
+                                <view class="red-circle" wx:if="{{item.showRedPoint}}"></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="item-area" style="overflow:hidden;" wx:if="{{ifShowOfficial}}">
+                <official-account class="public_account"></official-account>
+            </view>
+        </view>
+    </view>
+</template> -->

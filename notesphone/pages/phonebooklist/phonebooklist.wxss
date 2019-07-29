@@ -1,0 +1,218 @@
+.contentplan {
+    width: 100%;
+    background: #fff;
+    margin-bottom: 30rpx;
+    border-top: 1rpx solid #E6E7E8;
+    border-bottom: 1rpx solid #E6E7E8;
+}
+.contenttitle {
+    line-height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    font-size: 32rpx;
+    color: #999;
+}
+.linkbtn {
+    color: #3D76AF;
+}
+
+.contentrow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.contentname {
+    width: 100%;
+    border-top: 1rpx solid #E6E7E8;
+    line-height: 50rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-right: 40rpx;
+    color: #111;
+}
+
+.imgplan {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.inforcon {
+    width: 500rpx;
+    padding-top: 15rpx;
+    padding-bottom: 10rpx;
+}
+
+.conimg {
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 15rpx;
+}
+
+.arrimg {
+    width: 45rpx;
+    height: 45rpx;
+}
+
+.detailinfor {
+    margin-right: 40rpx;
+    font-size: 28rpx;
+    color: #999;
+}
+
+.opentelinfor {
+    margin-right: 40rpx;
+    font-size: 28rpx;
+    color: #3D76AF;
+}
+
+.detailwarn {
+    margin-right: 40rpx;
+    font-size: 26rpx;
+    color: red;
+}
+
+.cart-detail {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2000rpx;
+    border: 0px dashed red;
+}
+
+.cart-detail .mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2000rpx;
+    background: rgba(0,0,0,0.7);
+}
+
+.cart-detail .list {
+    position: fixed;
+    left: 0rpx;
+    top: 0rpx;
+    padding: 0;
+    background: #f7f7f7;
+    width: 100%;
+}
+
+.changetitle {
+    display: block;
+    padding-left: 40rpx;
+    padding-top: 20rpx;
+    padding-bottom: 10rpx;
+    font-size: 32rpx;
+    color: #222;
+}
+
+.contentbutton {
+    line-height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.showadrt {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 450rpx;
+    height: 100rpx;
+    line-height: 50rpx;
+}
+
+.combtnareabg {
+    position: fixed;
+    z-index: 999;
+    left: 20rpx;
+    bottom: 50rpx;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 70rpx;
+    background: #EFEFF4;
+    opacity: 0.6;
+}
+
+.combtnarea {
+    position: fixed;
+    z-index: 1000;
+    left: 20rpx;
+    bottom: 50rpx;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 70rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.kqbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 104rpx;
+    height: 104rpx;
+    line-height: 40rpx;
+    color: #fff;
+    font-size: 22rpx;
+    border-radius: 52rpx;
+    background-color: #20A0FF;
+}
+
+.regframe {
+    width: 100%;
+    margin-top: 120rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.regsbtn {
+    width: 400rpx;
+    font-size: 32rpx;
+    color: #20A0FF;
+    height: 75rpx;
+    text-align: center;
+    border: 1rpx solid #20A0FF;
+    border-radius: 37rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.linkbtntxt {
+    padding: 10rpx;
+    line-height: 60rpx;
+    margin-left: 40rpx;
+    font-size: 26rpx;
+    color: #3D76AF;
+}

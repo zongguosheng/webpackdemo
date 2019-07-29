@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "line-disable-view": "/components/ks-line-disable/index",
+    "stop-view": "/components/ks-stop/index",
+    "line-view": "/components/ks-line/index",
+    "search-box": "/pages/components/search-box/index",
+    "city-indicator": "/pages/components/city-indicator/index",
+    "warning": "/pages/components/warning/index",
+    "tags": "/pages/components/tags/index"
+  }
+}

@@ -1,0 +1,105 @@
+.line-item {
+    margin: 0 16rpx 16rpx 16rpx;
+    padding: 24rpx 200rpx 24rpx 32rpx;
+    position: relative;
+    border-radius: 16rpx;
+    box-shadow: 0 4rpx 4rpx 0 rgba(0,0,0,0.04);
+    background-color: #FFFFFF;
+}
+
+.line-name {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.line-direction {
+    margin-top: 16rpx;
+    color: #333;
+    font-size: 24rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.line-target-stop {
+    margin-top: 8rpx;
+    color: #333;
+    font-size: 24rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.line-bus-time {
+    right: 32rpx;
+    position: absolute;
+    height: 100rpx;
+    top: 8px;
+}
+
+.line-bus-block {
+    position: relative;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-bus-distance {
+    position: absolute;
+    right: 32rpx;
+    bottom: 24rpx;
+}
+
+.line-bus-arrive {
+    position: absolute;
+    right: 24rpx;
+    height: 184rpx;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40rpx;
+    color: #ff5a00;
+}
+
+.icon_home_signal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6px;
+    height: 6px;
+}
+
+.line-display-time {
+    font-size: 72rpx;
+}
+
+.line-display-time-2 {
+    font-size: 48rpx;
+}
+
+.line-display-time-unit {
+    font-size: 24rpx;
+}
+
+.line-bus-distance {
+    font-size: 24rpx;
+}
+
+.line-display-distance {
+    font-size: 24rpx;
+}
+
+.fg-blue {
+    color: #0082dc;
+}
+
+.fg-red {
+    color: #ff5a00;
+}
+
+.fg-3 {
+    color: #333;
+}

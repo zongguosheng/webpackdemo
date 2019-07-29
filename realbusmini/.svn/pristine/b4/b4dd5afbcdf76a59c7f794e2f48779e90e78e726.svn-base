@@ -1,0 +1,79 @@
+.fav {
+    height: 464rpx;
+    position: fixed;
+    z-index: 102;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 28rpx;
+}
+
+.fav-title {
+    height: 96rpx;
+    position: relative;
+}
+
+.fav-close {
+    position: absolute;
+    left: 32rpx;
+    height: 96rpx;
+    top: 0;
+}
+
+.fav-edit {
+    position: absolute;
+    right: 32rpx;
+    height: 96rpx;
+    top: 0;
+}
+
+.fav-tag {
+    width: 196rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    background-color: rgba(0,0,0,0.04);
+    margin: 0 auto;
+    position: relative;
+}
+
+.fav-block {
+    width: 33.33%;
+    margin-top: 32rpx;
+    position: relative;
+}
+
+.fav-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+}
+
+.fav-tag-left {
+    float: left;
+    margin: 0;
+}
+
+.fav-tag-right {
+    float: right;
+    margin: 0;
+}
+
+.fav-tag-active {
+    background-color: rgba(0,130,220,0.12);
+    color: #0082dc;
+}
+
+.fav-tag-add {
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 4px;
+}
+
+.fav-tag-delete {
+    width: 48rpx;
+    height: 48rpx;
+    position: absolute;
+    right: -12rpx;
+    top: -12rpx;
+}
