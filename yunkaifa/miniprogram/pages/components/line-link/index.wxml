@@ -1,0 +1,5 @@
+<view class="session" >
+    <text class="newstitle" >{{news}}</text>
+    <text class="iconfont icon_right"></text>
+</view>
+

@@ -1,0 +1,32 @@
+
+<view class='userinfo' style="background-image: url(../../images/bg.jpg); background-size:cover;" >
+    <button class="userinfo-avatar"   style="background-image: url({{avatarUrl}})" ></button>
+    <button class="login"  open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" lang="zh_CN" wx:if="{{!logged}}">点击登录</button>
+    <text class="username" >{{userInfo.nickName}}</text>
+    <text class="describe" >时间是一切财富中最宝贵的财富</text>
+</view>
+<view class="textrow">
+    <text-list  pinfo="{{userInfo}}" ></text-list>
+    <text-list  pinfo="{{userInfo}}" ></text-list>
+    <text-list  pinfo="{{userInfo}}" ></text-list>
+</view>
+<view class="links">
+    <line-link news="我的故事" ></line-link>
+    <line-link news="个人信息" bindtap="personinfo" ></line-link>
+    
+    <view class="session">
+      <text class="title">我的介绍</text> 
+      <text class="iconfont icon_right"></text>
+    </view>
+    <view class="session">
+      <text class="title">擅长领域</text> 
+      <text class="iconfont icon_right"></text>
+    </view>
+    <view class="session">
+      <text class="title">promise用法</text> 
+      <text class="iconfont icon_right"></text>
+    </view>
+    <line-link  bindtap="goToList" news="文章列表" ></line-link>
+    <line-link news="设置" ></line-link>
+    
+</view>

@@ -1,0 +1,4 @@
+<view class="link" wx:for="{{icon}}">
+    <text class="iconfont {{item}}" ></text>
+    <input class="name" type="text" value="{{item}}" ></input>
+</view>

@@ -1,0 +1,5 @@
+.login{ background: #544fc0; background-size: 100% 100%; height: 100%; padding-top: 100px; padding-bottom: 100px; }
+.login label{ color: #fff;}
+.btn-group{ display: flex; justify-content: space-between;}
+.btn-group .regist{ border: 1px solid #bdbdbd; background: lightsalmon; padding: 12px 20px; border-radius: 5px; margin-left: 100px; text-decoration: none; font-size: 12px;}
+.btn-long{ width: 100%; margin-left: 100px;}

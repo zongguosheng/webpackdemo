@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuex"></script>
+<!-- <script src="../js/store.js"></script> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{count}}</p>
+    <p>
+      <button @click="increment">+</button>
+      <button @click="dicrement">-</button>
+    </p>
+  </div>
+  <script>
+    const store = new Vuex.Store({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment: state => state.count++,
+    dicrement: state => state.count--
+  }
+})
+
+new Vue({
+  el: '#app',
+  computed: {
+    count () {
+      return store.state.count
+    }
+  },
+  methods: {
+    increment () {
+      store.commit('increment')
+    },
+    dicrement () {
+      store.commit('dicrement')
+    }
+  }
+
+})
+  
+  </script>
+</body>
+
+</html>
