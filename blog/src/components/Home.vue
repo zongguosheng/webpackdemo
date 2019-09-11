@@ -1,8 +1,10 @@
 <template>
     <div class="login">
         <el-row :gutter="20">
-          <el-col :span="12"  :offset='6'>{{notice_info }}
-          </el-col>
+          <el-col :span="12"  :offset='6'>{{notice_info }}</el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12"  :offset='6' class="algincentent"  ><div class="logo"><img src="../assets/logo.jpg"></div></el-col>
         </el-row>
         <el-row :gutter="20">
           <el-col :span="12"  :offset='6'>
@@ -15,7 +17,7 @@
             </el-form-item>
             <div class="btn-group">
                 <router-link to="/regist" class="regist" >注册</router-link>
-                <el-button @click="checkUsers">登录</el-button>
+                <el-button :plain="true" @click="checkUsers">登录</el-button>
             </div>
             </el-form>
           </el-col>
@@ -23,8 +25,14 @@
     </div>
 </template>
 <script type="text/javascript">
+import { Message } from 'element-ui'
+import {mapState} from 'vuex'
+import router from '../router'
 import axios from 'axios'
 export default {
+  computed: mapState({
+    user_name: state => state.user_name
+  }),
   data () {
     // 验证用户名
     var validateUserName = (rule, value, callback) => {
@@ -67,9 +75,7 @@ export default {
     checkUsers () {
       var name = this.ruleForm.username
       var pwd = this.ruleForm.pwd
-      var self = this // 很关键
       console.log(this.ruleForm.username)
-      console.log('===')
       console.log(this.ruleForm.pwd)
       axios({
         method: 'get',
@@ -80,23 +86,36 @@ export default {
         },
         timeout: 2000
       }).then(function (response) {
+        console.log(response)
+        console.log(response.status)
         var i, flag
         for (i in response.data) {
           if (name == response.data[i].user_name && pwd == response.data[i].user_pwd && name != '' && pwd != '') {
             flag = 'allright'
-          } else {
-            self.notice_info = '用户名不存在或密码错误'
           }
         }
         if (flag == 'allright') {
-          self.notice_info = '登陆成功'
+          console.log()
+          router.push('./index')
+          Message({
+            message: '登陆成功',
+            duration: 2000,
+            type: 'success',
+            showClose: true
+          })
+          // setTimeout(window.location.href = './#/index', 2000)
+        } else {
+          Message({
+            message: '用户名不存在或密码错误'
+          })
         }
       }).catch(function (error) {
         console.log(error)
-        self.notice_info = '服务器繁忙，请稍后重试!(Error code: 504)'
+        Message({
+          message: '服务器繁忙，请稍后重试!(Error code: 504)'
+        })
       })
     }
   }
 }
 </script>
-<style  src="../assets/css/main.css"></style>

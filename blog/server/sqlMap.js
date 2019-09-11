@@ -14,6 +14,10 @@ var sqlMap = {
     written: 'insert into message_board(message_list, author, date) values (?,?,?)',
     search: 'select message_list, author, date from message_board'
   },
+  article: {
+    written: 'insert into article_board(message_title, author, date) values (?,?,?)',
+    search: 'select article_list, author, date from article_board'
+  },
   diary: {
     written: 'insert into diary_board(diary_list, author, date) values (?,?,?)',
     // eslint-disable-next-line camelcase

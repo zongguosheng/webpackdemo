@@ -42,7 +42,7 @@ module.exports = {
     "eqeqeq": 0, // 必须使用全等
     "one-var": 0, // 连续声明
     "no-undef": 0, // 禁用未声明的变量，除非它们在 /*global */ 注释中被提到
-    "no-unused-vars": 1, // 禁止出现未使用过的变量
+    "no-unused-vars": 0, // 禁止出现未使用过的变量
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development

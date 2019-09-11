@@ -6,6 +6,8 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
+import './assets/css/reset.css'
+import './assets/css/main.css'
 
 // import { Button, Select } from 'element-ui' 引入部分组件
 

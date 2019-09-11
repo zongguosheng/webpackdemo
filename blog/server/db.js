@@ -6,7 +6,7 @@ const mysqlconfig = {
   port: 3306,
   database: 'test'
 }
-
+console.log(mysql)
 //  链接池：创建多个链接、复用与分发链接
 
 // eslint-disable-next-line no-unused-vars

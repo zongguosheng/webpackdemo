@@ -23,6 +23,7 @@ var jsonWrite = function (res, ret) {
 router.use('/addUser', (req, res) => {
   var sql = $sql.user.add
   var params = req.body // 获得「请求主体」/ Cookies
+  console.log(req)
   console.log('params')
   console.log(params)
   if (params.user_name == '' || params.user_pwd == '' || params.user_name == undefined) {
@@ -34,22 +35,19 @@ router.use('/addUser', (req, res) => {
       console.log('params***')
       console.log(results)
       jsonWrite(res, results)
+      console.log(jsonWrite(res, results))
     }
   })
 })
 
 // 查库操作(检测用户信息)
 router.use('/searchUser', (req, res) => {
-  debugger
   var sql = $sql.user.check
   var params = req.body
   console.log(req)
-  console.log(params)
   pool.query(sql, [params.user_name, params.user_pwd], function (error, results, fields) {
     if (error) throw error
     if (results) {
-      console.log('params')
-      console.log(results)
       console.log(results)
       jsonWrite(res, results)
     }
@@ -61,7 +59,7 @@ router.use('/leaveMessage', (req, res) => {
   console.log(req)
   var params = req.body
   console.log(params)
-  pool.query(sql, [params.list, params.date, params.author], function (error, results, fields) {
+  pool.query(sql, [params.message_list, params.date, params.author], function (error, results, fields) {
     if (error) throw error
     if (results) {
       console.log(results)
