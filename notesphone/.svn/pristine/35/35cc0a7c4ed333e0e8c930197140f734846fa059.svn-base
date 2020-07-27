@@ -1,0 +1,39 @@
+@import "/style/iconfont.wxss";
+view {
+  box-sizing: border-box;
+}
+.icon{ height: 48rpx; width: 48rpx;}
+
+/* tab-bar */
+.nav-bar{ 
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-top: 1px solid #e6e6e6;
+}
+.nav-bar-item{ 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    flex: 1;
+    flex-direction: column;
+    line-height: 24px;
+    text-align: center;
+    position: relative;
+}
+.tab-bar-item-content {
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+}
+.nav-bar-item::after{border: 0;}
+.tab-bar-text{ font-size: 12px;}
+.fg-org{ color: #ff5500;}.fc-c{ color: #ccc;}
+.pb60{padding-bottom: 60px;}

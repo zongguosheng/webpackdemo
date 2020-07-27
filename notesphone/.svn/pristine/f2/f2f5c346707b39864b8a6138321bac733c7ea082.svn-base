@@ -1,0 +1,2 @@
+/* pages/mymark/mymark.wxss */
+@import "../template/mymark/mymark.wxss";

@@ -1,0 +1,29 @@
+/* pages/realname/realname.wxss */
+.content{padding: 0 10px;}
+.inputgroup{ 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  height: 100rpx; 
+  line-height: 100rpx; 
+  font-size: 28rpx;
+  border-bottom: 1px solid #e6e6e6;
+}
+.upload{ margin-top: 50rpx;}
+.upload .title{ font-size: 28rpx; color: #292929; font-weight: bold; line-height: 60rpx;}
+.upload .waring{ font-size: 24rpx; color: #ff4772; line-height: 24px;}
+.inputgroup input{ text-align: right; height: 100rpx; line-height: 100rpx; font-size: 28rpx;}
+.uploadimg{ display: flex; flex-direction: row; margin-top: 50rpx; margin-bottom: 100rpx;}
+.uploadimg view{flex: 1 1 0px; text-align: center;}
+.uploadimg view image{ width: 321rpx; height: 206rpx;}
+.sunmitbtn{ 
+  background: #ff4772; 
+  color: #fff; 
+  width: 80% !important; 
+  height: 86rpx; 
+  line-height: 86rpx; 
+  padding: 0; 
+  font-size: 36rpx; 
+  font-weight: normal;
+  border-radius: 43rpx;
+}

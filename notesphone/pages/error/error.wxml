@@ -1,0 +1,14 @@
+<!--pages/error/error.wxml-->
+<view class="content">
+  <radio-group class="group" bindchange="radioChange">
+    <view class="label" wx:for="{{radioItems}}" wx:key>
+      <radio id="{{item.name}}" hidden value="{{item.name}}" checked="{{item.checked}}"></radio>
+      <label class="label_text" for="{{item.name}}"><text>{{item.name}}</text></label>
+    
+      <view class="iconfont icon-duigou colorblue" style="opacity:{{item.checked ? 1: 0}}"></view>
+      
+    </view>
+  </radio-group>
+
+  <button bindtap="errorReport" class="submitbtn">提交</button>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/serviceinfo/serviceinfo.wxml-->
+<view class="content">
+    <view class="goods">
+        <image src="../images/temp/img9.jpg" mode="aspectFill"></image>
+        <view class="h2">odelia2019新款《爱丽丝》梦幻森系超仙长袖冬季拖尾婚纱礼服新娘</view>
+        <view class="price"><text>￥</text>2369.00</view>
+
+        <view class="business">
+            <image src="../images/temp/img10.jpg" mode="aspectFill"></image>
+            <view class="businessinfo">
+                <view class="businesstitle">伊恩婚纱礼服馆</view>
+                <view class="businessaddress">河南省洛阳市西工区中州中路168号</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="goodsinfo">
+      <view class="rich-text-wrp">
+          <view class="title">活动介绍</view>
+          <rich-text nodes="{{param}}" ></rich-text>
+      </view>
+      <view class="rich-text-wrp">
+          <view class="title">图文详情</view>
+          <image src="../images/temp/img11.jpg" mode="widthFix"></image>
+      </view>
+    </view>
+</view>

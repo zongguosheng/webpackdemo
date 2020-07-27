@@ -1,5 +1,0 @@
-<view class="guideSuggest {{isIpx?'guide_recommend_sp':''}}" wx:if="{{guideSuggestShow&&suggestEnable}}">
-    <view class="arr_bottom"></view>
-    <view class="guide_l">{{bubbleContext}}</view>
-    <image catchtap="closeGuide" class="close_guide" data-name="3" src="/resource/images/close_white_btn@2x.png"></image>
-</view>

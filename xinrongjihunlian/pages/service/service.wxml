@@ -1,0 +1,59 @@
+<!--pages/service/service.wxml-->
+<view class="content">
+    <view class="searchbar">
+        <icon class="searchcion" size='20' type='search' bindtap="btnSearch"></icon>
+        <input class='search' bindinput='inputClick' placeholder-class="placeholder" type='text' placeholder='请输入小区名称'  />
+    </view>
+    <view class="service-item">
+        <view class="item">
+           <view class="title">婚纱礼服</view> 
+           <image src="../images/temp/img1.png" mode="aspectFill"></image> 
+        </view>
+        <view class="item">
+            <view class="title">喜宴用酒</view>
+            <image src="../images/temp/img2.png" mode="aspectFill"></image>
+        </view>
+        <view class="item">
+            <view class="title">请柬喜糖</view>
+            <image src="../images/temp/img3.png" mode="aspectFill"></image>
+        </view>
+        <view class="item">
+           <view class="title">喜庆用品</view> 
+           <image src="../images/temp/img4.png" mode="aspectFill"></image>
+        </view>
+        <view class="item">
+            <view class="title">珠宝首饰</view>
+            <image src="../images/temp/img5.png" mode="aspectFill"></image>
+        </view>
+        <view class="item">
+            <view class="title">婚庆服务</view>
+            <image src="../images/temp/img6.png" mode="aspectFill"></image>
+        </view>
+    </view>
+
+    <view class="quality">
+        <view class="title">品质优选</view>
+        <view class="qualitylist">
+            <view class="list" bindtap="gotoservice">
+                <image src="../images/temp/img3.jpg" mode="aspectFill"></image>
+                <view class="name">CRD/克徕帝钻戒1克拉18K白金六爪钻石戒...</view>
+                <view class="price">￥ 15758.00</view>
+            </view>
+            <view class="list">
+                <image src="../images/temp/img4.jpg" mode="aspectFill"></image>
+                <view class="name">CRD/克徕帝钻戒1克拉18K白金六爪钻石戒...</view>
+                <view class="price">￥ 15758.00</view>
+            </view>
+            <view class="list">
+                <image src="../images/temp/img5.jpg" mode="aspectFill"></image>
+                <view class="name">CRD/克徕帝钻戒1克拉18K白金六爪钻石戒...</view>
+                <view class="price">￥ 15758.00</view>
+            </view>
+            <view class="list">
+                <image src="../images/temp/img6.jpg" mode="aspectFill"></image>
+                <view class="name">CRD/克徕帝钻戒1克拉18K白金六爪钻石戒...</view>
+                <view class="price">￥ 15758.00</view>
+            </view>
+        </view>
+    </view>
+</view>

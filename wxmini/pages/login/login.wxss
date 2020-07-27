@@ -1,0 +1,31 @@
+/* pages/login/login.wxss */
+.content{ padding: 30rpx;}
+.loginregist{ padding: 70rpx 30rpx;}
+.loginregist .title{ 
+  font-size: 48rpx; 
+  display: inline-block; 
+  padding: 0 5px; 
+  line-height: 45rpx; 
+  border-bottom: 13rpx solid #ff4772;
+}
+.regist{ color: #9a9a9a; font-size: 24rpx; line-height: 80rpx;}
+.regist .link{ color: #ff4772; display: inline-block;}
+
+.inputgroup{ border-bottom: 1px solid #e6e6e6; height: 130rpx; line-height: 130rpx; display: flex; flex-direction: row;}
+.inputgroup input{height: 130rpx; line-height: 130rpx; width: 100%; font-size: 32rpx; font-family: "Microsoft YaHei";}
+.placeholdersize{ font-size: 32rpx; font-family: "Microsoft YaHei";}
+.red-btn{ 
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+  background: #ff4772; 
+  color: #fff; 
+  width: 90%; 
+  border-radius: 43rpx;
+  font-weight: normal; 
+  letter-spacing: 6px; 
+  font-family: Microsoft YaHei;
+}
+
+.password{ display: flex; flex-direction: row; justify-content: space-between;}
+.yzmdl{ font-size: 24rpx; color: #6a96d8;}
+.forget{ font-size: 24rpx; color: #999;}

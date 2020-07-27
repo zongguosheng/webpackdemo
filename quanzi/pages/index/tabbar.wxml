@@ -1,0 +1,23 @@
+<view class="tabbar">
+      
+    <view class="tab-bar-item-content" bindtap="tabClick" data-tab="home" data-title="首页" data-showNav="true">
+        
+        <image class="tab-bar-icon" hidden="{{activeTab==='home'}}" src="../../images/icon1.png"></image>
+        <image class="tab-bar-icon" hidden="{{activeTab!=='home'}}" src="../../images/icon1-1.png"></image>
+        <view class="tab-bar-text {{activeTab==='home'&&!showShare?'fg-blue':'fg-a'}}">   首页 </view>
+    </view>
+    <view class="tab-bar-item-content" bindtap="tabClick" data-tab="message" data-title="消息" data-showNav="true">
+        <label class="redspot"></label>
+        <image class="tab-bar-icon" hidden="{{activeTab==='message'}}" src="../../images/icon2.png"></image>
+        <image class="tab-bar-icon" hidden="{{activeTab!=='message'}}" src="../../images/icon2-1.png"></image>
+        <view class="tab-bar-text {{activeTab==='message'&&!showShare?'fg-blue':'fg-a'}}"> 消息 </view>
+    </view>
+    <view class="tab-bar-item-content" bindtap="tabClick" data-tab="user" data-title="我的" data-showNav="false">
+        <image class="tab-bar-icon" hidden="{{activeTab==='user'}}" src="../../images/icon3.png"></image>
+        <image class="tab-bar-icon" hidden="{{activeTab!=='user'}}" src="../../images/icon3-1.png"></image>
+        <view class="tab-bar-text {{activeTab==='user'&&!showShare?'fg-blue':'fg-a'}}">  我的 </view>
+    </view>
+
+      
+      
+</view>

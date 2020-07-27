@@ -1,0 +1,48 @@
+
+<view class="star-end-time">
+    <view class="endtime  {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+        <text>距结束</text>
+        <view class="time">04:22:56</view>
+    </view>
+    <view class="startime {{currentTab==0?'active':''}}"  data-current="1"  bindtap="clickTab">
+        <text>即将开始</text>
+        <view class="time">07-31 09：00</view>
+    </view>
+</view>
+
+<view class="{{currentTab == 0 ? 'show':'hidden'}}">
+    <view class="skilllist">
+          <view class="li" wx:for="{{miaosha}}" wx:key="index" bindtap="openinfo">
+              <view class="killimg">
+                <image class="" src="../../image/{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="killtext">
+                  <view> 
+                    <view class="describe">{{item.describe}}</view>
+                    <view class="specs">{{item.specs}}</view>
+                  </view>
+                  <view class="price">￥
+                  <text class="aftertext">{{item.price}}</text><text class="oldprice">{{item.oldprice}}</text> </view>
+                  <view class="address">{{item.address}}</view>
+              </view> 
+          </view>
+    </view>
+</view>
+<view class="{{currentTab == 1 ? 'show':'hidden'}}">
+    <view class="skilllist">
+          <view class="li" wx:for="{{miaosha}}" wx:key="index" bindtap="openinfo">
+              <view class="killimg">
+                <image class="" src="../../image/{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="killtext">
+                  <view> 
+                    <view class="describe">{{item.describe}}</view>
+                    <view class="specs">666{{item.specs}}</view>
+                  </view>
+                  <view class="price">￥
+                  <text class="aftertext">{{item.price}}</text><text class="oldprice">{{item.oldprice}}</text> </view>
+                  <view class="address">{{item.address}}</view>
+              </view> 
+          </view>
+    </view>
+</view>

@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="content">
+		<view class="limitbar">
+			<view class="select">
+				<label bindtap="clicksort" >默认排序 <icon class="iconfont iconsanjiao" style="color:#a8a8a8"></icon></label>
+				<label bindtap="clicksort">基本筛选 <icon class="iconfont iconsanjiao" style="color:#a8a8a8"></icon></label>
+				<label bindtap="clicksort">高级筛选 <icon class="iconfont iconsanjiao" style="color:#a8a8a8"></icon></label>
+			</view>
+      <view class="modeal" hidden="{{isShow == 1 ? true : false}}"></view>
+			<view class="list" hidden="{{isShow == 1 ? true : false}}" >
+				<view>默认排序</view>
+				<view>最新加入</view>
+				<view>最近登录</view>
+				<view>距离最近</view>
+			</view>
+		</view>
+
+    <view class="member-list">
+        <view class="li" bindtap="gotoinfo">
+            <image src="../images/temp/img1.jpg" mode="aspectFill" ></image>
+            <view class="name">赵女士 <icon class="iconfont iconshenfen" style="color: #6a96d8"></icon></view>
+            <view class="nameinfo">
+              <text>26岁</text>
+              <text>人事/行政</text>
+              <text>涧西区</text>
+            </view>
+        </view>
+        <view class="li">
+            <image src="../images/temp/img2.jpg" mode="aspectFill" ></image>
+            <view class="name">赵女士</view>
+            <view class="nameinfo">
+              <text>26岁</text>
+              <text>人事/行政</text>
+              <text>涧西区</text>
+            </view>
+        </view>
+        <view class="li">
+            <image src="../images/temp/img2.jpg" mode="aspectFill" ></image>
+            <view class="name">赵女士 <icon class="iconfont iconshenfen" style="color: #6a96d8"></icon> </view>
+            <view class="nameinfo">
+              <text>26岁</text>
+              <text>人事/行政</text>
+              <text>涧西区</text>
+            </view>
+        </view>
+        <view class="li">
+            <image src="../images/temp/img1.jpg" mode="aspectFill" ></image>
+            <view class="name">赵女士</view>
+            <view class="nameinfo">
+              <text>26岁</text>
+              <text>人事/行政</text>
+              <text>涧西区</text>
+            </view>
+        </view>
+    </view>
+</view>

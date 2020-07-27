@@ -1,6 +1,7 @@
 const path = require('path');  // 首先要引入node.js中path 模块，用于处理文件与目录的路径
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const webpack = require("webpack")
+var htmlwebpackplugin = require('html-webpack-plugin')
+const webpack = require("webpack")// 用于访问内置插件
 
 //   var htmlWebpackPlugin = require('html-webpack-plugin');
 //   var nodeExternals = require('webpack-node-externals');
@@ -17,27 +18,24 @@ module.exports ={
     plugins: [
         　　　　new ExtractTextPlugin('./dist/css/style.css'),
                new webpack.BannerPlugin('zongguosheng编写的组件代码'),
+               new htmlwebpackplugin({
+                   hash: true,
+                   template: './src/index.html',
+                   filename: 'index.html'
+               })
         　　],
     mode: 'production',
     //module 模块：例如解读CSS,图片如何转换，压缩
     module: {
         // 对一个单独的 module 对象定义了 rules 属性   多个loaders
         rules: [
-    　　　　　　{ 
-    　　　　　　　　test: /\.css$/, 
-        　　　　　 loader:ExtractTextPlugin.extract("style-loader","css-loader"),
-                  use: [ 'style-loader', 'css-loader' ],
-                    loader: ExtractTextPlugin.extract({
-                        fallback: 'style-loader',
-                        use: ['css-loader']
-                        // publicPath: '../'
-                    })
-
-
-
-
-    　　　　　　}
-    　　　
+    　　　　　　{
+                    test: /\.css$/, 
+                    use:  ExtractTextPlugin.extract({
+                        fallback: "style-loader",
+                        use: "css-loader"
+                      })    
+    　　　　　　},
         ]
     },
     //自带插件直接配置

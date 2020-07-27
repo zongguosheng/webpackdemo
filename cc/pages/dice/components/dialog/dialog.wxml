@@ -1,8 +1,0 @@
-<view class="dialog" hidden="{{!isShow}}">
-    <view class="body">
-        <view class="content">
-            <slot></slot>
-        </view>
-        <image bindtap="close" class="btn-close" hidden="{{!showClose}}" src="../../images/icn_close.png"></image>
-    </view>
-</view>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>个人信息</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+   <header>
+        <div class="wrap">
+          <a href="index.html" class="logo"><img src="images/logo.jpg" alt=""> </a>
+          <ul class="nav-list">
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="会员展示.html">会员展示</a></li>
+            <li><a href="婚恋商城.html">婚恋商城</a></li>
+            <li><a href="相亲活动.html">相亲活动</a></li>
+            <li><a href="加入红娘.html">加入红娘</a></li>
+            <li><a href="婚恋课堂.html">婚恋课堂</a></li>
+            <li><a href="情感测试.html">情感测试</a></li>
+          </ul>
+
+          <div class="rightlogin">
+              <div style="display: none;">
+                  <a href="login.html">登录</a>
+                  <a href="register.html" class="regist">注册</a>
+              </div>
+              <div class="logined">
+                  <div>
+                      <div class="userimg">
+                          <img src="images/tmp/img39.jpg" alt="">
+                          <span>2</span>
+                      </div>
+                      王女士
+                  </div>
+                  <ul class="subnav-list">
+                      <li><a href="个人信息.html">个人中心</a><p>编辑个人资料</p></li>
+                      <li><a href="个人信息.html">账号设置</a><p>修改密码</p></li>
+                      <li><a href="我的消息.html">我的消息</a><span>2</span></li>
+                      <li><a href="我的关注.html">我的关注</a></li>
+                      <li><a href="我的关注.html">我的活动</a></li>
+                      <li><a href="#">退出登录</a></li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+   </header>
+   <div class="subbanner">
+      <img src="images/bg3.jpg" alt="">
+   </div>
+   <div class="w1280">
+      <div class="wrap">
+          <div class="content">
+              <h4 class="nav-location"><a href="#">首页</a>  > <a href="#">加入红娘</a> </h4>
+              <h2 class="content-title">个人信息</h2> 
+              <div class="personal-Information">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active"><a href="#basicinfo" aria-controls="basicinfo" role="tab" data-toggle="tab">基本信息</a></li>
+                      <li role="presentation"><a href="#zo-condition" aria-controls="zo-condition" role="tab" data-toggle="tab">择偶条件</a></li>
+                      <li role="presentation"><a href="#certification" aria-controls="certification" role="tab" data-toggle="tab">实名认证</a></li>
+                      <li role="presentation"><a href="#hncertification" aria-controls="hncertification" role="tab" data-toggle="tab">红娘认证</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="basicinfo">
+                        <div class="joinhongniang basicinformation">
+                            <div class="">
+                              <div class="selectgroup">
+                                  <label>姓名</label>
+                                  <div class="selectinput w320">
+                                      <input type="text" class="input-text" value=""  placeholder="请填写">
+                                  </div>
+                                  <span class="tips">请正确输入</span> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>性别</label>
+                                  <input type="radio" name="sex" id="sex1"> <label for="sex1">男</label>
+                                  <input type="radio" name="sex" id="sex2"> <label for="sex2">女</label>
+                              </div>
+                              <div class="selectgroup">
+                                  <label>地区</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>未婚</li>
+                                          <li>离异</li>
+                                          <li>丧偶</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>生日</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>未婚</li>
+                                          <li>离异</li>
+                                          <li>丧偶</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>身份证号</label>
+                                  <div class="selectinput w320">
+                                      <input type="text" class="input-text" value=""  placeholder="请填写">
+                                  </div>
+                                  <span class="tips">请正确输入</span> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>婚姻状况</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>未婚</li>
+                                          <li>离异</li>
+                                          <li>丧偶</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>身高</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>160</li>
+                                          <li>165</li>
+                                          <li>170</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>体重</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>48kg</li>
+                                          <li>50kg</li>
+                                          <li>75kg</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>学历</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>高中</li>
+                                          <li>专科</li>
+                                          <li>本科</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>毕业院校</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>高中</li>
+                                          <li>专科</li>
+                                          <li>本科</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>职业</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>快递员</li>
+                                          <li>程序员</li>
+                                          <li>公务员</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>工作单位</label>
+                                  <div class="selectinput w320">
+                                      <input type="text" class="input-text" value=""  placeholder="请填写">
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>单位性质</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>民营</li>
+                                          <li>国企</li>
+                                          <li>外企</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>收入</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>民营</li>
+                                          <li>国企</li>
+                                          <li>外企</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>购房情况</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>民营</li>
+                                          <li>国企</li>
+                                          <li>外企</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>购车情况</label>
+                                  <div class="selectinput w320">
+                                      <div class="input">
+                                          <input type="text" class="select-input" value=""  placeholder="请选择">
+                                      </div>
+                                      <ul class="optionlist">
+                                          <li>民营</li>
+                                          <li>国企</li>
+                                          <li>外企</li>
+                                      </ul>
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                  <label>微信号</label>
+                                  <div class="selectinput w320">
+                                      <input type="text" class="input-text" value=""  placeholder="请填写">
+                                  </div> 
+                              </div>
+                              <div class="selectgroup">
+                                      <label></label>
+                                      <button class="saveupdat-btn">保存并更新</button>
+                              </div>
+                            </div>
+                            <div class="head">
+                               <div class="headimg"><img src="images/boy.jpg" alt=""></div>
+                               <a href="javascript:;" class="file">选择文件
+                                 <input type="file" name="" id="">
+                               </a>
+                               <p>只支持JPG格式，大小不要超过300k，建议尺寸70*100像素</p>
+                            </div>
+                        </div><!-- joinhongniang -->
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="zo-condition">
+                          <div class="joinhongniang basicinformation">
+                              <div class="left">
+                                <div class="selectgroup">
+                                    <label>性别</label>
+                                    <input type="radio" name="sex" id="sex1"> <label for="sex1">男</label>
+                                    <input type="radio" name="sex" id="sex2"> <label for="sex2">女</label>
+                                </div>
+                                <div class="selectgroup">
+                                    <label>地区</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>未婚</li>
+                                            <li>离异</li>
+                                            <li>丧偶</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>生日</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>未婚</li>
+                                            <li>离异</li>
+                                            <li>丧偶</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>婚姻状况</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>未婚</li>
+                                            <li>离异</li>
+                                            <li>丧偶</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>身高</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>160</li>
+                                            <li>165</li>
+                                            <li>170</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>体重</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>48kg</li>
+                                            <li>50kg</li>
+                                            <li>75kg</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>学历</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>高中</li>
+                                            <li>专科</li>
+                                            <li>本科</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>毕业院校</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>高中</li>
+                                            <li>专科</li>
+                                            <li>本科</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>职业</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>快递员</li>
+                                            <li>程序员</li>
+                                            <li>公务员</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>工作单位</label>
+                                    <div class="selectinput w320">
+                                        <input type="text" class="input-text" value=""  placeholder="请填写">
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>单位性质</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>民营</li>
+                                            <li>国企</li>
+                                            <li>外企</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>收入</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>民营</li>
+                                            <li>国企</li>
+                                            <li>外企</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>购房情况</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>民营</li>
+                                            <li>国企</li>
+                                            <li>外企</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                    <label>购车情况</label>
+                                    <div class="selectinput w320">
+                                        <div class="input">
+                                            <input type="text" class="select-input" value=""  placeholder="请选择">
+                                        </div>
+                                        <ul class="optionlist">
+                                            <li>民营</li>
+                                            <li>国企</li>
+                                            <li>外企</li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="selectgroup">
+                                        <label></label>
+                                        <button class="saveupdat-btn">保存并更新</button>
+                                </div>
+                              </div>
+                          </div><!-- joinhongniang -->
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="certification">
+                            <div class="realname">
+                                <div class="joinhongniang basicinformation">
+                                  <div>
+                                    <div class="selectgroup">
+                                        <label>姓名</label>
+                                        <div class="selectinput w320">
+                                            <input type="text" class="input-text" value=""  placeholder="请填写">
+                                        </div>
+                                        <span class="tips">请正确输入</span> 
+                                    </div>
+                                    <div class="selectgroup">
+                                        <label>身份证号</label>
+                                        <div class="selectinput w320">
+                                            <input type="text" class="input-text" value=""  placeholder="请填写">
+                                        </div>
+                                        <span class="tips">请正确输入</span> 
+                                    </div>
+
+                                    <div class="uploaddata">
+                                        <h3>请上传证件材料</h3>
+                                        <p>温馨提醒：身份证内容文字务必清晰，确保与本人相符。</p>
+                                        <div class="uploadcard">
+                                          <a href="javascript" class="card1">
+                                             <img src="images/img7.jpg" alt="">
+                                            <input type="file" name="" id=""> </a>
+                                          <a href="javascript" class="card2">
+                                              <img src="images/img8.jpg" alt="">
+                                            <input type="file" name="" id=""> </a>
+                                        </div>
+                                        <button class="submit-btn">提交</button>
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                            </div>
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="hncertification">
+                          <div class="realname">
+                              <div class="joinhongniang basicinformation">
+                                <div>
+                                  <div class="selectgroup">
+                                      <label>姓名</label>
+                                      <div class="selectinput w320">
+                                          <input type="text" class="input-text" value=""  placeholder="请填写">
+                                      </div>
+                                      <span class="tips">请正确输入</span> 
+                                  </div>
+                                  <div class="selectgroup">
+                                      <label>身份证号</label>
+                                      <div class="selectinput w320">
+                                          <input type="text" class="input-text" value=""  placeholder="请填写">
+                                      </div>
+                                      <span class="tips">请正确输入</span> 
+                                  </div>
+
+                                  <div class="uploaddata">
+                                      <h3>请上传证件材料</h3>
+                                      <p>温馨提醒：身份证内容文字务必清晰，确保与本人相符。</p>
+                                      <div class="uploadcard">
+                                        <a href="javascript" class="card1">
+                                           <img src="images/img7.jpg" alt="">
+                                          <input type="file" name="" id=""> </a>
+                                        <a href="javascript" class="card2">
+                                            <img src="images/img8.jpg" alt="">
+                                          <input type="file" name="" id=""> </a>
+                                      </div>
+                                      <button class="submit-btn">提交</button>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+          </div>
+      </div>
+  </div>
+   <footer>
+        <div class="wrap">
+            <div class="footer">
+                <div class="rowbody">
+                    <div class="contact-us">
+                      <h3>联系我们</h3>
+                      <p>联系电话：0379-65894126</p>
+                      <p>联系微信：158-3897-2269</p>
+                      <p>联系地址：河南省洛阳市涧西区中州西路26号5楼527</p>
+                    </div>
+                    <div class="about">
+                        <h3>关于</h3>
+                        <p>关于金鑫婚恋</p>
+                        <p>加入我们</p>
+                        <p>友情链接</p>
+                    </div>
+                    <div class="wechat">
+                        <div class="wechatewm">
+                           <h3>公众号</h3>
+                           <img src="images/tmp/img16.jpg" alt="">
+                        </div>
+                        <div class="wechatewm">
+                           <h3>小程序</h3>
+                           <img src="images/tmp/img17.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">Copyright 版权所有：河南鑫融基金控股份有限公司 版权所有                 <label>豫ICP备14012453号</label> </p>
+            </div>
+        </div>    
+   </footer>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+</body>
+   <script type="text/javascript">
+      $(function(){
+       $(".optionlist li").click(function () {
+        var text= $(this).text()
+        $(this).parent().siblings(".input").children().val(text)
+       });
+
+      })
+   </script>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>会员展示</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap-slider.min.css">
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <a href="index.html" class="logo"><img src="images/logo.jpg" alt=""> </a>
+            <ul class="nav-list">
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="会员展示.html">会员展示</a></li>
+            <li><a href="婚恋商城.html">婚恋商城</a></li>
+            <li><a href="相亲活动.html">相亲活动</a></li>
+            <li><a href="加入红娘.html">加入红娘</a></li>
+            <li><a href="婚恋课堂.html">婚恋课堂</a></li>
+            <li><a href="情感测试.html">情感测试</a></li>
+            </ul>
+
+            <div class="rightlogin">
+                <div style="display: none;">
+                    <a href="login.html">登录</a>
+                    <a href="register.html" class="regist">注册</a>
+                </div>
+                <div class="logined">
+                    <div>
+                        <div class="userimg">
+                            <img src="images/tmp/img39.jpg" alt="">
+                            <span>2</span>
+                        </div>
+                        王女士
+                    </div>
+                    <ul class="subnav-list">
+                        <li><a href="个人信息.html">个人中心</a><p>编辑个人资料</p></li>
+                        <li><a href="个人信息.html">账号设置</a><p>修改密码</p></li>
+                        <li><a href="我的消息.html">我的消息</a><span>2</span></li>
+                        <li><a href="我的关注.html">我的关注</a></li>
+                        <li><a href="我的关注.html">我的活动</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+   <div class="subbanner">
+      <img src="images/bg3.jpg" alt="">
+   </div>
+   <div class="w1280">
+      <div class="wrap">
+          <div class="content">
+              <h4 class="nav-location"><a href="#">首页</a>  > <a href="#">会员展示</a> </h4>
+              <h2 class="content-title">会员展示</h2> 
+              <div class="factor-screen">
+                  <div class="factorrow w1020">
+                    <div class="selectgroup">
+                        <label>年龄</label>
+                        <!-- <div class="selectinput w120">
+                            <div class="input">
+                                <input type="text" class="select-input" value=""  placeholder="请选择">
+                            </div>
+                            <ul class="optionlist">
+                                <li>20岁</li>
+                                <li>30岁</li>
+                                <li>40岁</li>
+                                <li>50岁</li>
+                            </ul>
+                        </div>  -->
+                        <div class="slidergroup">
+                            <input id="ex2" type="text" class="span2" value="" data-slider-min="10" data-slider-max="100" data-slider-handle="square" data-slider-step="5" data-slider-value="[18,60]"/>
+                        </div>
+                        <!-- <label>-</label>
+                        <div class="selectinput w120">
+                            <div class="input">
+                                <input type="text" class="select-input" value=""  placeholder="请选择">
+                            </div>
+                            <ul class="optionlist">
+                                <li>20岁</li>
+                                <li>30岁</li>
+                                <li>40岁</li>
+                                <li>50岁</li>
+                            </ul>
+                        </div> -->
+                    </div>
+                    <div class="selectgroup">
+                        <label>性别</label>
+                        <div class="selectinput w120">
+                            <div class="input">
+                                <input type="text" class="select-input" value=""  placeholder="请选择">
+                            </div>
+                            <ul class="optionlist">
+                                <li>20岁</li>
+                                <li>30岁</li>
+                                <li>40岁</li>
+                                <li>50岁</li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="selectgroup">
+                        <label>婚况</label>
+                        <div class="selectinput w120">
+                            <div class="input">
+                                <input type="text" class="select-input" value=""  placeholder="请选择">
+                            </div>
+                            <ul class="optionlist">
+                                <li>未婚</li>
+                                <li>离异</li>
+                                <li>丧偶</li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="selectgroup">
+                        <label>地区</label>
+                        <div class="selectinput w222">
+                            <div class="input">
+                                <input type="text" class="select-input" value=""  placeholder="请选择">
+                            </div>
+                            <ul class="optionlist">
+                                <li>河南</li>
+                                <li>洛阳</li>
+                                <li>丧偶</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="selectgroup">
+                        <label>身高</label>
+                        <div class="selectinput w120">
+                            <div class="input">
+                                <input type="text" class="select-input" value=""  placeholder="请选择">
+                            </div>
+                            <ul class="optionlist">
+                                <li>175</li>
+                                <li>180</li>
+                                <li>190</li>
+                                <li>160</li>
+                            </ul>
+                        </div> 
+                        <label>-</label>
+                        <div class="selectinput w120">
+                            <div class="input">
+                                <input type="text" class="select-input" value=""  placeholder="请选择">
+                            </div>
+                            <ul class="optionlist">
+                                <li>165</li>
+                                <li>175</li>
+                                <li>171</li>
+                                <li>123</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="selectgroup">
+                        <label>职业</label>
+                        <div class="selectinput w120">
+                            <div class="input">
+                                <input type="text" class="select-input" value=""  placeholder="请选择">
+                            </div>
+                            <ul class="optionlist">
+                                <li>20岁</li>
+                                <li>30岁</li>
+                                <li>40岁</li>
+                                <li>50岁</li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="selectgroup">
+                        <label>收入</label>
+                        <div class="selectinput w120">
+                            <div class="input">
+                                <input type="text" class="select-input" value=""  placeholder="请选择">
+                            </div>
+                            <ul class="optionlist">
+                                <li>未婚</li>
+                                <li>离异</li>
+                                <li>丧偶</li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="selectgroup">
+                          <label>学历</label>
+                          <div class="selectinput w120">
+                              <div class="input">
+                                  <input type="text" class="select-input" value=""  placeholder="请选择">
+                              </div>
+                              <ul class="optionlist">
+                                  <li>河南</li>
+                                  <li>洛阳</li>
+                                  <li>丧偶</li>
+                              </ul>
+                          </div>
+                        <div class="ml30">
+                            <label for="img">有图</label>
+                            <input type="checkbox" name="" id="img"> 
+                        </div>
+                    </div>
+                  </div>
+                  <button class="search-btn">搜索</button>
+              </div>
+
+              <div class="vipshow">
+                  <ul class="limit-list">
+                    <li class="active">默认 <span class="glyphicon glyphicon-arrow-down"></span></li>
+                    <li>年龄 <span class="glyphicon glyphicon-arrow-down"></span></li>
+                    <li>最新注册 <span class="glyphicon glyphicon-arrow-down"></span></li>
+                    <li>最近登录 <span class="glyphicon glyphicon-arrow-down"></span></li>
+                  </ul>
+                  <ul class="prettygirl">
+                      <li><a href="#">
+                        <img src="images/tmp/img1.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                      <li><a href="#">
+                        <img src="images/tmp/img2.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                      <li><a href="#">
+                        <img src="images/tmp/img3.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                      <li><a href="#">
+                        <img src="images/tmp/img4.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                      <li><a href="#">
+                        <img src="images/tmp/img5.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                      <li><a href="#">
+                        <img src="images/tmp/img1.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                      <li><a href="#">
+                        <img src="images/tmp/img2.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                      <li><a href="#">
+                        <img src="images/tmp/img3.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                      <li><a href="#">
+                        <img src="images/tmp/img4.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                      <li><a href="#">
+                        <img src="images/tmp/img5.jpg" alt=""></a>
+                        <p> <label>刘女士</label> <label>25岁/ 行政</label> </p>
+                      </li>
+                  </ul>
+              </div>
+
+              <div class="paging-group">
+                  <ul class="paging-list">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a class="next" href="#">下一页</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+   <footer>
+        <div class="wrap">
+            <div class="footer">
+                <div class="rowbody">
+                    <div class="contact-us">
+                      <h3>联系我们</h3>
+                      <p>联系电话：0379-65894126</p>
+                      <p>联系微信：158-3897-2269</p>
+                      <p>联系地址：河南省洛阳市涧西区中州西路26号5楼527</p>
+                    </div>
+                    <div class="about">
+                        <h3>关于</h3>
+                        <p>关于金鑫婚恋</p>
+                        <p>加入我们</p>
+                        <p>友情链接</p>
+                    </div>
+                    <div class="wechat">
+                        <div class="wechatewm">
+                           <h3>公众号</h3>
+                           <img src="images/tmp/img16.jpg" alt="">
+                        </div>
+                        <div class="wechatewm">
+                           <h3>小程序</h3>
+                           <img src="images/tmp/img17.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">Copyright 版权所有：河南鑫融基金控股份有限公司 版权所有                 <label>豫ICP备14012453号</label> </p>
+            </div>
+        </div>    
+   </footer>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/bootstrap-slider.min.js"></script>
+</body>
+   <script type="text/javascript">
+      $(function(){
+        $("#ex2").slider({});
+       $(".optionlist li").click(function () {
+        var text= $(this).text()
+        $(this).parent().siblings(".input").children().val(text)
+       });
+
+      })
+   </script>
+</html>

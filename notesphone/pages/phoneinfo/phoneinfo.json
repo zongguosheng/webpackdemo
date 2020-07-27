@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#ff6371",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "modal": "/component/loginmodel/loginmodel"
+  }
+}

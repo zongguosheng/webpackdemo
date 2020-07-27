@@ -1,9 +1,0 @@
-<view class="container" wx:if="{{system==='IOS'}}">
-    <image class="icon" src="../../resource/images/download-icon.png"></image>
-    <view class="title">请下载体验</view>
-    <view class="sub_title">1.车上睡觉、聊天、玩儿手机时，再也不用担心坐过站，「下车提醒」一键帮你解决</view>
-    <view class="sub_title">2.还有乘车赚车费，各种吃喝玩乐代金券等高级服务特权，等你一起来领取</view>
-    <view class="tips">回复 1 ，获取体验资格</view>
-    <button bindtap="openContact" class="btn" openType="contact">我要体验</button>
-</view>
-<web-view src="{{url}}" wx:if="{{system==='Android'}}"></web-view>

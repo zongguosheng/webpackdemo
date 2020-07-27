@@ -1,6 +1,0 @@
-.userinfo{display: flex; flex-direction: column; padding: 0 10px;}
-.li{ border-bottom: 1px solid #dbdbdb; color: #333; font-size: 14px; height: 40px; line-height: 40px;}
-.li text{ margin-left: 10px;}
-
-
-

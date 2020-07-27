@@ -1,0 +1,39 @@
+.star-end-time{background: #ff6371; display: flex; flex-direction: row; justify-content: space-around; padding: 30rpx 0;}
+.endtime{ color: #fff;}
+.startime{color: #ffa1aa;}
+.endtime text,.startime text{  display: block; text-align: center; line-height: 24px;}
+.endtime .time, .startime .time{ font-size: 36rpx;}
+
+.skilllist .li{ display: flex; flex-direction: row; padding: 30rpx;}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+.li .killimg{  margin-right: 20rpx; display: block; width: 238rpx; height: 238rpx;}
+.killimg image{ width: 238rpx; height: 238rpx; border-radius: 5px;}
+.killtext{ display: flex;  flex-direction: column; justify-content: space-between;}
+.killtext .describe{ font-size: 28rpx; color: #292929;
+  overflow: hidden; text-overflow: ellipsis; display: box; display: -webkit-box; line-clamp: 2; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.specs{color: #9e9e9e;}
+.price{ color: #ff6371; font-size: 24rpx;}
+.aftertext{ font-size: 32rpx; margin-right: 16rpx;}
+.price .oldprice{text-decoration: line-through; color: #9e9e9e; font-size: 24rpx;}
+.address{ color: #9e9e9e; font-size: 24rpx;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

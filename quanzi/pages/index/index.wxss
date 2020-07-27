@@ -1,0 +1,67 @@
+
+.search-bar{ background: #fff; height: 80rpx; line-height: 80rpx; border-radius: 5px;}
+.search-bar__box{ display: flex; flex-direction: row; height: 80rpx; line-height: 80rpx; align-items: center;}
+.search-bar__box input{height: 40rpx; line-height: 40rpx; text-align: left; padding-left: 10px; border-right:1px solid #d7d7d7 ; margin-right: 5px; flex-grow: 1; }
+/* background: url(../../images/home_search_bar_search.png) no-repeat left center; */
+.qzlist{padding: 30rpx 0;}
+.card{ display: flex; flex-direction: row; justify-content: space-between; align-items: center; background: #fff; padding: 10px; border-radius: 5px; margin-bottom: 10px;}
+.card .left{display: flex; flex-direction: row; align-items: center;}
+.card .cardimg{ width: 50px; height: 50px; border-radius: 5px; margin-right: 10px;}
+.card .cardimg image{ max-width: 100%; width: 50px; height: 50px; border-radius: 5px; }
+.card .cardright .h2{ font-size: 32rpx; color: #373737; line-height: 48rpx; margin-bottom: 3px;}
+.card .cardright .text{ font-size: 24rpx; line-height: 60rpx; color: #9b9b9b; overflow: hidden; text-overflow: ellipsis; display: box; display: -webkit-box; line-clamp: 1; -webkit-line-clamp: 1; -webkit-box-orient: vertical; font-weight: normal; font-family: Arial, Helvetica, sans-serif;
+}
+.content{ padding: 10px}
+.tabbar {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 19;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #fff;
+  box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.04);
+}
+.tab-bar-item-content {
+  margin-top: 3px;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+
+.tab-bar-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.tab-bar-text {
+  font-size: 10px;
+}
+
+.menulist{ display: flex; flex-direction: row; justify-content: space-around; background: #fff; padding: 15px 0;}
+.menulist  .li{position: relative;}
+.messagelist{margin-top: 20px;}
+.messagecard{ background: #fff; display: flex; flex-direction: row; align-items: center; padding: 10px 15px;}
+.messagecard .left{flex-grow: 1; margin-right: 15px;}
+.messagecard .right{flex-grow: 2;}
+.userinfo{ display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 5px;}
+.userinfo .username{ font-size: 32rpx;}
+.userinfo .time{ font-size: 12px; color: #bfbfbf;}
+.messagetext{ display: flex; flex-direction: row; justify-content:space-between;}
+.messagetext text{font-size: 28rpx; line-height: 25px; color: #999; overflow: hidden; text-overflow: ellipsis; display: box; display: -webkit-box; line-clamp: 1; -webkit-line-clamp: 1; -webkit-box-orient: vertical; width: 80%;}
+.messagetext label{ display: inline-block; width: 25px; height: 25px; background: #fa5050; color: #fff; font-size: 12px; line-height: 25px; border-radius: 50%; text-align: center;}
+.messagecard .head{ width: 80rpx; height: 80rpx; border-radius: 50%;}
+.messagecard .head image{ width: 80rpx; height: 80rpx; border-radius: 50%;}
+
+.header{ position: absolute; top: -10px;}
+.list80{ background: #fff; padding: 0 60rpx;}
+.list80 .li{ display: flex; flex-direction: row; align-items: center;}
+.list80 .li .bottomline{ border-bottom: 1px solid #ebebeb; line-height: 110rpx; flex-grow: 2; display: flex; align-items: center; justify-content: space-between; margin-left: 15px;} 
+.list80 .li:last-child .bottomline{ border-bottom: 0; }
+.list80 .li .bottomline text{font-size: 28rpx; color: #626262;}
+.mt20{ margin-top: 20rpx;}

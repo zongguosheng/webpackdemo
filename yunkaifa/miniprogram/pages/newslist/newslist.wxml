@@ -1,3 +1,0 @@
-<view wx:for="{{news}}" wx:for-index="nid" >
-      <line-link news="{{item.title}}" ></line-link>
-</view  >

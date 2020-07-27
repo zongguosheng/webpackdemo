@@ -1,6 +1,0 @@
-{
-    "navigationBarTitleText": "预留手机号",
-    "usingComponents": {
-        "modal": "../../components/modal/modal"
-    }
-}

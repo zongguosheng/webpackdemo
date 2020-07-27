@@ -1,3 +1,0 @@
-.text-mode{ display: flex; flex-direction: column; padding: 10px 0; text-align: center;}
-.fontw{ font-weight: bold; font-size: 16px; line-height: 30px;}
-.fontn{  font-size: 14px; color: #666; line-height: 24px;}

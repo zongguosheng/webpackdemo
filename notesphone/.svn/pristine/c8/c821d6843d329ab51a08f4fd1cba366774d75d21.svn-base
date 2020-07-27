@@ -1,0 +1,2 @@
+<import src="../template/mymark/mymark.wxml"></import>
+<template is="mark" data="{{collectionList}}"></template>

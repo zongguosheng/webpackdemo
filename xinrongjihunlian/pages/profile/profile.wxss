@@ -1,0 +1,24 @@
+/* pages/profile/Profile.wxss */
+.profile{ padding: 30rpx; border-bottom: 4px solid #e6e6e6;}
+.profile image{ width: 686rpx; height: 386rpx;}
+.profile .h2{font-weight: bold; font-size: 32rpx; line-height: 60rpx;}
+.profile .nameinfo{ font-size: 28rpx; color: #808080;}
+.profile .nameinfo text{margin-right: 20rpx;}
+
+.profileinfo{ padding:0 30rpx 30rpx 30rpx; }
+.profilemode{border-bottom: 1px solid #e6e6e6; padding: 50rpx 0;}
+.profilemode:last-child{border: 0;}
+.profilemode .title{ font-size: 32rpx; color: #ff4772; line-height: 60rpx; font-weight: bold; margin-bottom: 10rpx;}
+.profilemode .li{height: 60rpx; line-height: 60rpx; font-size: 28rpx;}
+.profilemode .li label{ display: inline-block; color: #999; width: 200rpx;}
+.profilemode .li text{color: #292929;}
+
+.scroll-view_H{ height: 118rpx; width: 100%; display: flex; flex-direction: column; white-space: nowrap; margin-bottom: 30rpx;}
+.imglist{ width: 118rpx; height: 118rpx; display: inline-block; flex: 1; margin-right: 24rpx;}
+.imglist image{ width: 118rpx; height: 118rpx;}
+
+.btngroup{ display: flex; flex-direction: row; justify-content: space-around;}
+.btngroup button{height: 86rpx; color: #fff; font-size: 32rpx; line-height: 86rpx; padding: 0; border-radius: 43rpx; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; width: 40%; letter-spacing: 5px; }
+.btngroup .like{ background: #fca75b;}
+.btngroup .help{ background: #ff4772;}
+

@@ -1,5 +1,0 @@
-<block wx:if="{{activeTab==='index'}}">
-    <include src="layout-home.wxml"></include>
-    <include src="../guide/guide.wxml"></include>
-</block>
-

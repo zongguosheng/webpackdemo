@@ -1,0 +1,212 @@
+<!--pages/classification/classification.wxml-->
+<view class='header'>
+    <view class="top">
+        <view class="userinfo" bindtap="gotoUserinfo">
+            <image src="../../image/img2.jpg" mode="aspectFill"></image>
+            <view class="username">
+                <view class="usertext">
+                    <text class="nicheng">我想要两颗西柚</text>
+                    <text class="span">服务商</text>
+                </view>
+                <text class="iconfont icon-arrowdropdown"></text>
+            </view>
+        </view>
+        <view class="tool">
+           <view bindtap="gotopublish">发布需求</view>
+        </view>
+    </view>
+    <view class="searchbar">
+        <view class="searchinput">
+            <icon class="searchcion" size='20' type='search' bindtap="btnSearch"></icon>
+            <input class='search' confirm-type="search" bindconfirm="searchPhone" bindinput='searchInput' type='text' placeholder-class="placeholdercolor" placeholder='搜索商家、服务' value='{{searchText}}' />
+        </view>
+    </view>
+</view>
+<!-- 分类列表 -->
+<view class="classtitle">
+    <view class="leftflex" >
+      <image src="../../image/img4.jpg" ></image>
+      <text class="titletext">成为优质便民服务商，共创优质平台</text>
+    </view>
+    <text class="iconfont icon-arrowdropdown"></text>
+</view>
+<view class="classlist">
+  <view bindtap="openPhoneList" >
+      <image class="hot" src="../../image/fl/hot.png"></image>
+      <image class="icon" src="../../image/fl/36.png" mode="aspectFill"></image>
+      <text>优惠好券</text>
+  </view>
+  <view bindtap="openPhoneList" >
+      <image class="new" src="../../image/fl/new.png"></image>
+      <image class="icon" src="../../image/fl/37.png" mode="aspectFill"></image>
+      <text>商超促销</text>
+  </view>
+  <view bindtap="openPhoneList" wx:for="{{typeList}}" wx:key="{{item.type.id}}" id="{{item.type.id}}">
+      
+      <image class="icon" src="../../image/fl/{{item.type.icon}}" mode="aspectFill"></image>
+      <text>{{item.type.name}}</text>
+  </view>
+  <view bindtap="openPhoneList"  id="{{item.type.id}}">
+      <image src="../../image/fl/35.png" mode="aspectFill"></image>
+      <text>更多</text>
+  </view>
+</view> 
+<view class="hd">
+    <image src="../../image/hd.png"></image>
+</view>
+<!-- 促销秒杀 -->
+<view class="seckill">
+    <view class="seckill-title">
+        <view class="killtext">
+            <text>促销秒杀</text>
+            <view class="seckill-time">
+               <text>距结束</text>  <label>04:22:56</label>
+            </view>
+        </view>
+        <view class="killmore" bindtap="openlist">
+           <text>更多好货限时疯抢</text> <image src="../../image/icon1.jpg" mode="aspectFit" class="icon20"></image>
+        </view>
+    </view>
+    <scroll-view scroll-x="true" class="scroll-view_H">
+        <view class="scroll-view-item_H" wx:for="{{miaosha}}" wx:key="index">
+            <image class="msimg" src="../../image/{{item.src}}" mode="aspectFit"></image>
+            <view class="price"><text>￥</text>{{item.price}}</view>
+            <view class="oldprice"><text>￥</text>{{item.oldprice}}</view>
+        </view>
+    </scroll-view>
+</view>
+
+<view class="nav-tab">
+    <view class="nav-title {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">优惠好券<text>券淘优品</text></view>
+    <view class="nav-title {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">人气<text>大家都在选</text></view>
+    <view class="nav-title {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">服务<text>找你索要</text></view>
+    <view class="nav-title {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">需求<text>帮个忙</text></view>
+</view>
+<view class="{{currentTab == 0 ? 'show':'hidden'}}">
+  <view class="discountlist" >
+      <view class="li" wx:for="{{discountgood}}" wx:key="index" bindtap="opendiscountlist">
+        <view class="picture">
+          <image src="../../image/{{item.src}}" mode="aspectFit"></image>
+        </view>
+        <view class="describe">{{item.describe}}</view>
+        <view class="afterprice">
+            <view class="price">￥<text>{{item.price}}</text><label> 劵后</label></view>
+            <view class="ticket " bindtap="">领劵</view>
+        </view>
+      </view>
+  </view>
+</view>
+<view class="{{currentTab == 1 ? 'show':'hidden'}}">
+  <view class="contentrow" >
+    <view class="contentname" data-id="{{item.id}}">
+      <navigator url="../phoneinfo/phoneinfo?id={{item.id}}" hover-class="navigator-hover" hover-stay-time="100">
+        <view class="imgplan">
+          <view class="inforcon">
+            <view class="servertitle">
+              <text>最新需求电脑维修上门服务网络系统安装数据恢复</text>
+            </view>
+            <text class="detailinfor">距离：6666{{item.distanceStr}}</text>
+            <text class="detailinfor" style="none;"></text>
+          </view>
+        </view>
+      </navigator>
+      <view bindtap="mackPhoneCall" data-phone="{{item.phone}}" class="telimg iconfont icon-dianhua"></view>
+    </view>
+  </view>
+</view>
+<view class="{{currentTab == 2 ? 'show':'hidden'}}">
+  <view class="contentrow" >
+    <view class="contentname" data-id="{{item.id}}">
+      <navigator url="../phoneinfo/phoneinfo?id={{item.id}}" hover-class="navigator-hover" hover-stay-time="100">
+        <view class="imgplan">
+          <view class="inforcon">
+            <view class="servertitle">
+              <text>最新需求电脑维修上门服务网络系统安装数据恢复</text>
+            </view>
+            <text class="detailinfor">距离：6666{{item.distanceStr}}</text>
+            <text class="detailinfor" style="none;"></text>
+          </view>
+        </view>
+      </navigator>
+      <view bindtap="mackPhoneCall" data-phone="{{item.phone}}" class="telimg iconfont icon-dianhua"></view>
+    </view>
+  </view>
+  <view class="contentrow" >
+    <view class="contentname" data-id="{{item.id}}">
+      <navigator url="../phoneinfo/phoneinfo?id={{item.id}}" hover-class="navigator-hover" hover-stay-time="100">
+        <view class="imgplan">
+         
+          <image src="../../image/img3.jpg" mode="aspectFill"></image>
+         
+          <view class="inforcon">
+            <view class="servertitle">
+              <text>退伍兵搬家</text>
+            </view>
+            <text class="detailinfor">距离：6666{{item.distanceStr}}</text>
+            <text class="detailinfor" style="none;"></text>
+          </view>
+        </view>
+      </navigator>
+      <view bindtap="mackPhoneCall" data-phone="{{item.phone}}" class="telimg iconfont icon-dianhua"></view>
+    </view>
+  </view>
+</view>
+<view class="{{currentTab == 3 ? 'show':'hidden'}}">
+  <view class="contentrow" >
+    <view class="contentname" data-id="{{item.id}}">
+      <navigator url="../phoneinfo/phoneinfo?id={{item.id}}" hover-class="navigator-hover" hover-stay-time="100">
+        <view class="imgplan">
+          <view class="inforcon">
+            <view class="servertitle">
+              <text>洛阳网咖电脑300套</text>
+            </view>
+            <text class="detailinfor">发布时间：2020-06-06</text>
+            <text class="detailinfor" style="none;"></text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class="contentrow" >
+    <view class="contentname" data-id="{{item.id}}">
+      <navigator url="../phoneinfo/phoneinfo?id={{item.id}}" hover-class="navigator-hover" hover-stay-time="100">
+        <view class="imgplan">
+          <view class="inforcon">
+            <view class="servertitle">
+              <text>物品文件食品取送 帮办业务 称心价格</text>
+            </view>
+            <text class="detailinfor">发布时间：2020-04-30</text>
+            <text class="detailinfor" style="none;"></text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<!-- <view class='header'>
+    <view class="top">
+        <view class="weather">
+          <block wx:if="{{weather != null}}">
+            <view class="username" >{{weather.week}}</view>
+            <text class="describe" >{{weather.minDegree}}/{{weather.maxDegree}}℃ <text>{{weather.dayWeather}}</text></text>
+          </block>
+        </view>
+        <view class="tool">
+            <text bindtap="openMymark" class="iconfont icon-icon-test"></text>
+            <text bindtap="openJoinme" class="iconfont icon-hongqi"></text>
+        </view>
+    </view>
+    <view class="searchbar">
+        <view class="searchinput">
+            <icon class="searchcion" size='20' type='search' bindtap="btnSearch"></icon>
+            <input class='search' confirm-type="search" bindconfirm="searchPhone" bindinput='searchInput' type='text' placeholder-class="placeholdercolor" placeholder='搜索商家、服务' value='{{searchText}}' />
+        </view>
+    </view>
+</view>-->
+<!-- 分类列表 -->
+<!-- <view class="classlist">
+  <view bindtap="openPhoneList" wx:for="{{typeList}}" wx:key="{{item.type.id}}" id="{{item.type.id}}">
+      <image src="../../image/fl/{{item.type.icon}}" mode="aspectFill"></image>
+      <text>{{item.type.name}}</text>
+  </view>
+</view>  --> 

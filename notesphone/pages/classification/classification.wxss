@@ -1,0 +1,16 @@
+.classification-title{ font-size: 28rpx; color: #292929; font-weight: bold; padding: 0 32rpx; margin-top: 40rpx;}
+.classlist{ display: flex; flex-flow: row wrap; width: 720rpx; margin: 0 auto}
+.classlist view .icon{ width: 40px; height: 40px; margin: 0 auto;}
+.classlist view {
+    padding: 15px;
+    display: flex;
+    width: 25%;
+    height: 25%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.hot{ width: 48rpx; height: 26rpx; position: absolute; right: 10px; top: 10px;}
+.new{ width: 38rpx; height: 26rpx; position: absolute; right: 20px; top: 10px;}
+.classlist view text{text-align: center; font-size: 22rpx; color: #404040;}

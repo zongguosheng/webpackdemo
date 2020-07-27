@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class="content">
+    <view class="loginregist">
+        <view class="title">登录</view>
+        <view class="regist">还没有账号，立即<navigator class="link"> 注册 </navigator></view>
+
+        <view class="inputgroup">
+          <input placeholder="请输入手机号码"></input>
+        </view>
+        <view class="inputgroup">
+          <input placeholder="请输入密码"></input>
+        </view>
+        <button class="red-btn" >登录</button>
+
+        <view class="password"> <text class="yzmdl">使用验证码登录</text>   
+            <text class="forget">找回密码</text>
+         </view>
+    </view>
+</view>

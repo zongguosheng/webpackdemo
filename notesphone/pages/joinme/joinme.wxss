@@ -1,0 +1,15 @@
+.joininfo{ padding: 0 20px; margin-top: -20px;}
+.joininfo .tip{ font-size: 14px; color: #ff5500; line-height: 30px;  }
+.li{ 
+  width: 100%; 
+  display: flex; 
+  flex-direction: row;
+  font-size: 14px;
+  line-height: 50px;
+  border-bottom: 1px solid #ebebeb;
+}
+.li label{flex: 1;}
+.li input{height: 50px; line-height: 50px; flex: 3;}
+.submitbtn{ background: #ff5500; color: #fff; letter-spacing: 8px; border-radius: 23px; margin-top: 10px;}
+.joinme{ padding-bottom: 80px;}
+

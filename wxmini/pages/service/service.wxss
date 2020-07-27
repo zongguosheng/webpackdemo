@@ -1,0 +1,56 @@
+/* pages/service/service.wxss */
+.content{padding: 20rpx;}
+.searchbar{
+  display: flex;
+  flex-direction: row;
+  background: #F2F4F7;
+  height: 80rpx;
+  align-items: center;
+  border-radius: 40rpx;
+  padding-left: 10px;
+}
+.searchbar icon{ margin-right: 5px;}
+.placeholder{ font-size: 14px; color: #999;}
+.service-item{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 28rpx 10rpx 0 0;
+}
+.service-item .item{
+  position: relative;
+  overflow: hidden;
+  height: 100rpx;
+  padding: 10px;
+  margin: 5px;
+  flex: 1 1 120rpx;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #e0e0e0;
+}
+.service-item .item image{width: 87rpx; height: 103rpx; position: absolute; right: 0; bottom: 0;}
+.item .title{font-weight: bold; font-size: 14px;}
+
+.qualitylist{
+  display: flex;
+  flex-flow: row wrap;
+}
+.quality .title{ font-size: 32rpx; font-weight: bold; line-height: 80rpx; margin-top: 30rpx; margin-bottom: 20rpx;}
+.qualitylist .list{
+  flex: 1 1 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  margin-bottom: 15px;
+}
+.qualitylist .list image{ width: 331rpx; height: 331rpx; border-radius: 5px; margin-bottom: 7px;}
+.qualitylist .list .name{
+  font-size: 14px;
+  padding: 0 5px;
+  line-height: 20px; 
+  font-weight: bold;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow:hidden;
+  display: -webkit-box;
+  -webkit-line-clamp:2; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient:vertical;
+}
+.qualitylist .list .price{ font-size: 14px; color: #FF4772; font-weight: bold; margin-top: 4px;}

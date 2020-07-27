@@ -1,6 +1,0 @@
-{
-    "navigationBarTitleText": "扫码乘公交",
-    "usingComponents": {
-        "modal": "../../components/modal/modal"
-    }
-}

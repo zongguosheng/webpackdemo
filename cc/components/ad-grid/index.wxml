@@ -1,7 +1,0 @@
-<view class="ad-grid">
-    <view catchtap="onTapItem" class="ad-grid-item" data-item="{{item}}" wx:for="{{ads}}" wx:key="{{index}}">
-        <image class="ad-grid-icon" src="{{item.markPic||item.iconUrl}}" wx:if="{{item.showRedPoint}}"></image>
-        <image class="ad-grid-icon" src="{{item.iconUrl}}" wx:else></image>
-        <view class="ad-grid-text">{{item.title}}</view>
-    </view>
-</view>

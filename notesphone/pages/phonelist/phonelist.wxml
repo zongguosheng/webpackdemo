@@ -1,0 +1,33 @@
+<scroll-view class="waring">
+  <view class="scrolltxt">
+    <view class="marquee_box">
+      <view class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+        <text>{{text}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="contenttitle">
+  <text>{{nearTitle}}</text>
+</view>
+<view class="contentrow" wx:for="{{pageList}}" wx:key="pageList">
+  <view class="contentname" data-id="{{item.id}}">
+    <navigator url="../phoneinfo/phoneinfo?id={{item.id}}" hover-class="navigator-hover" hover-stay-time="100">
+      <view class="imgplan">
+        <view class="inforcon">
+          <view class="servertitle">
+            <text>{{item.name}}</text>
+          </view>
+          <text class="detailinfor">距离：{{item.distanceStr}}</text>
+          <text class="detailinfor" style="none;"></text>
+        </view>
+      </view>
+    </navigator>
+    <view bindtap="mackPhoneCall" data-phone="{{item.phone}}" class="telimg iconfont icon-dianhua"></view>
+  </view>
+</view>
+<view class="pb60"></view>
+
+<modal show="{{showLoginModel}}">
+</modal>

@@ -1,0 +1,7 @@
+
+<view class="classlist">
+  <view bindtap="openPhoneList" wx:for="{{typeList}}" wx:key="{{item.type.id}}" id="{{item.type.id}}">
+      <image src="../../image/fl/{{item.type.icon}}" mode="aspectFill"></image>
+      <text>{{item.type.name}}</text>
+  </view>
+</view> 

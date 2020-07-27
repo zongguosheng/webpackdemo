@@ -1,0 +1,70 @@
+<!--pages/profile/Profile.wxml-->
+<view class="content">
+    <view class="profile">
+        <image src="../images/temp/img9.jpg" mode="aspectFill"></image>
+        <view class="h2">林女士 <icon class="iconfont iconshenfen" style="color: #6a96d8"></icon></view>
+        <view class="nameinfo">
+          <text>26岁</text>
+          <text>人事/行政</text>
+          <text>涧西区</text>
+        </view>
+    </view>
+
+    <view class="profileinfo">
+        <view class="profilemode">
+          <view class="title">进本资料</view>
+          <view class="li"><label>身高</label> <text>172</text></view> 
+          <view class="li"><label>民族</label> <text>汉族</text></view>
+          <view class="li"><label>学历</label> <text>硕士</text></view>
+          <view class="li"><label>现居住地</label> <text>洛阳市涧西区</text></view>
+          <view class="li"><label>单位性质</label> <text>国企</text></view>
+          <view class="li"><label>月收入</label> <text>5k - 8k</text></view>
+          <view class="li"><label>婚姻状况</label> <text>未婚</text></view>
+          <view class="li"><label>住房</label> <text>有房无贷款</text></view>
+          <view class="li"><label>车辆</label> <text>有车有贷款</text></view>
+        </view>
+        <view class="profilemode">
+          <view class="title">进本资料</view>
+          <view class="li"><label>年龄</label> <text>172</text></view> 
+          <view class="li"><label>学历</label> <text>本科及以上</text></view>
+          <view class="li"><label>月收入</label> <text>5k - 8k</text></view>
+          <view class="li"><label>婚史</label> <text>未婚</text></view>
+          <view class="li"><label>住房</label> <text>有房无贷款</text></view>
+          <view class="li"><label>车辆</label> <text>有车有贷款</text></view>
+        </view>
+        <view class="profilemode">
+          <view class="title">亲友团资料</view>
+          <view class="li"><label>亲属关系</label> <text>父母</text></view> 
+          <view class="li"><label>工作</label> <text>公务员</text></view>
+        </view>
+        <view class="profilemode">
+          <view class="title">TA红娘</view>
+          <view class="li"><label>红娘名字</label> <text>牵线</text></view> 
+        </view>
+        <view class="profilemode">
+          <view class="title">TA的相册</view>
+          <scroll-view class="scroll-view_H" scroll-x="true" > 
+            <view id="demo1" class="imglist">
+                <image src="../images/temp/img12.jpg" mode="aspectFill"></image>
+            </view>
+            <view id="demo2"  class="imglist">
+                <image src="../images/temp/img13.jpg" mode="aspectFill"></image>
+            </view>
+            <view id="demo3" class="imglist">
+                <image src="../images/temp/img14.jpg" mode="aspectFill"></image>
+            </view>
+            <view id="demo3" class="imglist">
+                <image src="../images/temp/img15.jpg" mode="aspectFill"></image>
+            </view>
+            <view id="demo3" class="imglist">
+                <image src="../images/temp/img16.jpg" mode="aspectFill"></image>
+            </view>
+          </scroll-view>
+          
+          <view class="btngroup">
+              <button class="like">关注一下</button>
+              <button class="help">帮我牵线</button>
+          </view>
+        </view>
+    </view>
+</view>

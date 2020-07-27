@@ -1,5 +1,0 @@
-<view class="err_box" wx:if="{{err}}">
-    <image class="err_icon" src="/resource/images/err.png"></image>
-    <text class="err_text">网络貌似不给力～</text>
-    <view catchtap="_comeBack" class="retry_btn">重试</view>
-</view>

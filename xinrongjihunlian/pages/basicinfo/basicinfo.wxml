@@ -1,0 +1,53 @@
+<!--pages/basicinfo/basicinfo.wxml-->
+<view class="content">
+      <view class="uploadimg">
+          <view>头像</view>
+          <view class="userimg">
+                <image src="../images/img9.jpg" mode="aspectFill"></image>
+          </view>
+      </view>
+      <view class="section">
+          <picker value="{{sexindex}}" range="{{sex}}" bindchange="bindsexChange">
+              <view class="picker">
+                <view class="name">性别</view>
+                <view class="rightinput">
+                  <input type="text" class="fontred" value="{{sex[sexindex]}}" placeholder-class="placeholder" disabled="true" ></input>
+                </view>
+               </view>
+          </picker>
+      </view>
+      <view class="section">
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+              <view class="picker">
+                <view class="name">生日</view>
+                <view class="rightinput">
+                  <input type="text" value="{{date}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                  <view class="iconfont iconright"></view>
+                </view>
+               </view>
+          </picker>
+      </view>
+      <view class="section">
+          <picker value="{{marryindex}}" range="{{marry}}" bindchange="bindMarryChange">
+              <view class="picker">
+                <view class="name">婚姻状况</view>
+                <view class="rightinput">
+                  <input type="text" value="{{marry[marryindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                  <view class="iconfont iconright"></view>
+                </view>
+               </view>
+          </picker>
+      </view>
+      <view class="section">
+          <picker value="{{salaryindex}}" range="{{salary}}" bindchange="bindsalaryChange">
+              <view class="picker">
+                <view class="name">年薪</view>
+                <view class="rightinput">
+                  <input type="text" value="{{salary[salaryindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                  <view class="iconfont iconright"></view>
+                </view>
+               </view>
+          </picker>
+      </view>
+
+</view>

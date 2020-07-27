@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="content">
+    <view class="search-bar" id="searchBar">
+            <view class="search-bar__box">
+                <input class="input" maxlength="10" placeholder="搜索圈子" confirm-type="search" /><image class="icon" src="../../images/icon_classify.png" mode="aspectFit"></image>
+            </view>
+    </view> 
+    <view class="qzlist">
+         <view class="card" bindtap="gotoinfo">
+                <view class="left">
+                    <view class="cardimg"><image  src="../../images/img1.jpg" mode="aspectFill"></image></view>
+                    <view class="cardright">
+                            <view class="h2">GC Circle</view>
+                            <view class="text">{{ showNav}}German Chamber online networking commont</view>
+                    </view>
+                </view>
+                <image class="icon14" src="../../images/icon_entrance.png" mode="aspectFit"></image>
+         </view>
+         <view class="card">
+                <view class="left">
+                    <view class="cardimg"><image  src="../../images/img1.jpg" mode="aspectFill"></image></view>
+                    <view class="cardright">
+                            <view class="h2">{{!showNav}}看一看</view>
+                            <view class="text">我哈哈哈哈哈</view>
+                    </view>
+                </view>
+                <image class="icon14" src="../../images/icon_entrance.png" mode="aspectFit"></image>
+         </view>
+    </view>        
+</view>
+
+<view class="super"> <image class="icon18" src="../../images/icon_graylogo.png"></image> zongbojue提供技术支持</view>

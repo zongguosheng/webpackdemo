@@ -1,0 +1,28 @@
+.classlist{ display: flex; flex-flow: row wrap; width: 720rpx; margin: 0 auto}
+.classlist view image{ width: 40px; height: 40px; margin: 0 auto;}
+.classlist view {
+    padding: 15px;
+    display: flex;
+    width: 25%;
+    height: 25%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.classlist view text{text-align: center; font-size: 22rpx; color: #404040;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

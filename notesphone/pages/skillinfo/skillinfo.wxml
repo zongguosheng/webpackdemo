@@ -1,0 +1,36 @@
+<view class="skillinfo">
+    <view class=" swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">
+            <image src="../../image/img11.jpg" mode="aspectFill"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="killtext">
+        <view class="price">￥
+            <text class="aftertext">78</text><text class="oldprice">158</text> 
+        </view>
+        <view class="describe">好奇心钻装小森林婴儿纸尿裤L40夏季超薄透气大号宝宝尿不湿官方 </view>
+    </view>
+    <view class="goodsinfo">
+        <view class="row"> <label>产品规格</label> <text>L40片</text> </view>
+        <view class="row"> <label>适用年龄</label> <text>7个月 8个月 9个月 10个月 11个月 12个月</text> </view>
+        <view class="row"> <label>适合体重</label> <text> 9KG-14KG</text> </view>
+        <view class="row"> <label>门店地址</label> <text>洛阳市涧西区南昌路130号丹尼斯量贩</text> </view>
+    </view>
+    <view>
+        <view class="title">更多优惠</view>
+        <scroll-view scroll-x="true" class="scroll-view_H">
+            <view class="scroll-view-item_H" wx:for="{{miaosha}}" wx:key="index">
+                <image class="msimg" src="../../image/{{item.src}}" mode="aspectFit"></image>
+                <view class="price"><text>￥</text>{{item.price}}</view>
+                <view class="oldprice"><text>￥</text>{{item.oldprice}}</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

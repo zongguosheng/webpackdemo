@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "电话本",
+  "navigationBarBackgroundColor": "#ff6371",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "modal": "/component/loginmodel/loginmodel"
+  }
+}

@@ -1,0 +1,39 @@
+<view>
+    <view class="menulist">
+        <view class="li">
+            <view><image class="icon30" src="../../images/message_icon_area_question.png" mode="aspectFit"></image></view>
+            <label>问答</label>
+        </view>   
+        <view class="li">
+            <label class="redspot">1</label>
+            <view><image class="icon30" src="../../images/message_icon_area_comment.png" mode="aspectFit"></image></view>
+            <label>评论</label>
+        </view>   
+        <view class="li">
+            <view><image class="icon30" src="../../images/message_icon_area_like.png" mode="aspectFit"></image></view>
+            <label>点赞</label>
+        </view>   
+        <view class="li">
+            <view><image class="icon30" src="../../images/message_icon_area_inform.png" mode="aspectFit"></image></view>
+            <label>通知</label>
+        </view>   
+    </view>
+</view>
+<block wx:if="{{message == 1}}">
+   <view class="messagelist">
+        <view class="messagecard">
+            <view class="left">
+                <view class="head"> <image src="../../images/bd.jpg"></image> </view>
+            </view>
+            <view class="right">
+                <view class="userinfo"><view class="username">zongbojue</view>    <text class="time">2020-07-01 11:41:08</text>       </view>
+                <view class="messagetext"><text>哈哈哈哈开始看电视剧纠纷时大家都哈哈哈哈开始看电视剧纠纷时大家都</text> <label>2</label></view>
+            </view>
+        </view>
+   </view>
+</block>
+<view class="tip" wx:elif="{{message == 1}}">
+  <image src="../../images/empty_status_no_letter.png" mode="aspectFit"></image>
+  <text>还没有私信消息！</text>
+</view>
+<view class="super"> <image class="icon18" src="../../images/icon_graylogo.png"></image> zongbojue提供技术支持</view>

@@ -1,0 +1,11 @@
+/* pages/about/about.wxss */
+.version, .logo{ display: flex; justify-content: center; padding: 20rpx;}
+.logo image{ width: 130rpx; height: 130rpx; }
+.version image{ width: 177rpx; height: 22rpx;}
+.logo{ margin-top: 60rpx;}
+.aboutinfo{padding: 20rpx; text-align: center; color: #999; line-height: 60rpx; font-size: 32rpx;}
+
+.kefu{ text-align: center; margin-top: 70rpx;}
+.kefu text{ border-bottom: 2px solid #ff6371; padding:5px 10px;}
+.bq{ color: #999; font-size: 28rpx; text-align: center; position: fixed; bottom: 60rpx; width: 100%;}
+.bq view{text-align: center; }

@@ -1,0 +1,6 @@
+<import src="../template/mymark/mymark.wxml"></import>
+<template is="mark" data="{{collectionList}}"></template>
+<view class="default">
+    <image src="../../image/img6.jpg"></image>
+    <view>您还没有收藏任何电话哦~</view>
+</view>

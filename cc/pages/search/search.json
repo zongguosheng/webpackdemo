@@ -1,7 +1,0 @@
-{
-    "navigationBarTitleText": "搜索",
-    "usingComponents": {
-        "ADBanner": "/components/adbanner/adbanner",
-        "search-box-2": "/pages/components/search-box-2/index"
-    }
-}

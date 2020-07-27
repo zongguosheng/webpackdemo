@@ -1,0 +1,11 @@
+<!--pages/activity/activity.wxml-->
+<view class="content">
+     <view class="activitylist" wx:for="{{activity}}" wx:for-item="active" wx:key  bindtap="gotoinfo">
+        <view class="ing">进行中</view>
+        <view class="over">进行中</view>
+        <image src="../images/temp/{{active.src}}.jpg" mode="aspectFill"></image>
+        <view class="h2">{{active.title}}sssssssss</view>
+        <view class="time"> <text>{{active.datetime}}</text> <text>{{active.activitytime}}</text></view>
+        <view class="address">{{active.address}}</view>
+     </view>
+</view>

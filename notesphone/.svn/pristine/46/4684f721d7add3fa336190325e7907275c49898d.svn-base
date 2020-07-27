@@ -1,0 +1,31 @@
+<view class="joinme">
+    <image src="../../image/img1.jpg" mode="aspectFit" style="width: 750rpx; height: 353rpx;"></image>
+    <view class="joininfo">
+      <text class="tip">请如实填写信息</text>
+      <form bindsubmit="merchantJoin" reportSubmit="true">
+        <picker mode="selector" bindchange="selectorChange" value="{{selectorIndex}}" range="{{selectorArray}}" range-key="name">
+          <view class="li">
+            <label>服务类型</label>
+            <input name="merchantType" disabled value="{{join.merchantTypeName}}" placeholder="请点击选择服务类型 >"></input>
+          </view>
+        </picker>
+        <view class="li">
+          <label>联系人</label>
+          <input name="contactsMan" bindinput="userInput" data-name="contactsMan" value="{{join.contactsMan}}" placeholder="请填写联系人"></input>
+        </view>
+        <view class="li">
+          <label>联系电话</label>
+          <input name="contactsPhone" bindinput="userInput" data-name="contactsPhone" value="{{join.contactsPhone}}" placeholder="请填写联系电话"></input>
+        </view>
+        <view class="li">
+          <label>商家名称</label>
+          <input name="merchantName" bindinput="userInput" data-name="merchantName" value="{{join.merchantName}}" placeholder="请填写商家名称"></input>
+        </view>
+        <view class="li">
+          <label>商家位置</label>
+          <input bindtap="openLocation" name="merchantAddress" value="{{join.merchantAddress}}" disabled placeholder="请点击选择位置 >"></input>
+        </view>
+        <button form-type="submit" loading="{{joinLoading}}" class="submitbtn">提交</button>
+      </form>
+    </view>
+  </view>

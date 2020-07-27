@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navbar": "/pages/commpents/navbar/index"
+  },
+  "navigationBarTitleText": "首页"
+}

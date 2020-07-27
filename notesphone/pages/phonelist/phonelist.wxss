@@ -1,0 +1,178 @@
+.classify {
+    margin-top: 1px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    background: #fff;
+}
+.waring{ 
+  background: #fff0f0; 
+  color: #e74645;
+  padding: 2px 5px; 
+  font-size: 12px; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing:border-box;
+}
+.scrolltxt{padding:20rpx 20rpx;}
+.marquee_text text{ white-space: nowrap;}
+.classify text{ height: 80rpx; line-height: 80rpx; font-size: 36rpx; }
+
+.contentplan {
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 30rpx;
+    border-top: 1rpx solid #fff;
+    border-bottom: 1rpx solid #EFEFF4;
+}
+.contenttitle {
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 40rpx;
+    padding-right: 40rpx;
+    font-size: 14px;
+    color: #686868;
+}
+
+
+
+
+.conimg {
+    width: 48rpx;
+    height: 48rpx;
+    margin-right: 15rpx;
+}
+.routeimgclose {
+    width: 45rpx;
+    height: 45rpx;
+    transform: rotate(-90deg);
+}
+
+.routeimgopen {
+    width: 45rpx;
+    height: 45rpx;
+    transform: rotate(90deg);
+}
+.arrimg {
+    width: 45rpx;
+    height: 45rpx;
+}
+
+
+/* 分类 */
+.top-news{ width:100%; overflow: hidden;}
+.scroll-view{ white-space:nowrap; width: 100%; padding:6px 20px 0; box-sizing: border-box; }
+.nav-name{ 
+  display:inline-block;
+  text-align: center; 
+  font-size:16px; 
+  width: 80rpx;
+  color: #ff5500; 
+  padding:38rpx 34rpx;
+  white-space: normal;
+  margin: 8px; 
+  border-radius: 10px;
+  background: #fef6ee;
+  /*box-shadow: 2px 2px 3px 2px  #fef6ee; , -1px -1px 1px 2px  #fef6ee */
+  
+}
+.nav-hover{
+  background: #ff5500;
+  color: #fff;
+  box-shadow: 2px 2px 3px 2px #fef6ee, -2px -2px 3px 2px #fef6ee;
+}
+
+
+.telimg{ 
+  display: block;
+  background: #ff6371; 
+  border: 1px solid #ff6371; 
+  border-radius: 50%; 
+  text-align: center;
+  width: 42px; 
+  height: 42px; 
+  line-height: 42px; 
+  color: #fff; 
+  font-size: 24px;
+}
+.contentrow {
+    box-sizing: border-box;
+    padding: 0 20px 0 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.contentname {
+  width: 100%;
+  line-height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+  color: #111;
+  border-bottom: 1rpx solid #E6E7E8;
+}
+
+.imgplan {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.servertitle text{
+  height: 28px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  line-height: 28px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:1; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient:vertical;
+}
+
+.inforcon {
+  width: 500rpx;
+  padding-top: 15rpx;
+  padding-bottom: 10rpx;
+}
+
+
+.detailinfor {
+  margin-right: 40rpx;
+  font-size: 28rpx;
+  color: #b3b3b3;
+}
+
+@import "../template/joinme/joinme.wxss";
+
+
+
+
+
+
+
+
+
+

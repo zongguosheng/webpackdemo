@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "电话本",
+  "usingComponents": {
+    "modal": "/component/loginmodel/loginmodel"
+  }
+}

@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class="content">
+    <view class="loginregist">
+        <view class="title">登 录</view>
+        <!-- <view class="regist">还没有账号，立即<navigator url="/pages/regist/regist" class="link"> 注册 </navigator></view>
+
+        <view class="inputgroup">
+          <input type="number" placeholder="请输入手机号码" placeholder-class="placeholdersize" bindinput="phoneNumChange" value="{{phoneNum}}"></input>
+        </view>
+        <view class="inputgroup">
+          <input type="text" password="true" placeholder="请输入密码" bindinput="passwordChange" value="{{password}}"></input>
+        </view>
+        <button class="red-btn" bindtap="login">登 录</button> -->
+        <button class="red-btn" type="primary" open-type="getUserInfo" bindgetuserinfo="wechatLogin">微信登录</button>
+        <view class="password"> <text class="yzmdl">使用验证码登录</text>   
+            <text class="forget">找回密码</text>
+         </view>
+    </view>
+</view>

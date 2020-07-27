@@ -1,0 +1,30 @@
+<!--pages/activityinfo/activityinfo.wxml-->
+<view class="content">
+     <view class="activitylist">
+        <image src="{{file}}{{activityBannerPic}}" mode="aspectFill"></image>
+        <view class="h2">{{title}}</view>
+        <view class="time"> <text>{{date}}</text> <text>{{time}}</text></view>
+        <view class="address">{{activityAddress}}</view>
+     </view>
+</view>
+
+<view class="p30">
+    <view class="rich-text-wrp">
+        <view class="title">活动介绍</view>
+        <rich-text nodes="{{acyiveinfo}}" ></rich-text>
+    </view>
+    <view class="rich-text-wrp">
+        <view class="title">活动流程</view>
+        <rich-text nodes="{{acyiveprocess}}" ></rich-text>
+    </view>
+    <view class="rich-text-wrp">
+        <view class="title">报名要求</view>
+        <rich-text nodes="{{enroll}}" ></rich-text>
+    </view>
+    <view class="rich-text-wrp">
+        <view class="title">注意事项</view>
+        <rich-text nodes="{{note}}" ></rich-text>
+    </view>
+    <button class="enroll-btn" wx:if="{{isEntry == true}}" bindtap="entry">报名</button>
+    <button class="enroll-btn" wx:if="{{isEntry == false}}" >已报名</button>
+</view>

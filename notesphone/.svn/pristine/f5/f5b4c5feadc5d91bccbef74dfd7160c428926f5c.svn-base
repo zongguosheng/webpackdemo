@@ -1,0 +1,28 @@
+<!--pages/classification/classification.wxml-->
+<view class='header'>
+    <view class="top">
+        <view class="weather">
+          <block wx:if="{{weather != null}}">
+            <view class="username" >{{weather.week}}</view>
+            <text class="describe" >{{weather.minDegree}}/{{weather.maxDegree}}℃ <text>{{weather.dayWeather}}</text></text>
+          </block>
+        </view>
+        <view class="tool">
+            <text bindtap="openMymark" class="iconfont icon-icon-test"></text>
+            <text bindtap="openJoinme" class="iconfont icon-hongqi"></text>
+        </view>
+    </view>
+    <view class="searchbar">
+        <view class="searchinput">
+            <icon class="searchcion" size='20' type='search' bindtap="btnSearch"></icon>
+            <input class='search' confirm-type="search" bindconfirm="searchPhone" bindinput='searchInput' type='text' placeholder-class="placeholdercolor" placeholder='搜索商家、服务' value='{{searchText}}' />
+        </view>
+    </view>
+</view>
+<!-- 分类列表 -->
+<view class="classlist">
+  <view bindtap="openPhoneList" wx:for="{{typeList}}" wx:key="{{item.type.id}}" id="{{item.type.id}}">
+      <image src="../../image/fl/{{item.type.icon}}" mode="aspectFill"></image>
+      <text>{{item.type.name}}</text>
+  </view>
+</view> 

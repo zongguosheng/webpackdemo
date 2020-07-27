@@ -1,6 +1,0 @@
-{
-    "navigationBarTitleText": "实名信息",
-    "usingComponents": {
-        "modal": "../../components/modal/modal"
-    }
-}

@@ -1,0 +1,23 @@
+@import "./style/weui.wxss";
+
+page{ background: #f8f8f8; padding-bottom: 60px;}
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+.icon{ width: 48rpx; height: 48rpx;}
+.icon12{ display: inline-block; width: 24rpx; height: 24rpx; line-height: 48rpx; }
+.icon14{ display: inline-block; width: 28rpx; height: 28rpx; line-height: 48rpx; }
+.icon18{ display: inline-block; width: 36rpx; height: 36rpx; line-height: 48rpx; }
+.icon20{ display: inline-block; width: 40rpx; height: 40rpx; line-height: 40rpx; }
+.icon24{ display: inline-block; width: 48rpx; height: 48rpx; line-height: 48rpx; }
+.icon30{ width: 60rpx; height: 60rpx;}
+.tip{ display: flex; flex-direction: column; justify-content: center; text-align: center;}
+.tip image{ margin: 0 auto; width: 400rpx; height: 400rpx;}
+.tip text{ color: #616161; font-size: 32rpx;}
+.redspot{ display: inline-block; background: #ef5553; width: 20rpx; height: 20rpx; position: absolute; border-radius: 50%; right: -10px;}
+.menulist .li .redspot{color: #fff; background: #ef5553; width: 15px; height: 15px; line-height: 15px; font-size: 12px; text-align: center; top: -3px; right: -5px;}
+
+
+.super{ color: #c4c4c4; font-size: 12px; text-align: center; vertical-align: middle; height: 24px; line-height: 12px; margin-top: 40px;}
+.super image{ vertical-align: middle;}

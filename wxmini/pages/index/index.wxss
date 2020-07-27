@@ -1,0 +1,59 @@
+/**index.wxss**/
+.limitbar{ border-bottom: 1px solid #e6e6e6;}
+.select{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content:space-around;
+		font-size: 14px;
+		color: #5c5c5c;
+		line-height: 50px;
+	}
+.modeal{position: absolute; height: 100%; width: 100%; background: rgba(0, 0, 0, 0.4)}
+.listbody{
+    border-top: 1px solid #e6e6e6;
+    background: #fff;
+		position: absolute;
+		width: 100%;
+		
+		top: 51px;
+		font-size: 14px;
+		color: #999999;
+		line-height: 50px;
+    display: none;
+	}
+.list{ margin: 0 10px;}
+.list .li{ 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;
+  height: 50px;
+  line-height: 50px; 
+  border-bottom: 1px solid #E6E6E6;
+}
+.list .li picker input{ height: 50px; line-height: 50px; text-align: right; padding-right: 10px;}
+.list .li .inputtext{ height: 50px; line-height: 50px; text-align: right; padding-right: 10px;}
+.show {
+  display: block;
+}
+.member-list{
+  display: flex;
+  flex-flow: row wrap;
+  padding:5px 10px;
+}
+.member-list .li {
+  padding: 5px;
+  flex: 1 1 0;
+}
+.member-list .li image{
+   width: 330rpx; 
+   height: 400rpx;
+   margin: 0 auto;
+   border-radius: 5px;
+}
+.li .name{ font-size: 16px; color: #292929; font-weight: bold; line-height: 24px; margin-top: 5px;}
+.nameinfo text{ font-size: 12px; color: #808080; line-height: 24px; margin-right: 5px;}
+
+.pickerrow{display: flex; flex-direction: row; height: 100rpx; line-height: 100rpx; font-size: 28rpx;}
+.pickerrow picker{ margin-left: 5rpx; padding: 0;}
+.pickerrow .picker input{width: 115rpx;}

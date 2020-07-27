@@ -1,8 +1,0 @@
-<form bindsubmit="onSubmitSearch" reportSubmit="true">
-    <button formType="submit" hoverClass="none">
-        <view class="search ">
-            <image class="search-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/frame_search_ic@2x.png"></image>
-            <view class="placeholder">搜索公交线路、车站、地点</view>
-        </view>
-    </button>
-</form>

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="discountlist" >
+      <view class="li" wx:for="{{discountgood}}" wx:key="index" bindtap="opendiscountinfo">
+        <view class="picture">
+          <image src="../../image/{{item.src}}" mode="aspectFit"></image>
+        </view>
+        <view class="describe">{{item.describe}}</view>
+        <view class="afterprice">
+            <view class="price">￥<text>{{item.price}}</text><label> 劵后</label></view>
+            <view class="ticket " bindtap="">领劵</view>
+        </view>
+      </view>
+  </view>
+</view>

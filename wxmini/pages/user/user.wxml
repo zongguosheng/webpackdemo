@@ -1,0 +1,79 @@
+<!--pages/user/user.wxml-->
+<view class="content">
+    <view class="header">
+        <view class="userimage">
+            <image src="{{headpic}}" mode="aspectFill"></image>
+        </view>
+        <view class="userinfo">
+            <view class="username">
+                <view class="name">{{name}}</view>
+                <view class="p5">
+                    <text>{{age}}岁</text>
+                    <text>{{career}}</text>
+                    <text>{{livePlace}}</text>
+                </view>
+            </view>
+            <view class="speed">
+                  <view class="li">
+                      <view>{{data.attentionCount}}</view>
+                      <view class="text">关注</view>
+                  </view>
+                  <view class="li">
+                      <view>{{data.activityCount}}</view>
+                      <view class="text">参与活动</view>
+                  </view>
+                  <view class="li">
+                      <view>56%</view>
+                      <view class="text">资料完整度</view>
+                  </view>
+            </view>
+        </view>
+        <view class="p10"> 
+            <view bindtap="gotopersoninfo" class="iconfont iconright more"></view>
+        </view>
+        
+    </view>
+    <view class="bg1">
+      <image src="../images/bg.jpg" mode="aspectFill"></image>
+    </view>
+    <view class="mainlist">
+        <navigator url="../basicdata/basicdata" class="li">
+           <image src="../images/img1.jpg" mode="aspectFill"><label class="dit"></label></image>
+           <view>基本资料</view>
+        </navigator>
+        <view bindtap="navigateTo" data-url="../photoAlbum/photoAlbum" class="li">
+           <image src="../images/photo.png" mode="aspectFill"><label class="dit"></label></image>
+           <view>相册</view>
+        </view>
+        <view bindtap="navigateTo" data-url="../family/family" class="li">
+           <image src="../images/img3.jpg" mode="aspectFill"><label class="dit"></label></image>
+           <view>家庭状况</view>
+        </view>
+        <view  bindtap="mateselectTo" data-url="../mateselect/mateselect" class="li">
+           <image src="../images/img4.jpg" mode="aspectFill"><label class="dit"></label></image>
+           <view>择偶要求</view>
+        </view>
+        <view class="li" bindtap="navigateTo" data-url="../Interest/Interest">
+           <image src="../images/img5.jpg" mode="aspectFill"><label class="dit"></label></image>
+           <view>性格爱好</view>
+        </view>
+        <view bindtap="navigateTo" data-url="../realname/realname" class="li">
+           <image src="../images/img6.jpg" mode="aspectFill"><label class="dit"></label></image>
+           <view>实名认证</view>
+        </view>
+    </view>
+    <view class="sublist">
+        <view class="li" bindtap="navigateTo" data-url="../joinme/joinme">
+            <view>加入红娘</view>
+            <view class="iconfont iconright"></view>
+        </view>
+        <view class="li">
+            <view>我的消息</view>
+            <view class="iconfont iconright"></view>
+        </view>
+        <view class="li" bindtap="navigateTo" data-url="../about/about">
+            <view>关于我们</view>
+            <view class="iconfont iconright"></view>
+        </view>
+    </view>
+</view>

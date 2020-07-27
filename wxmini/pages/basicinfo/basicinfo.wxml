@@ -1,0 +1,15 @@
+<!--pages/basicinfo/basicinfo.wxml-->
+<view class="content">
+  <view class="uploadimg">
+    <view>头像</view>
+    <view class="userimg">
+      <image src="{{userimg}}" mode="aspectFill" bindtap="userImgClick"></image>
+    </view>
+  </view>
+  <view class="inputgroup">
+    <label>昵称</label>
+    <input placeholder="请输入昵称" bindinput="nickNameChange" value="{{nickName}}"></input>
+  </view>
+  
+  <button class="sunmitbtn" bindtap="submit">保 存</button>
+</view>

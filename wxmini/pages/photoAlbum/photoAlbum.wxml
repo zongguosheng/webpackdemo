@@ -1,0 +1,10 @@
+<view class="page__bd">
+	<mp-cells>
+		<mp-cell>
+			<mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" 
+      upload="{{uplaodFile}}" files="{{files}}" max-count="10" title="照片上传" tips="最多可上传10张照片"
+      delete="true" binddelete="deleteFile"
+      ></mp-uploader>
+		</mp-cell>
+	</mp-cells>
+</view>

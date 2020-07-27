@@ -1,0 +1,26 @@
+/* pages/Interest/Interest.wxss */
+.interest{padding: 10px;}
+.interest .interest-title{ font-size: 30rpx; color: #333; line-height: 40px; padding-left: 20px; border-bottom: 2px solid #FF4772;}
+.interest-list{display: flex; flex-flow: row wrap; justify-content: space-between; padding: 20px 0;}
+.interest-lable{ position: relative; display: inline-block; text-align: center; width:80px; height: 40px; line-height: 40px; font-size: 28rpx;  border: 1px solid #e5e5e5; margin-bottom: 10px; border-radius: 5px;}
+.interest-lable checkbox{ width:80px; height: 40px;}
+.checked{ background: #FF4772; color: #fff;}
+.red-btn{ 
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+  background: #ff4772; 
+  color: #fff; 
+  width: 90%; 
+  border-radius: 43rpx;
+  font-weight: normal; 
+  letter-spacing: 6px; 
+  font-family: Microsoft YaHei;
+}
+
+
+
+
+
+
+
+

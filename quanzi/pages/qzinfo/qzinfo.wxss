@@ -1,0 +1,146 @@
+.content{ margin-top: -30px;}
+.topswiperbar{display: flex; justify-content: space-between; align-items: center; 
+  padding: 20px; border-bottom: 1px solid #eaeaea; background: #fff; padding-bottom: 0;
+  border-radius: 15px 15px 0 0;}
+.topTabSwiper{ display: flex; flex-direction: row;}
+.topTabSwiper .tab{ line-height: 40px; margin-right: 60rpx; color: #a0a0a0;}
+.topTabSwiper .tabBorer{border-bottom: 1px solid #343434; color: #343434;}
+.swiper{min-height: 600px;}
+.swiper_content{height: 100%; overflow: auto;}
+.swiperlist{padding: 40rpx; background: #fff; display: flex; overflow: hidden; }
+.swiper_content .head{ width: 110rpx; height: 110rpx; border-radius: 50%; border: 1px solid #fff; margin-right: 30rpx; }
+.swiper_content .head .headimg{ width: 110rpx; height: 110rpx; border-radius: 50%;}
+.pushcontent{flex-grow: 1.5; width: 250px;}
+.pushcontent .imgs{ padding: 10px 0; width: 250px; }
+.pushcontent .imgs image{max-width: 100%;}
+.pushuser{color: #5e678e; font-size: 16px;}
+.time{color: #b5b5b5; line-height: 48rpx; font-size: 24rpx;}
+.pushtext{ line-height: 48rpx;}
+.geekxz-hide{ display: none;}
+.iconlist{display: flex; flex-direction: row; justify-content: space-between; }
+.likelist { display: flex; flex-flow: row wrap; align-items: center; width: 100%; margin-top: 15px; line-height: 24px;}
+.likelist .liked{ display: inline-block; margin: 0 3px; color: #5e678e; font-size: 32rpx;}
+.reply .name{color: #5e678e; font-size: 32rpx; line-height: 28px;}
+.cover{ 
+  position:fixed; left:0px; top:0px; bottom: 0;
+  background:rgba(0, 0, 0, 0.4);
+  width:100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+  height:100%;
+  z-Index:99; 
+
+}
+.modal{ position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 999;
+  background: #f8f8f8;
+  border-radius: 15px 15px 0 0;
+  padding: 20px 0 0;
+  box-sizing: border-box;
+}
+.modal .before{ padding:0 20px;}
+.modal .before text{ font-size: 28rpx; color: #999;}
+.modal .input{ line-height: 24px; height: 40px; margin-top: 10px;  background: #fff; padding: 0 15px; margin: 5px; box-sizing: border-box;}
+.modal .after{padding:0 20px; display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px; margin-bottom: 10px;}
+.modal .after .sendbtn{ width: 60px; height: 30px; line-height: 30px; background: #2f78ff; font-size: 28rpx; padding: 0; color: #fff; font-weight: normal; margin: 0;}
+.modal .after .emoji .icon30{ margin-right: 15px;}
+
+.emoji-box {
+  position: relative;
+  height: 200px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  /* margin-bottom: -200px; */
+}
+.emoji-cell {
+  width: 9.09%;
+  height: 33px;
+  display: inline-block;
+}
+
+.emoji-cell image {
+  width: 23px;
+  height: 23px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.emoji-move-in {
+  -webkit-animation: emoji-move-in 0.3s forwards;
+  animation: emoji-move-in 0.3s forwards;
+}
+
+.emoji-move-out {
+  -webkit-animation: emoji-move-out 0.3s forwards;
+  animation: emoji-move-out 0.3s forwards;
+}
+
+.no-emoji-move {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes emoji-move-in {
+  0% {
+    margin-bottom: -200px;
+  }
+
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes emoji-move-in {
+  0% {
+    margin-bottom: -200px;
+  }
+
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@-webkit-keyframes emoji-move-out {
+  0% {
+    margin-bottom: 0;
+  }
+
+  100% {
+    margin-bottom: -200px;
+  }
+}
+
+@keyframes emoji-move-out {
+  0% {
+    margin-bottom: 0;
+  }
+
+  100% {
+    margin-bottom: -200px;
+  }
+}
+
+@-webkit-keyframes pd-left-move {
+  0% {
+    padding-left: 5px;
+  }
+
+  100% {
+    padding-left: 15px;
+  }
+}
+
+@keyframes pd-left-move {
+  0% {
+    padding-left: 5px;
+  }
+
+  100% {
+    padding-left: 15px;
+  }
+}
+
+
+
+
+

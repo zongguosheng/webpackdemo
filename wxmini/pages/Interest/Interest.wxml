@@ -1,0 +1,26 @@
+<!--pages/Interest/Interest.wxml-->
+<view class="content">
+
+  <view class="interest">
+    <view class="interest-title">性格</view>
+    <view class="interest-list">
+      <label data-id="{{inter.id}}" class="interest-lable {{inter.checked ? 'checked' : ''}}" bindtap="characterChecked" wx:for="{{characters}}"
+        wx:for-item="inter" wx:key="id">
+        {{inter.value}}
+      </label>
+    </view>
+  </view>
+
+
+  <view class="interest">
+    <view class="interest-title">爱好</view>
+    <view class="interest-list">
+      <label data-id="{{inter.id}}" class="interest-lable {{inter.checked ? 'checked' : ''}}" bindtap="hobbyChecked" wx:for="{{hobbys}}"
+        wx:for-item="inter" wx:key="id">
+        {{inter.value}}
+      </label>
+    </view>
+  </view>
+
+  <button class="red-btn" bindtap="save">保存</button>
+</view>

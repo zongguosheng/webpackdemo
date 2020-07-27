@@ -1,0 +1,29 @@
+<!--pages/commpents/navbar/index.wxml-->
+<view class="nav-wrap  {{activeTab ==='user'?'bgimg':'bgcolor'}}" style="height:{{activeTab ==='user'?'auto':navHeight }}px;">
+    <block wx:if="{{activeTab  !== 'user' }}">
+        <view class="navbar-title" style='top:{{navTop}}px'>
+        {{ title}}
+        </view>
+    </block>
+    <block wx:elif="{{activeTab  == 'user' }}">
+        <view class="headstyle">
+            <view class="personinfo">
+                <view class="left">
+                    <view class="head"> <image src="/images/bd.jpg"></image> </view>
+                </view>
+                <view class="right">
+                    <view class="userinfo">
+                        <view class="username">zongbojue</view>    
+                        <navigator>编辑资料 <image src="/images/icon_small_return_white.png" class="icon12"></image></navigator>      
+                    </view>
+                    <view class="messagetext"><text>哈哈哈哈开始看电视剧纠纷时大家都哈哈哈哈开始看电视剧纠纷时大家都</text></view>
+                </view>
+            </view>
+
+            <view class="card">
+                <label>游泳</label> 
+                <label>查看 <image src="/images/icon_small_return_orange.png" class="icon12"></image></label>
+            </view>
+        </view>
+    </block>
+</view>

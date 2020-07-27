@@ -1,0 +1,25 @@
+<!--pages/realname/realname.wxml-->
+<view class="content">
+    <view class="inputgroup">
+        <label>真实姓名</label>
+        <input placeholder="请输入"></input>
+    </view>
+    <view class="inputgroup">
+        <label>身份证号码</label>
+        <input placeholder="请输入"></input>
+    </view>
+
+    <view class="upload">
+        <view class="title">请上传证件材料</view>
+        <text class="waring">温馨提醒：身份证内容文字务必清晰，确保与本人相符。</text>
+        <view class="uploadimg">
+            <view>
+                <image src="../images/img7.jpg" mode="aspectFill"></image>
+            </view>
+            <view>
+                <image src="../images/img8.jpg" mode="aspectFill"></image>
+            </view>
+        </view>
+        <button class="sunmitbtn">提 交</button>
+    </view>
+</view>

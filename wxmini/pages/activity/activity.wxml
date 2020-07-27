@@ -1,0 +1,20 @@
+<!--pages/activity/activity.wxml-->
+<view class="content">
+     <view class="activitylist" wx:for="{{activity}}" wx:for-item="active" wx:key  >
+      <view wx:if="{{active.state == 0}}" bindtap="gotoinfo" data-id='{{active.activity.id}}'>
+        <view class="ing" wx:if="{{active.state == 0}}">进行中</view>
+        <image src="{{ file}}{{active.activityBanner.activityBannerPic}}" mode="aspectFill"></image>
+        <view class="h2">{{active.activity.title}}</view>
+        <view class="time"> <text>{{active.datetime}}</text> <text>{{active.activitytime}}</text></view>
+        <view class="address">{{active.activity.address}}</view>
+      </view>
+      <view wx:if="{{active.state == 1}}">
+        <view class="over" wx:if="{{active.state == 1}}">已过期</view>
+        <image src="{{ file}}{{active.activityBanner.activityBannerPic}}" mode="aspectFill"></image>
+        <view class="h2">{{active.activity.title}}</view>
+        <view class="time"> <text>{{active.datetime}}</text> <text>{{active.activitytime}}</text></view>
+        <view class="address">{{active.activity.address}}</view>
+     
+      </view>
+     </view>
+</view>

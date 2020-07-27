@@ -1,0 +1,21 @@
+<template name="mark">
+  <view class="contentrow" wx:for="{{collectionList}}" wx:key="coll_{{item.id}}">
+      <view class="contentname" data-id="{{item.id}}">
+    <navigator url="../phoneinfo/phoneinfo?id={{item.id}}" hover-class="navigator-hover" hover-stay-time="100">
+        <view class="imgplan">
+          <view class="inforcon">
+            <view class="servertitle">
+              <text>{{item.name}}</text>
+            </view>
+            <text class="detailinfor">距离：{{item.distanceStr}}</text>
+            <text class="detailinfor" style="none;">使用人数：{{item.sycs}} 人</text>
+          </view>
+        </view>
+    </navigator>
+        <view bindtap="mackPhoneCall" data-phone="{{item.phone}}" class="telimg iconfont icon-dianhua">
+        </view>
+      </view>
+  </view>
+  
+  <view class="pb60"></view>
+</template>

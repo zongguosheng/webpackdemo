@@ -1,0 +1,317 @@
+<!--pages/basicdata/basicdata.wxml-->
+<view class="content">
+  <!-- <view class="section">
+        <view class="picker">
+            <view class="name">姓名</view>
+            <view class="rightinput">
+              <input type="text" value="" placeholder="请输入" placeholder-class="placeholder"  ></input>
+              <view class="iconfont iconright"></view>
+            </view>
+        </view> 
+    </view>  -->  
+    <view class="section">
+        <picker value="{{sexindex}}" range="{{sex}}" bindchange="bindsexChange">
+            <view class="picker">
+              <view class="name">性别</view>
+              <view class="rightinput">
+                <input type="text" value="{{sex[sexindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 
+    <view class="section">
+        <view class="picker">
+            <view class="name">手机号</view>
+            <view class="rightinput">
+              <input type="text" value="" placeholder="请输入" placeholder-class="placeholder"  ></input>
+              <view class="iconfont iconright"></view>
+            </view>
+        </view>
+    </view>
+    -->
+    <view class="section">
+        <view class="row-wrap" bindtap="selectCity">
+            <view class="label">居住地</view>
+            <view class="pickerrow">
+                <picker bindchange="bindPickerProvinceChange" range="{{provinces}}">
+                  <view class="picker {{selProvince=='请选择'?'hui':''}}">
+                    {{selProvince}}
+                  </view>
+                </picker>
+                <picker bindchange="bindPickerCityChange" range="{{citys}}">
+                  <view class="picker {{selCity=='请选择'?'hui':''}}">
+                    {{selCity}}
+                  </view>
+                </picker>
+                <picker bindchange="bindPickerChange" range="{{districts}}">
+                  <view class="picker {{selDistrict=='请选择'?'hui':''}}">
+                    {{selDistrict}}
+                  </view>
+                </picker>
+                <view class="iconfont iconright"></view>
+            </view>
+        </view>
+    </view>
+    <view class="section">
+        <view class="row-wrap" bindtap="selectCity">
+            <view class="label">籍贯</view>
+            <view class="pickerrow">
+                <picker bindchange="bindPickerProvinceChange" range="{{provinces}}">
+                  <view class="picker {{selProvince=='请选择'?'hui':''}}">
+                    {{selProvince}}
+                  </view>
+                </picker>
+                <picker bindchange="bindPickerCityChange" range="{{citys}}">
+                  <view class="picker {{selCity=='请选择'?'hui':''}}">
+                    {{selCity}}
+                  </view>
+                </picker>
+                <picker bindchange="bindPickerChange" range="{{districts}}">
+                  <view class="picker {{selDistrict=='请选择'?'hui':''}}">
+                    {{selDistrict}}
+                  </view>
+                </picker>
+                <view class="iconfont iconright"></view>
+            </view>
+        </view>
+    </view>
+    <!--  
+    <view class="section">
+        <view class="picker">
+            <view class="name">身份证号</view>
+            <view class="rightinput">
+              <input type="text" value="" placeholder="请输入" placeholder-class="placeholder"  ></input>
+              <view class="iconfont iconright"></view>
+            </view>
+        </view>
+    </view> -->
+    <view class="section">
+        <picker value="{{marryindex}}" range="{{marry}}" bindchange="bindMarryChange">
+            <view class="picker">
+              <view class="name">婚姻状况</view>
+              <view class="rightinput">
+                <input type="text" value="{{marry[marryindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 身高 -->
+    <view class="section">
+        <picker value="{{heightindex}}" range="{{height}}" bindchange="bindheightChange">
+            <view class="picker">
+              <view class="name">身高（厘米）</view>
+              <view class="rightinput">
+                <input type="number" value="{{height[heightindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 体重 -->
+    <view class="section">
+        <picker value="{{weightindex}}" range="{{weight}}" bindchange="bindweightChange">
+            <view class="picker">
+              <view class="name">体重（公斤）</view>
+              <view class="rightinput">
+                <input type="number" value="{{weight[weightindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!--  单位性质  -->
+    <view class="section">
+        <picker value="{{unitNatureindex}}" range="{{unitNatures}}" bindchange="bindunitNatureChange">
+            <view class="picker">
+              <view class="name">单位性质</view>
+              <view class="rightinput">
+                <input type="text" value="{{unitNatures[unitNatureindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 学历 -->
+    <view class="section">
+        <picker value="{{educationindex}}" range="{{education}}" bindchange="bindeducationChange">
+            <view class="picker">
+              <view class="name">学历</view>
+              <view class="rightinput">
+                <input type="text" value="{{education[educationindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    
+    <view class="section">
+        <picker mode="date" value="{{date}}" start="1950-01-01" end="2001-01-01" bindchange="bindDateChange">
+            <view class="picker">
+              <view class="name">出生年月</view>
+              <view class="rightinput">
+                <input type="text" value="{{date}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    
+    <view class="section">
+        <picker value="{{salaryindex}}" range="{{salary}}" bindchange="bindsalaryChange">
+            <view class="picker">
+              <view class="name">年收入</view>
+              <view class="rightinput">
+                <input type="text" value="{{salary[salaryindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <view class="section">
+        <picker value="{{chinesezodiacsindex}}" range="{{chinesezodiacs}}" bindchange="bindchinesezodiacChange">
+            <view class="picker">
+              <view class="name">生肖</view>
+              <view class="rightinput">
+                <input type="text" value="{{chinesezodiacs[chinesezodiacsindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <view class="section">
+        <picker value="{{zodiacsindex}}" range="{{zodiacs}}" bindchange="bindzodiacsChange">
+            <view class="picker">
+              <view class="name">星座</view>
+              <view class="rightinput">
+                <input type="text" value="{{zodiacs[zodiacsindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <view class="section">
+        <picker value="{{bloodTypesindex}}" range="{{bloodTypes}}" bindchange="bindbloodTypesChange">
+            <view class="picker">
+              <view class="name">血型</view>
+              <view class="rightinput">
+                <input type="text" value="{{bloodTypes[bloodTypesindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 民族 -->
+    <view class="section">
+        <picker value="{{nationindex}}" range="{{nation}}" bindchange="bindnationChange">
+            <view class="picker">
+              <view class="name">民族</view>
+              <view class="rightinput">
+                <input type="text" value="{{nation[nationindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 购房情况 -->
+    <view class="section">
+        <picker value="{{housesindex}}" range="{{houses}}" bindchange="bindhousesChange">
+            <view class="picker">
+              <view class="name">购房情况</view>
+              <view class="rightinput">
+                <input type="text" value="{{houses[housesindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 购车情况 -->
+    <view class="section">
+        <picker value="{{carsindex}}" range="{{cars}}" bindchange="bindCarsChange">
+            <view class="picker">
+              <view class="name">购车情况</view>
+              <view class="rightinput">
+                <input type="text" value="{{cars[carsindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 吸烟情况 -->
+    <view class="section">
+        <picker value="{{smokingindex}}" range="{{smokings}}" bindchange="bindsmokingindexsChange">
+            <view class="picker">
+              <view class="name">吸烟情况</view>
+              <view class="rightinput">
+                <input type="text" value="{{smokings[smokingindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 喝酒情况 -->
+    <view class="section">
+        <picker value="{{drinkingindex}}" range="{{drinkings}}" bindchange="binddrinkChange">
+            <view class="picker">
+              <view class="name">喝酒情况</view>
+              <view class="rightinput">
+                <input type="text" value="{{drinkings[drinkingindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 有无子女 -->
+    <view class="section">
+        <picker value="{{childsindex}}" range="{{childs}}" bindchange="bindchildsChange">
+            <view class="picker">
+              <view class="name">有无子女</view>
+              <view class="rightinput">
+                <input type="text" value="{{childs[childsindex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    <!-- 
+    <view class="section">
+  <view class="section__title">多列选择器</view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="picker">
+        当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+      </view>
+    </picker>
+  </view>-->
+    <!-- 户籍 
+    
+    <view class="section">
+        <picker mode="multiSelector"  bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class="picker">
+              <view class="name">户籍</view>
+              <view class="rightinput">
+                <input type="text" value="{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>  -->
+    
+    <!-- 户籍 
+    <view class="section">
+        <picker mode="region"  value="{{region}}"  bindchange="bindRegionChange" custom-item="{{customItem}}" >
+            <view class="picker">
+              <view class="name">户籍</view>
+              <view class="rightinput">
+                <input type="text" value="{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true" ></input>
+                <view class="iconfont iconright"></view>
+              </view>
+              </view>
+        </picker>
+    </view>
+    -->
+    
+<button class="red-btn" bindtap="save">保存</button>
+
+</view>

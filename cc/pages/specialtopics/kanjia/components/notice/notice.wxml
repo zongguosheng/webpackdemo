@@ -1,6 +1,0 @@
-<swiper autoplay="{{autoplay}}" circular="{{circular}}" class="live-info-swiper" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}" vertical="{{vertical}}">
-    <swiper-item class="swiper-item" wx:for="{{noticeList}}" wx:key="{{index}}">
-        <view class="swiper-text" wx:if="{{item.type==='a'}}">{{item.msg}}</view>
-        <view class="swiper-text" wx:if="{{item.type==='b'}}">{{item.msg}}<text style="color: #F8E71C;">{{item.amount/100}}</text>元</view>
-    </swiper-item>
-</swiper>

@@ -1,0 +1,12 @@
+<navbar navbar-data='{{nvabarData}}' title="{{title}}" activeTab="{{activeTab }}"  showNav="{{showNav}}" ></navbar>
+<block wx:if="{{activeTab==='home'}}">
+    <include src="home.wxml" ></include>
+</block>
+<block wx:elif="{{activeTab==='message'}}">
+    <include src="message.wxml" ></include>
+</block>
+<block wx:elif="{{activeTab==='user'}}">
+    <include src="user.wxml" ></include>
+</block>
+
+<include src="tabbar.wxml" ></include>

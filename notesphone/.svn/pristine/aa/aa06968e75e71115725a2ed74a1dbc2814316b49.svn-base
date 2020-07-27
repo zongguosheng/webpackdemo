@@ -1,0 +1,80 @@
+page{ height: 100%;}
+.phoneinfo{height: 100%; }
+
+.map{ height: 100%; position: relative; z-index: 1 }
+.datainfo{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: transparent;
+  
+  padding-top: 40px;
+  -webkit-appearance:none;
+  margin-top: -5px;
+  z-index: 88;
+  box-sizing: border-box;
+}
+.location{
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; 
+  background: #0e89f5; 
+  top: 18px; 
+  right: 22px; 
+  text-align: center; 
+  line-height: 72rpx; 
+  color: #fff; 
+  margin: 0;
+  z-index: 99;
+}
+.img-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 42.3333%;
+}
+.address{
+  display: flex; 
+  flex-direction: column; 
+  height: 220rpx; 
+  line-height: 24px; 
+  background: #fff; 
+  padding: 15px;
+  
+}
+.address .text{ color: #b3b3b3; font-size: 14px; line-height: 30px;}
+.address .h2{ 
+  width: 100%;
+  font-size: 16px;
+  line-height: 26px; 
+  font-weight: 600; 
+  color: #333;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  -webkit-line-clamp:1; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient:vertical;
+}
+.address .row{ display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
+.row .error{ font-weight: normal; color: #ff3333; line-height: 26px; font-size: 14px;}
+.btngroup{ display: flex; flex-direction: row; background: #fff; padding:15px;}
+.btngroup .order-btn{ 
+    height: 90rpx;
+    color: #fff;
+    flex: 2;
+    line-height: 90rpx;
+    border-radius: 45rpx;
+    background: #ff5500;
+    
+}
+.btngroup .shortbtn{flex: 1; margin: 0; padding: 0; background: transparent; display: flex; flex-direction: column; }
+.shortbtn cover-image{ margin: 0 auto;}
+.btngroup .shortbtn .view{line-height: 26px; font-size: 14px; color: #999999;}
+.btngroup .shortbtn .iconfont{font-size: 18px; line-height: 18px; color: #999999;}
+.btngroup .shortbtn::after{border: 0;}
+.fc-org{ color: #ff5500;}
+.fc-c{color: #999999;}
+.bottom{position: fixed; bottom: 0;}
+
+.adderssinfo{ width: 80%; line-height: 30px; text-overflow:ellipsis; overflow:hidden; -webkit-line-clamp:1; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient:vertical;
+}

@@ -16,6 +16,10 @@ Vue.use(ElementUI)
 Vue.prototype.$http = axios // 全局注册 使用方法为:this.$axios
 // Vue.use(VueAxios, axios)
 /* eslint-disable no-new */
+router.beforeEach((to, form, next) => {
+  window.document.title = to.meta.title == undefined ? '默认标题' : to.meta.title
+  next()
+})
 new Vue({
   el: '#app',
   router,

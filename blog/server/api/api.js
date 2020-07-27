@@ -35,7 +35,6 @@ router.use('/addUser', (req, res) => {
       console.log('params***')
       console.log(results)
       jsonWrite(res, results)
-      console.log(jsonWrite(res, results))
     }
   })
 })
@@ -77,6 +76,35 @@ router.use('/leaveMessage', (req, res) => {
     if (error) throw error
     if (results) {
       console.log(results)
+      jsonWrite(res, results)
+    }
+  })
+})
+
+// 发表文章
+router.use('/pushArticle', (req, res) => {
+  var sql = $sql.article.written
+  var params = req.body
+  console.log(params)
+  pool.query(sql, [params.article_title, params.author, params.article_info, params.date, params.article_type], function (error, results, fields) {
+    if (error) throw error
+    if (results) {
+      console.log(results)
+      jsonWrite(res, results)
+    }
+  })
+})
+// 类型搜索文章
+router.use('/searchArticle', (req, res) => {
+  var sql = $sql.article.typesearch
+  var params = req.body
+  console.log(params)
+  console.log(params.article_type)
+  pool.query(sql, params.article_type, function (error, results, fields) {
+    if (error) throw error
+    if (results) {
+      console.log(results)
+      jsonWrite(res, results)
     }
   })
 })

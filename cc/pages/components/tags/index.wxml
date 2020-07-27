@@ -1,5 +1,0 @@
-<scroll-view class="tags" scrollX="true">
-    <view bindtap="onClickTag" class="tag-item" data-tag="{{tag}}" wx:for="{{tags}}" wx:for-item="tag" wx:key="{{index}}">
-        <text class="tag-name {{tag.name===activeTag.name&&tag.type===activeTag.type?'tag-active':''}}">{{tag.name}}</text>
-    </view>
-</scroll-view>

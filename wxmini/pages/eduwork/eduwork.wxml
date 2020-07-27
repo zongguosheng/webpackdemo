@@ -1,0 +1,70 @@
+<view class="content">
+  <view class="section">
+    <picker value="{{index.educations}}" range="{{educations}}" data-type="educations" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">学历</view>
+        <view class="rightinput">
+          <input type="text" value="{{educations[index.educations]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker value="{{index.unitNatures}}" range="{{unitNatures}}" data-type="unitNatures" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">单位性质</view>
+        <view class="rightinput">
+          <input type="text" value="{{unitNatures[index.unitNatures]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker value="{{index.industry}}" range="{{industry}}" data-type="industry" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">所属行业</view>
+        <view class="rightinput">
+          <input type="text" value="{{industry[index.industry]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker value="{{index.duties}}" range="{{duties}}" data-type="duties" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">职务</view>
+        <view class="rightinput">
+          <input type="text" value="{{duties[index.duties]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker value="{{index.wordState}}" range="{{wordState}}" data-type="wordState" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">工作状态</view>
+        <view class="rightinput">
+          <input type="text" value="{{wordState[index.wordState]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <picker value="{{index.salarys}}" range="{{salarys}}" data-type="salarys" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">年薪</view>
+        <view class="rightinput">
+          <input type="text" value="{{salarys[index.salarys]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <button class="red-btn" bindtap="save">保存</button>
+</view>

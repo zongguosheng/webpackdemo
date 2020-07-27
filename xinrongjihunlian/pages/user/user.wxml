@@ -1,0 +1,75 @@
+<!--pages/user/user.wxml-->
+<view class="content">
+    <view class="header">
+        <view class="userimage">
+            <image src="../images/temp/img7.jpg" mode="aspectFill"></image>
+        </view>
+        <view class="userinfo">
+            <view class="username">
+                <view class="name">崔女士</view>
+                <view class="p5"><text>26岁</text><text>企业行政</text><text>洛龙区</text></view>
+            </view>
+            <view class="speed">
+                  <view class="li">
+                      <view>19</view>
+                      <view class="text">关注</view>
+                  </view>
+                  <view class="li">
+                      <view>27</view>
+                      <view class="text">参与活动</view>
+                  </view>
+                  <view class="li">
+                      <view>56%</view>
+                      <view class="text">资料完整度</view>
+                  </view>
+            </view>
+        </view>
+        <view class="p10"> 
+            <view bindtap="gotopersoninfo" class="iconfont iconright more"></view>
+        </view>
+    </view>
+    <view class="mainlist">
+        <navigator url="../basicdata/basicdata" class="li">
+           <image src="../images/img1.jpg" mode="aspectFill"></image>
+           <view>基本资料</view>
+        </navigator>
+        <view class="li">
+           <image src="../images/img2.jpg" mode="aspectFill"></image>
+           <view>学历工作</view>
+        </view>
+        <view class="li">
+           <image src="../images/img3.jpg" mode="aspectFill"></image>
+           <view>家庭状况</view>
+        </view>
+        <view class="li">
+           <image src="../images/img4.jpg" mode="aspectFill"></image>
+           <view>择偶要求</view>
+        </view>
+        <view class="li">
+           <image src="../images/img5.jpg" mode="aspectFill"></image>
+           <view>性格爱好</view>
+        </view>
+        <navigator url="../realname/realname" class="li">
+           <image src="../images/img6.jpg" mode="aspectFill"></image>
+           <view>实名认证</view>
+        </navigator>
+    </view>
+    <view class="sublist">
+        <view class="li">
+            <view>加入红娘</view>
+            <view class="iconfont iconright"></view>
+        </view>
+        <view class="li">
+            <view>我的消息</view>
+            <view class="iconfont iconright"></view>
+        </view>
+        <view class="li">
+            <view>修改密码</view>
+            <view class="iconfont iconright"></view>
+        </view>
+        <view class="li">
+            <view>关于我们</view>
+            <view class="iconfont iconright"></view>
+        </view>
+    </view>
+</view>

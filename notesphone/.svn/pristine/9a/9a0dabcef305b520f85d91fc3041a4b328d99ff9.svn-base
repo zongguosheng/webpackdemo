@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1438808 */
+  src: url('//at.alicdn.com/t/font_1438808_c4tt38nvbn.eot');
+  src: url('//at.alicdn.com/t/font_1438808_c4tt38nvbn.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1438808_c4tt38nvbn.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1438808_c4tt38nvbn.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1438808_c4tt38nvbn.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1438808_c4tt38nvbn.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 24px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dianhua:before {
+  content: "\e66f";
+}
+
+.icon-fenxiang:before {
+  content: "\e60b";
+}
+
+.icon-ruzhushangjia:before {
+  content: "\e601";
+}
+
+.icon-activeHome:before {
+  content: "\e600";
+}
+
+.icon-daohang:before {
+  content: "\e605";
+}
+
+.icon-shoucang:before {
+  content: "\e606";
+}
+
+.icon-xuanzhog:before {
+  content: "\e607";
+}
+
+.icon-icon-test:before {
+  content: "\e608";
+}
+

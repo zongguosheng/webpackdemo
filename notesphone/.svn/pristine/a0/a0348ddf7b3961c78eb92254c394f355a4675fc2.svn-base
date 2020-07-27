@@ -1,0 +1,50 @@
+var util = require('./util.js')
+var api = require('./api.js')
+const app = getApp()
+
+
+function request(url, data = {}, callback) {
+  wx.request({
+    url: url,
+    data: data,
+    success: function (res) {
+      if (res.statusCode == 200) {
+        if (res.data.code == 0) {
+          callback(res.data)
+        } else if (res.data.code == 1004) {
+          util.showError('登录失败')
+        } else {
+          util.showError(res.data.desc)
+        }
+      } else {
+        util.showError(res.errMsg)
+      }
+    },
+    fail: function (err) {
+      util.showError(err.errMsg)
+    }
+  })
+}
+
+function login(callback) {
+  wx.login({
+    success(res) {
+      console.log(res)
+      loginByCode(res.code, callback)
+    },
+    fail() {
+      util.showError('自动登录失败')
+    }
+  })
+}
+
+function loginByCode(code, callback) {
+  request(api.authLogin, { code: code}, function(data){
+    callback(data.wxId, data.token, data.haveUserInfo)
+  })
+}
+
+module.exports = {
+  request: request,
+  login: login,
+}

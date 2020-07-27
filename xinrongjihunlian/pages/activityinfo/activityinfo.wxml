@@ -1,0 +1,29 @@
+<!--pages/activityinfo/activityinfo.wxml-->
+<view class="content">
+     <view class="activitylist">
+        <image src="../images/temp/hd1.jpg" mode="aspectFill"></image>
+        <view class="h2">但愿人长久~千里共婵娟~~9月12线下活动~</view>
+        <view class="time"> <text>2019-09-12</text> <text>上午9:00 - 11:00</text></view>
+        <view class="address">洛阳市涧西区青少年活动中心四小姐的店</view>
+     </view>
+</view>
+
+<view class="p30">
+    <view class="rich-text-wrp">
+        <view class="title">活动介绍</view>
+        <rich-text nodes="{{acyiveinfo}}" ></rich-text>
+    </view>
+    <view class="rich-text-wrp">
+        <view class="title">活动流程</view>
+        <rich-text nodes="{{acyiveprocess}}" ></rich-text>
+    </view>
+    <view class="rich-text-wrp">
+        <view class="title">报名要求</view>
+        <rich-text nodes="{{enroll}}" ></rich-text>
+    </view>
+    <view class="rich-text-wrp">
+        <view class="title">注意事项</view>
+        <rich-text nodes="{{note}}" ></rich-text>
+    </view>
+    <button class="enroll-btn">报名</button>
+</view>

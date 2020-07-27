@@ -1,0 +1,52 @@
+/* pages/user/user.wxss */
+.header{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background: #ff4772;
+  justify-content: space-around;
+}
+.p10{padding-top: 15px;}
+.more{ color: #fff;}
+.userimage{width: 160rpx; height: 160rpx; border-radius: 50%; overflow: hidden; border: 2px solid #fff; margin-top: 10px;}
+.userimage image{ width: 160rpx; height: 160rpx;}
+.userinfo{
+  display: flex;
+  flex-direction: column;
+}
+.userinfo .username{ display: flex; flex-direction: column; padding-left: 10px; margin-bottom: 10px;}
+.userinfo .username view{ color: #fff; font-size: 24rpx;}
+.userinfo .username .name{ font-size: 36rpx; padding-left: 10px;}
+.userinfo .username .p5{ padding: 5px 0;}
+.userinfo .username view text{ display: inline-block; padding-right: 10px; margin-right: 10px; line-height: 12px; height: 12px; border-right: 1px solid #fff; min-width: 50px; text-align: center;}
+.userinfo .username view text:last-child{ border: 0;}
+.speed{ color: #fff;}
+.speed li{ display: flex; flex-direction: row; justify-content: center;}
+.userinfo .speed{ display: flex; flex-direction: row; justify-content: space-around;}
+.userinfo .speed .li view{ text-align: center; font-size: 32rpx; line-height: 48rpx; }
+.userinfo .speed .li .text{
+  font-size: 24rpx;
+}
+.mainlist{
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+}
+.mainlist .li{
+  padding: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  flex: 1 1 160rpx;
+}
+.mainlist .li image{ width: 56rpx; height: 56rpx;}
+.mainlist .li view{ font-size: 24rpx; line-height: 24px; color: #292929; }
+.sublist{ display: flex; flex-direction: column; border-top: 8rpx solid #f5f5f5; padding: 0 22rpx;}
+.sublist .li{ 
+  height: 100rpx; 
+  line-height: 100rpx; 
+  display: flex; 
+  flex-direction: row;
+  border-bottom: 1px solid #e6e6e6; 
+  justify-content: space-between;
+}
+.sublist .li view{ color: #292929; font-size: 28prx;}

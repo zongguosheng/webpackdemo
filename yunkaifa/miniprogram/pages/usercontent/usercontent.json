@@ -1,9 +1,0 @@
-{
-  
-  "navigationBarTitleText": "用户中心",
-  "usingComponents": {
-    "text-list": "../components/personinfo/index",
-    "line-link": "../components/line-link/index"
-  }
-  
-}

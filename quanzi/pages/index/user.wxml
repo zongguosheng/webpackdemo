@@ -1,0 +1,76 @@
+<view class="list80">
+    <view class="li">
+        <image class="icon18" src="../../images/icon_personal_account.png" mode="aspectFill"></image>
+        <view class="bottomline">
+            <text>个人账户</text>
+           <image class="icon14" src="../../images/icon_small_return_gray.png"></image>
+        </view>
+    </view>
+    <view class="li">
+        <image class="icon18" src="../../images/icon_my_collection.png" mode="aspectFill"></image>
+        <view class="bottomline">
+            <text>我的收藏</text>
+           <image class="icon14" src="../../images/icon_small_return_gray.png"></image>
+        </view>
+    </view>
+</view>
+<view class="list80 mt20">
+    <view class="li">
+        <image class="icon18" src="../../images/icon_circle_arrangement.png" mode="aspectFill"></image>
+        <view class="bottomline">
+            <text>圈子排列方式</text>
+           <image class="icon14" src="../../images/icon_small_return_gray.png"></image>
+        </view>
+    </view>
+    <view class="li">
+        <image class="icon18" src="../../images/icon_subscribe_message.png" mode="aspectFill"></image>
+        <view class="bottomline">
+            <text>订阅通知</text>
+           <image class="icon14" src="../../images/icon_small_return_gray.png"></image>
+        </view>
+    </view>
+    <view class="li">
+        <image class="icon18" src="../../images/icon_mp_program.png" mode="aspectFill"></image>
+        <view class="bottomline">
+            <text>添加到我的小程序</text>
+           <image class="icon14" src="../../images/icon_small_return_gray.png"></image>
+        </view>
+    </view>
+</view>
+<view class="list80 mt20">
+    <view class="li">
+        <image class="icon18" src="../../images/icon_shield_list.png" mode="aspectFill"></image>
+        <view class="bottomline">
+            <text>屏蔽名单</text>
+           <image class="icon14" src="../../images/icon_small_return_gray.png"></image>
+        </view>
+    </view>
+</view>
+<view class="list80 mt20">
+    <view class="li">
+        <image class="icon18" src="../../images/icon_shield_list.png" mode="aspectFill"></image>
+        <view class="bottomline">
+            <text>屏蔽名单</text>
+           <image class="icon14" src="../../images/icon_small_return_gray.png"></image>
+        </view>
+    </view>
+</view>
+<view class="list80 mt20">
+    <view class="li">
+        <image class="icon18" src="../../images/icon_shield_list.png" mode="aspectFill"></image>
+        <view class="bottomline">
+            <text>屏蔽名单</text>
+           <image class="icon14" src="../../images/icon_small_return_gray.png"></image>
+        </view>
+    </view>
+</view>
+<view class="list80 mt20">
+    <view class="li">
+        <image class="icon18" src="../../images/icon_shield_list.png" mode="aspectFill"></image>
+        <view class="bottomline">
+            <text>屏蔽名单</text>
+           <image class="icon14" src="../../images/icon_small_return_gray.png"></image>
+        </view>
+    </view>
+</view>
+<view class="super"> <image class="icon18" src="../../images/icon_graylogo.png"></image> zongbojue提供技术支持</view>

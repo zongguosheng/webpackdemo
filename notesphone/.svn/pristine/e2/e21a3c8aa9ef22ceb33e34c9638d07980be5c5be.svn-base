@@ -1,0 +1,40 @@
+<!--pages/publishinfo/publishinfo.wxml-->
+<view class="content">
+    <view class="needs">
+        <view class="needsitle">洛阳网咖电脑300套</view>
+        <view class="userinfo">
+           <view class="userimg">
+              <image src="../../image/img2.jpg"></image> 
+          </view>
+           <view class="usertext">
+                <text class="usernicheng">我想要两颗西柚</text>
+                <text class="pushtime">2019-11-06</text>
+           </view>
+        </view>
+
+        <view class="article">
+           <view class="h2">详情描述 <text></text></view>
+           <view class="articleinfo">
+           英雄联盟电脑，Steam吃鸡电脑，办公游戏电脑。网咖游戏电脑500套，点下面（电话）可联系我。游戏当面试机，绝地求生吃鸡，LOL DNF ，csgo等网            游腾讯全家桶！逆水寒，剑网3 （工作室DNF搬砖8 16 32开、梦幻刷金6开！）高端设计CAD 3Dmax渲染机。
+           家用四核，4核，4G内存128固态盘。主机599处理，20寸至24寸LED显示器二三百块钱。
+           </view>
+           <view class="contact">联系人： 李先生</view>
+           <view class="h2">其他要求 <text></text></view>
+           <view class="tab-text">
+              <text>诚信</text><text>诚信</text><text>诚信</text><text>诚信</text><text>诚信</text>
+           </view>
+        </view>
+    </view>
+    <view class="btngroup">
+        <button class="shortbtn" openType="share">
+          <image src="../../image/fx.png" style="width:31px; height:24px;"></image>
+          <view class="view">分享</view>
+        </button>
+        <button bindtap="collection" class="shortbtn {{ shoucang ?'fc-c':'fc-org'}}">
+          <image src="../../image/xz.png" style="width:24px; height:24px;" wx:if="{{shoucang}}"></image>
+          <image src="../../image/shoucang.png" style="width:24px; height:24px;" wx:else></image>
+          <view class="view" bindtap="click">{{ shoucang ? '已':''}}收藏</view>
+        </button>
+        <button class="order-btn" bindtap="openTelephone" >立即联系</button>
+    </view>
+</view>

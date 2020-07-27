@@ -1,0 +1,45 @@
+<view class="skillinfo">
+    <view class=" swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">
+            <image src="../../image/img12.jpg" mode="aspectFill"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="discounttext">
+        <view class="disprice">
+            <view>￥<text class="aftertext">78</text> <text class="afterprice">劵后价</text> <text class="oldprice">￥158</text></view>
+            <view><image src="../../image/fxr.png" mode="aspectFill"  class="icon34"></image></view>  
+        </view>
+        <view class="describe">Swarovski施华洛世奇正品项链女跳动的心锁骨链礼物官网5279425</view>
+        <view class="ad">
+            <text>月销 9527</text>
+            <text>快递 包邮</text>
+            <text>广东 广州</text>
+        </view>
+        <view class="coupon">
+            <view class="couponprice"><text class="red">￥</text> <text class="fs60">88</text> <text>满598使用</text> </view>
+            <view class="fs36">立即领取</view>
+        </view>
+    </view>
+    <view class="goodsinfo">
+        <view class="row"> <label>链子材质</label> <text>合金/镀银/镀金</text> </view>
+        <view class="row"> <label>镶嵌材质</label> <text>合金镶嵌人工宝石/半宝石</text> </view>
+        <view class="row"> <label>产品规格</label> <text>21cm(含)-50cm(含)</text> </view>
+    </view>
+    <view class="scrollmodule">
+      <view class="title">猜你喜欢</view>
+      <scroll-view scroll-x="true" class="scroll-view_H">
+          <view class="scroll-view-item_H" wx:for="{{miaosha}}" wx:key="index">
+              <image class="msimg" src="../../image/{{item.src}}" mode="aspectFit"></image>
+              <view class="price"><text>￥</text>{{item.price}}</view>
+              <view class="oldprice"><text>￥</text>{{item.oldprice}}</view>
+          </view>
+      </scroll-view>
+    </view>
+</view>

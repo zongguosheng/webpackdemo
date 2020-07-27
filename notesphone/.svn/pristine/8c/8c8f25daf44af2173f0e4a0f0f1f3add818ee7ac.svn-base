@@ -1,0 +1,21 @@
+// 本机开发时使用
+// var rootUrl = 'http://localhost:9087/minilbsphone/';
+// 真机调试使用
+// var rootUrl = 'http://192.168.1.191:9087/minilbsphone/';
+// 正式使用
+var rootUrl = 'https://m.xifuvip.com/minilbsphone/';
+
+module.exports = {
+  authLogin: rootUrl + "auth/login",
+
+  saveUserInfo: rootUrl + "srv/saveUserInfo",
+  serviceTypeList: rootUrl + "srv/serviceTypeList",
+
+  servicePhonePageData: rootUrl + "srv/servicePhonePageData",
+  servicePhoneDetail: rootUrl + "srv/servicePhoneDetail",
+  collectionList: rootUrl + "srv/collectionList",
+  collection: rootUrl + "srv/collection",
+  disCollection: rootUrl + "srv/disCollection", 
+  saveMerchantJoin: rootUrl + "srv/saveMerchantJoin",
+  errorReport: rootUrl + "srv/errorReport",
+};

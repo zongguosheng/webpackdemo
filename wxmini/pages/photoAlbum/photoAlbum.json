@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "mp-uploader": "/weui/uploader/uploader",
+    "mp-cells": "/weui/cells/cells",
+    "mp-cell": "/weui/cell/cell"
+  },
+  "navigationBarTitleText": "相册",
+  "navigationBarBackgroundColor": "#FF4772"
+}

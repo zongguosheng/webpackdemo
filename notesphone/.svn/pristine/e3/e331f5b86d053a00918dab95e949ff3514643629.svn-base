@@ -1,0 +1,5 @@
+<!--pages/errordefault/errordefault.wxml-->
+<view class="default">
+    <image src="../../image/img7.jpg"></image>
+    <view>感谢您对洛阳找号的支持，祝您生活愉快！~</view>
+</view>

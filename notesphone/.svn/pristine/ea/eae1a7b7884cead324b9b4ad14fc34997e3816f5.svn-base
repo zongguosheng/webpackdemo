@@ -1,0 +1,55 @@
+<view class="content">
+    <view class="flexrow">
+      <view class="flextitle">商家图片</view>
+      <view class="flexright">
+        <image src="../../image/img5.jpg" mode="aspectFill"></image>
+        <text class="iconfont icon-arrowdropdown"></text>
+      </view>
+    </view>
+    <view class="flexrow">
+      <view class="flextitle">商家名称</view>
+      <view class="flexright">
+        <input type="text" placeholder="请填写"></input>
+        <text class="iconfont icon-arrowdropdown"></text>
+      </view>
+    </view>
+    <view class="flexrow">
+      <view class="flextitle">联系人</view>
+      <view class="flexright">
+        <input type="number" value="我想要两颗西柚" placeholder="请填写"></input>
+        <text class="iconfont icon-arrowdropdown"></text>
+      </view>
+    </view>
+    <view class="flexrow">
+      <view class="flextitle">联系电话</view>
+      <view class="flexright">
+        <input type="text" placeholder="请填写"></input>
+        <text class="iconfont icon-arrowdropdown"></text>
+      </view>
+    </view>
+    <view class="flexrow">
+      <view class="flextitle">商家位置</view>
+      <view class="flexright">
+        <input type="text" placeholder="请填写"></input>
+        <text class="iconfont icon-arrowdropdown"></text>
+      </view>
+    </view>
+    <navigator class="flexrow" url="../mymark/mymark" hover-class="navigator-hover">
+      <view class="flextitle">我的收藏</view>
+      <view class="flexright">
+        <text class="iconfont icon-arrowdropdown"></text>
+      </view>
+    </navigator>
+    <view class="flexrow">
+      <view class="flextitle">我的需求</view>
+      <view class="flexright">
+        <text class="iconfont icon-arrowdropdown"></text>
+      </view>
+    </view>
+    <navigator class="flexrow" url="../errordefault/errordefault" hover-class="navigator-hover">
+      <view class="flextitle">问题反馈</view>
+      <view class="flexright">
+        <text class="iconfont icon-arrowdropdown"></text>
+      </view>
+    </navigator>
+</view>

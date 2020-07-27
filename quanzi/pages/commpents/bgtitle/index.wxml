@@ -1,0 +1,24 @@
+<view class="header" >
+    <view class='navbar-title {{scrollTop ? "background" : ""}}' style='height:{{navHeight}}px; '>
+        <view class="title_icon">
+            <image src='../../../images/icon_return_light.png' hidden="{{scrollTop }}" mode='aspectFit' class='icon24 back' bindtap='navBack'></image>
+            <image src='../../../images/icon_shadow_return_dark.png' hidden="{{!scrollTop}}" mode='aspectFit' class='icon24 back' bindtap='navBack'></image>
+        </view>
+        <view class='title_text'>
+          BPHOTO
+        </view>
+    </view>
+
+    <view class="personinfo">
+        <view class="left">
+            <view class="head"> <image src="/images/bd.jpg" class="headimg" ></image> </view>
+        </view>
+        <view class="right">
+            <view class="userinfo">
+                <view class="username">zongbojue</view>    
+                <image src="/images/icon_small_return_white.png" class="icon18"></image>     
+            </view>
+            <view class="messagetext"><text class="jj">哈哈哈哈开始看电视剧纠纷时大家都哈哈哈哈开始看电视剧纠纷时大家都</text></view>
+        </view>
+    </view>
+</view>

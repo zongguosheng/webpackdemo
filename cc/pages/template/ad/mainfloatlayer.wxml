@@ -1,9 +1,0 @@
-<template name="mainfloatlayer">
-    <view class="ad-float-shadow">
-        <view catchtouchmove="noTouchMove" class="ad-float-layer">
-            <image catchtap="clickAroundFloat" src="{{aroundFloatLayerAD[0].pic}}" style="width: 100%; height: 100%;"></image>
-            <image catchtap="closeFloatLayerAD" class="ad-float-layer-close" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/home_advert_Close.png"></image>
-        </view>
-        <view catchtouchmove="noTouchMove" class="mask"></view>
-    </view>
-</template>

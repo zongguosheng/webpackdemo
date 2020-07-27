@@ -1,4 +1,0 @@
-<view class="text-mode">
-    <text class="fontw">{{pinfo.province}}</text>
-    <text class="fontn">{{pinfo.city}}</text>
-</view>

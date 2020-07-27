@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/phonelist/phonelist",
+    "pages/phoneinfo/phoneinfo",
+    "pages/mymark/mymark",
+    "pages/joinme/joinme",
+    "pages/error/error",
+    "pages/serverlist/serverlist",
+    "pages/userinfo/userinfo",
+    "pages/publish/publish",
+    "pages/errordefault/errordefault",
+    "pages/sort/sort",
+    "pages/publishinfo/publishinfo"
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电话本",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取位置便于向您推荐附近的服务信息"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

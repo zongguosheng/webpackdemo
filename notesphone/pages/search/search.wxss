@@ -1,0 +1,27 @@
+/* pages/search/search.wxss */
+.searchbar{padding:2px 15px; position: relative;}
+.searchinput{display: flex; flex-direction: row; align-items: center; padding-left: 10px; background: #fff; border-radius: 21.5px; height: 43px; line-height: 43px; border: 1px solid #bdbdbd;}
+.searchinput icon{height: 20px; line-height: 43px; margin: 0 10px;}
+.searchinput input{height: 43px; line-height: 43px;width: 100%}
+
+.article{padding: 10px 0;}
+.article .h2{ font-size: 32rpx; line-height: 50rpx; color: #333; position: relative; display: inline-block; font-weight: bold; margin-top: 20rpx;}
+.article .h2 text{ position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: -5px; 
+  padding:0 5px;
+  display: inline-block; 
+  height: 8px; width: 100%;
+  border-radius: 4px;
+  background: #ffe0e3;
+  z-index: -1}
+.tab-text{ display: flex; flex-flow: row wrap; padding: 20px 0;}
+.tab-text text{ 
+  border: 0px solid #0e89f5; 
+  color: #666; 
+  background: #f2f2f2; 
+  padding: 4px 8px; 
+  border-radius: 5px; 
+  margin: 5px;}
+

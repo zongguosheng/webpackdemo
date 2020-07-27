@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<view class="searchbar">
+    <view class="searchinput">
+        <icon class="searchcion" size='20' type='search' bindtap="btnSearch"></icon>
+        <input class='search' confirm-type="search" bindconfirm="searchPhone" bindinput='searchInput' type='text' placeholder-class="placeholdercolor" placeholder='搜索商家、服务' value='{{searchText}}' />
+    </view>
+    <view class="searchmore">
+        <view class="article">
+          <view class="h2">热门搜素<text></text></view>
+          <view class="tab-text">
+            <text>笔记本维修</text>
+            <text>龙门石窟</text>
+            <text>EMS</text>
+            <text>暖气水管维修</text>
+            <text>EMS</text>
+            <text>隋唐洛阳城国家遗址公园</text>
+            <text>干洗</text>
+          </view>
+          <view class="h2">搜素历史<text></text></view>
+          <view class="tab-text">
+            <text>笔记本维修</text>
+              <text>龙门石窟</text>
+              <text>EMS</text>
+              <text>暖气水管维修</text>
+            </view>
+        </view>
+    </view>
+</view>

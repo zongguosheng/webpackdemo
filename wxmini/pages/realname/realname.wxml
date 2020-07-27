@@ -1,0 +1,30 @@
+<!--pages/realname/realname.wxml-->
+<view class="content">
+    <view class="inputgroup">
+        <label>真实姓名</label>
+        <input placeholder="请输入真实姓名" disabled="{{status != 0}}" bindinput="realNameChange" value="{{realName}}"></input>
+    </view>
+    <view class="inputgroup">
+        <label>身份证号码</label>
+        <input placeholder="请输入身份证号码" disabled="{{status != 0}}" bindinput="idCardNoChange" value="{{idCardNo}}"></input>
+    </view>
+
+    <view class="upload">
+        <view class="title">请上传证件材料</view>
+        <text class="waring">温馨提醒：身份证内容文字务必清晰，确保与本人相符。</text>
+        <view class="uploadimg">
+            <view>
+                <image wx:if="{{status == 0}}" src="{{positivePic}}" mode="scaleToFill" bindtap="positiveClick"></image>
+                <image wx:else src="{{positivePic}}" mode="scaleToFill"></image>
+            </view>
+            <view>
+                <image wx:if="{{status == 0}}" src="{{negativePic}}" mode="scaleToFill" bindtap="negativeClick"></image>
+                <image wx:else src="{{negativePic}}" mode="scaleToFill"></image>
+            </view>
+        </view>
+        
+        <button wx:if="{{status == 0}}" class="sunmitbtn" bindtap="submit">提 交</button>
+        <button wx:elif="{{status == 1}}" class="sunmitbtn">认证资料审核中</button>
+        <button wx:else class="sunmitbtn">已完成实名认证</button>
+    </view>
+</view>

@@ -1,0 +1,70 @@
+<!--pages/profile/Profile.wxml-->
+<view class="content">
+    <view class="profile">
+        
+        <image  src="{{headpic}}" mode="aspectFill"></image>
+        <view class="h2">{{name}} <icon class="iconfont iconshenfen" style="color: #6a96d8"></icon></view>
+        <view class="nameinfo">
+          <text>{{age}}岁</text>
+          <text>{{career}}</text>
+          <text>{{livePlace}}</text>
+        </view>
+    </view>
+
+    <view class="profileinfo">
+        <view class="profilemode">
+          <view class="title">基本资料</view>
+          <view class="lable">
+              <text>{{sexStr}}</text><text>{{age}}岁</text><text>{{height}}</text><text>48kg</text><text>{{marry}}</text><text>{{nationality}}</text>
+              <text>属相：{{chinesezodiac}}</text> <text>{{education}}</text> <text>{{annualSalary}}</text>
+          </view>
+          <view class="li"><label>现居住地</label> <text>{{data.provinceStr}}{{data.cityStr}}{{data.areaStr}}</text></view>
+          <view class="li"><label>单位性质</label> <text>{{unitNature}}</text></view>
+          <view class="li"><label>住房</label> <text>{{house}}</text></view>
+          <view class="li"><label>车辆</label> <text>{{car}}</text></view>
+        </view>
+        <view class="profilemode">
+          <view class="title">择偶标准</view>
+          <view class="li"><label>年龄</label> <text>{{ageT}}</text></view> 
+          <view class="li"><label>学历</label> <text>{{educationT}}</text></view>
+          <view class="li"><label>年收入</label> <text>{{salaryT}}</text></view>
+          <view class="li"><label>婚史</label> <text>{{marryT}}</text></view>
+          <view class="li"><label>住房</label> <text>{{houseT}}</text></view>
+          <view class="li"><label>车辆</label> <text>{{carT}}</text></view>
+        </view>
+        <view class="profilemode">
+          <view class="title">亲友团资料</view>
+          <view class="li"><label>亲属关系</label> <text>父母</text></view> 
+        </view>
+        <view class="profilemode">
+          <view class="title">TA的红娘</view>
+          <view class="li"><label>红娘信息</label> <text>喜庆红娘</text></view> 
+        </view>
+        <view class="profilemode">
+          <view class="title">TA的相册</view>
+          <scroll-view class="scroll-view_H" scroll-x="true" >
+            <view id="demo1" class="imglist">
+                <image src="../images/temp/img12.jpg" mode="aspectFill"></image>
+            </view>
+            <view id="demo2"  class="imglist">
+                <image src="../images/temp/img13.jpg" mode="aspectFill"></image>
+            </view>
+            <view id="demo3" class="imglist">
+                <image src="../images/temp/img14.jpg" mode="aspectFill"></image>
+            </view>
+            <view id="demo3" class="imglist">
+                <image src="../images/temp/img15.jpg" mode="aspectFill"></image>
+            </view>
+            <view id="demo3" class="imglist">
+                <image src="../images/temp/img16.jpg" mode="aspectFill"></image>
+            </view>
+          </scroll-view>
+          
+          <view class="btngroup">
+              <button class="like" wx:if="{{isAttention == true}}" bindtap="attention">关注一下</button>
+              <button class="like" wx:if="{{isAttention == false}}" bindtap="attention">已关注</button>
+              <button class="help">帮我牵线</button>
+          </view>
+        </view>
+    </view>
+</view>

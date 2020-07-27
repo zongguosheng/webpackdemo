@@ -4,6 +4,8 @@
 // eslint-disable-next-line camelcase
 // sql语句
 var loginname = ''
+// eslint-disable-next-line camelcase
+var article_type = ''
 var sqlMap = {
 // 用户
   user: {
@@ -15,8 +17,9 @@ var sqlMap = {
     search: 'select message_list, author, date from message_board'
   },
   article: {
-    written: 'insert into article_board(message_title, author, date) values (?,?,?)',
-    search: 'select article_list, author, date from article_board'
+    written: 'insert into article_board(article_title, author, article_info, date, article_type) values (?,?,?,?,?)',
+    // eslint-disable-next-line camelcase
+    typesearch: 'select * from article_board where article_type= ?'
   },
   diary: {
     written: 'insert into diary_board(diary_list, author, date) values (?,?,?)',

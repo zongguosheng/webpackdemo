@@ -1,0 +1,135 @@
+<view class="content">
+  <view class="section">
+    <picker value="{{index.parentsState}}" range="{{parentsState}}" data-type="parentsState" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">父母情况</view>
+        <view class="rightinput">
+          <input type="text" value="{{parentsState[index.parentsState]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="section">
+    <picker value="{{index.parentsEconomy}}" range="{{parentsEconomy}}" data-type="parentsEconomy" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">父母经济</view>
+        <view class="rightinput">
+          <input type="text" value="{{parentsEconomy[index.parentsEconomy]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="section">
+    <picker value="{{index.fatherWork}}" range="{{fatherWork}}" data-type="fatherWork" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">父亲工作</view>
+        <view class="rightinput">
+          <input type="text" value="{{fatherWork[index.fatherWork]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="section">
+    <picker value="{{index.motherWork}}" range="{{motherWork}}" data-type="motherWork" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">母亲工作</view>
+        <view class="rightinput">
+          <input type="text" value="{{motherWork[index.motherWork]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="section">
+    <picker value="{{index.familyRank}}" range="{{familyRank}}" data-type="familyRank" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">家中排行</view>
+        <view class="rightinput">
+          <input type="text" value="{{familyRank[index.familyRank]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+<!--  
+  <view class="section">
+    <picker value="{{index.whenMarried}}" range="{{whenMarried}}" data-type="whenMarried" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">想何时结婚</view>
+        <view class="rightinput">
+          <input type="text" value="{{whenMarried[index.whenMarried]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="section">
+    <picker value="{{index.wantChild}}" range="{{wantChild}}" data-type="wantChild" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">是否要小孩</view>
+        <view class="rightinput">
+          <input type="text" value="{{wantChild[index.wantChild]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="section">
+    <picker value="{{index.weddingType}}" range="{{weddingType}}" data-type="weddingType" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">婚礼形式</view>
+        <view class="rightinput">
+          <input type="text" value="{{weddingType[index.weddingType]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="section">
+    <picker value="{{index.cookingSkill}}" range="{{cookingSkill}}" data-type="cookingSkill" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">厨艺状况</view>
+        <view class="rightinput">
+          <input type="text" value="{{cookingSkill[index.cookingSkill]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="section">
+    <picker value="{{index.parentsTogether}}" range="{{parentsTogether}}" data-type="parentsTogether" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">与父母同住</view>
+        <view class="rightinput">
+          <input type="text" value="{{parentsTogether[index.parentsTogether]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="section">
+    <picker value="{{index.housework}}" range="{{housework}}" data-type="housework" bindchange="bindPickerChange">
+      <view class="picker">
+        <view class="name">家务分工</view>
+        <view class="rightinput">
+          <input type="text" value="{{housework[index.housework]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+          <view class="iconfont iconright"></view>
+        </view>
+      </view>
+    </picker>
+  </view>
+  -->
+  <button class="red-btn" bindtap="save">保存</button>
+</view>

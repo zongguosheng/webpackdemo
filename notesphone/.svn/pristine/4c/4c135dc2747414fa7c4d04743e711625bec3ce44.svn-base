@@ -1,0 +1,12 @@
+/* pages/userinfo/userinfo.wxss */
+.content{padding:10px;}
+.flexrow{display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 30rpx 0; border-bottom: 1px solid #e6e6e6;}
+.flexright{ display: flex; flex-direction: row; align-items: center;}
+.flexright image{ width: 98rpx; height: 98rpx; border-radius: 5px;}
+.flexright .iconfont{ color: #999999;}
+.flexright input{ text-align: right; font-size: 28rpx; height: 24px; line-height: 24px;}
+.flextitle{font-size: 28rpx; color: #333;}
+
+
+
+

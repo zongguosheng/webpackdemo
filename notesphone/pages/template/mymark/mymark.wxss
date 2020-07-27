@@ -1,0 +1,56 @@
+
+.telimg{ display: block; border: 1px solid #ff5500; border-radius: 50%; text-align: center; width: 42px; height: 42px; line-height: 42px; color: #ff5500; font-size: 24px;}
+.contentrow {
+  padding: 0 20px 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.contentname {
+  width: 100%;
+  line-height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+  color: #111;
+}
+
+.imgplan {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.servertitle text{
+  height: 28px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  line-height: 28px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:1; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient:vertical;
+}
+
+.inforcon {
+  width: 500rpx;
+  padding-top: 15rpx;
+  padding-bottom: 10rpx;
+}
+
+
+.detailinfor {
+  margin-right: 40rpx;
+  font-size: 28rpx;
+  color: #b3b3b3;
+}

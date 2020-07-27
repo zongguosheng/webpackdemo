@@ -1,0 +1,38 @@
+/* pages/serviceinfo/serviceinfo.wxss */
+.content{ font-family: Microsoft YaHei; padding-bottom: 60rpx;}
+.goods{margin-bottom: 30rpx; padding: 30rpx; border-bottom: 4px solid #e6e6e6;}
+.goods image{ width: 686rpx; height: 386rpx; border-radius: 8px;}
+.goods .h2{
+  margin-top: 5px;
+  font-weight: bold; 
+  font-size: 32rpx;
+  line-height: 50rpx;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow:hidden;
+  display: -webkit-box;
+  -webkit-line-clamp:2; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient:vertical;
+}
+.goods .price{ font-size: 32rpx; line-height: 60rpx; color: #ff4772; font-weight: bold;}
+.goods .price text{ font-size: 28rpx;}
+
+.business{ display: flex; flex-direction: row; justify-content: space-around; margin-top: 50rpx;}
+.business image{ width: 162rpx; height: 116rpx; border-radius: 8px;}
+.businessinfo{ font-size: 28rpx; line-height: 50rpx; display: flex; flex-direction: column; justify-content: center;}
+.businessinfo .businesstitle{ font-weight: bold;}
+.goodsinfo{ padding: 10rpx 30rpx;}
+.rich-text-wrp{ margin-bottom: 30rpx; padding-bottom: 30rpx; border-bottom: 1px solid #e6e6e6;}
+.rich-text-wrp .title{ font-weight: bold; color: #ff4772; margin-bottom: 10px;}
+.rich-text-wrp .f24{ font-size: 24rpx; line-height: 50rpx; color: #292929;}
+.rich-text-wrp image{width: 100%;  display: block; margin: 20px 0; }
+
+
+
+
+
+
+
+
+
+

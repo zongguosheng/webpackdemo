@@ -1,0 +1,25 @@
+<view class="content">
+      <view class="logo">
+      <image src="../images/logo.png" mode="aspectFill" ></image>
+      </view>
+      <view class="version">
+      <image src="../images/version.png" mode="aspectFill" ></image>
+      </view>
+      <view class="aboutinfo">
+          <view>新时代婚姻是在民政局注册登记的 </view> 
+          <view>非营利性服务组织 </view>
+          <view>依托于金鑫婚恋红娘团队 </view>
+          <view>是全国性纯公益免费婚恋服务机构 </view>
+          <view>服务宗旨是帮助社会各界适婚单身群体</view>
+          <view>解决婚姻问题、组建幸福家庭，</view>
+          <view>促进社会和谐发展</view> 
+      </view>
+
+      <view class="kefu">
+         <text> QQ客服：1530088144</text>
+      </view>
+
+      <view class="bq">
+       <view> 洛阳喜蚨科技有限公司  版权所有</view>
+      </view>
+</view>

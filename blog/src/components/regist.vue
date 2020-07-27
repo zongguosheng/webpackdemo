@@ -1,10 +1,6 @@
 <template>
     <div class="login">
         <el-row :gutter="20">
-          <el-col :span="12"  :offset='6'>{{notice_info }}
-          </el-col>
-        </el-row>
-        <el-row :gutter="20">
           <el-col :span="12"  :offset='6'>
             <el-form :model="ruleForm"  status-icon :rules="rules" ref="ruleForm" label-width="100px" class="form">
             <el-form-item label="账号" prop="username">
@@ -22,7 +18,9 @@
     </div>
 </template>
 <script type="text/javascript">
+import { Message } from 'element-ui'
 import axios from 'axios'
+import router from '../router'
 export default {
   data () {
     // 验证用户名
@@ -98,7 +96,13 @@ export default {
           }).then(function (res) {
             console.log(res)
             if (res.status == 200) {
-              self.notice_info = '注册成功'
+              router.push('./index')
+              Message({
+                message: '注册成功',
+                duration: 2000,
+                type: 'success',
+                showClose: true
+              })
             }
           })
         }

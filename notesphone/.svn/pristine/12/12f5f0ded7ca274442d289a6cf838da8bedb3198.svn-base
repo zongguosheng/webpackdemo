@@ -1,0 +1,23 @@
+<view class="container">
+    <view class="classification-title">便民生活</view>
+    <view class="classlist">
+      <view bindtap="openPhoneList" wx:for="{{typeList}}" wx:key="{{item.type.id}}" id="{{item.type.id}}">
+          <image class="icon" src="../../image/fl/{{item.type.icon}}" mode="aspectFill"></image>
+          <text>{{item.type.name}}</text>
+      </view>
+    </view>
+    <view class="classification-title">维修保洁</view>
+    <view class="classlist">
+      <view bindtap="openPhoneList" wx:for="{{typeList}}" wx:key="{{item.type.id}}" id="{{item.type.id}}">
+          <image class="icon" src="../../image/fl/{{item.type.icon}}" mode="aspectFill"></image>
+          <text>{{item.type.name}}</text>
+      </view>
+    </view>
+    <view class="classification-title">房屋管理</view>
+    <view class="classlist">
+      <view bindtap="openPhoneList" wx:for="{{typeList}}" wx:key="{{item.type.id}}" id="{{item.type.id}}">
+          <image class="icon" src="../../image/fl/{{item.type.icon}}" mode="aspectFill"></image>
+          <text>{{item.type.name}}</text>
+      </view>
+    </view>
+</view>

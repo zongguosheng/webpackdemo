@@ -1,6 +1,0 @@
-{
-    "navigationBarTitleText": "送福利",
-    "usingComponents": {
-        "prize-card": "/pages/specialtopics/kanjia/components/prize-card/index"
-    }
-}

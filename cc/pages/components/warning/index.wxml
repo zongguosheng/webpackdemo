@@ -1,6 +1,0 @@
-<view class="city-switch-block">
-    <view bindtap="onClickContent" class="city-switch">
-        {{content}}
-    </view>
-    <image bindtap="onClickClose" class="city-close-icon" src="https://cdn.www.chelaile.net.cn/web_active/wmp/newimages/close_white_ic@2x.png"></image>
-</view>

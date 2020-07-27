@@ -1,10 +1,7 @@
 <template>
     <div class="login">
         <el-row :gutter="20">
-          <el-col :span="12"  :offset='6'>{{notice_info }}</el-col>
-        </el-row>
-        <el-row :gutter="20">
-          <el-col :span="12"  :offset='6' class="algincentent"  ><div class="logo"><img src="../assets/logo.jpg"></div></el-col>
+          <el-col :span="12"  :offset='6' class="algincentent"  ><div class="headimg"><img src="../assets/logo.jpg"></div></el-col>
         </el-row>
         <el-row :gutter="20">
           <el-col :span="12"  :offset='6'>
@@ -27,6 +24,7 @@
 <script type="text/javascript">
 import { Message } from 'element-ui'
 import {mapState} from 'vuex'
+import {cookie} from '../js/cookie'
 import router from '../router'
 import axios from 'axios'
 export default {
@@ -95,7 +93,10 @@ export default {
           }
         }
         if (flag == 'allright') {
-          console.log()
+          cookie.addCookie('userName', name, 7, '/')
+          cookie.addCookie('userPass', pwd, 7, '/')
+          console.log('=')
+          console.log(document.cookie)
           router.push('./index')
           Message({
             message: '登陆成功',

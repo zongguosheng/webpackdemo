@@ -1,5 +1,0 @@
-<view bind:tap="onTapStop" class="item">
-    <view class="item-name">{{stop.sn}}</view>
-    <view class="item-line">{{stop.lineNames}}</view>
-    <view class="item-distance">{{stop.displayDis}}</view>
-</view>

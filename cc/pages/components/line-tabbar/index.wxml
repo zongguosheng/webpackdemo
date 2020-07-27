@@ -1,7 +1,0 @@
-<view wx:for="{{tabs}}">
-    <view bindtap="onClickTab" class="tab-item">
-        <image src="{{tab.icon}}"></image>
-        <text>{{tab.label}}</text>
-        <view class="tab-dot"></view>
-    </view>
-</view>

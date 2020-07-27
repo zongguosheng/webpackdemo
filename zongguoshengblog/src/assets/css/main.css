@@ -1,0 +1,115 @@
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	word-wrap: break-word;
+}
+*:focus {
+	outline: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+a {
+	text-decoration:none;
+	outline:none;
+}
+a img {
+	border:none;
+}
+ol, ul, nav {
+    list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, textarea {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+	outline:none;
+	border-radius: 0;
+	-webkit-appearance:none;
+}
+input[type="submit"], input[type="button"], input[type="reset"] {
+    cursor: pointer;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+.clear {
+	clear:both;
+	display:block;
+	height:0;
+	overflow:hidden;
+}
+.clearfix {
+	zoom:1;
+}
+.clearfix:after {
+	clear:both;
+	display:block;
+	height:0;
+	content:"";
+	visibility:hidden;
+}
+.wrap{ width: 1200px; margin: 0 auto;}
+.listimg{ padding: 30px 0;}
+.time {
+	font-size: 14px;
+	line-height: 24px;
+	color: #999;
+}
+.button {
+	padding: 0;
+	float: right;
+}
+.bottom {
+	margin-top: 13px;
+	line-height: 12px;
+}
+
+.image {
+	width: 100%;
+	display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+		display: table;
+		content: "";
+}
+
+.clearfix:after {
+		clear: both
+}
+
+.footer{ padding: 0; }
+.footerlist{ display: flex; flex-direction: row; justify-content: space-around; padding: 30px;  background: #94d1ef;}
+.footerlist li a{ color: #409EFF;}

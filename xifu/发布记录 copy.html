@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>layui在线调试</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.css" />
+  <script src="https://cdn.jsdelivr.net/npm/buijs/lib/zepto.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/buijs/lib/latest/bui.js"></script>
+<style>
+  input[type="range"] {
+        /*-webkit-box-shadow: 0 1px 0 0px #424242, 0 1px 0 #060607 inset, 0px 2px 10px 0px black inset, 1px 0px 2px rgba(0, 0, 0, 0.4) inset, 0 0px 1px rgba(0, 0, 0, 0.6) inset;*/
+        -webkit-appearance: none;
+        /*去除默认样式*/
+        margin-top: 42px;
+        background: #dddddd;
+        /*border-radius: 15px;*/
+        width: 80% !important;
+        -webkit-appearance: none;
+        height: 4px;
+        padding: 0;
+        border: none;
+        /*input的长度为80%，margin-left的长度为10%*/
+    }
+  input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            /*去除默认样式*/
+            cursor: default;
+            top: 0;
+            margin-top: -10px;
+            height: 20px;
+            width: 20px;
+            transform: translateY(0px);
+            /*background: none repeat scroll 0 0 #5891f5;*/
+            background: #439DF7;
+            border-radius: 15px;
+            border: 5px solid #439DF7;
+            /*-webkit-box-shadow: 0 -1px 1px #fc7701 inset;*/
+        }
+</style>
+</head>
+<body>
+  <div class="bui-page ">
+   
+      <div id="laydateDemo"></div>
+
+        <input type="range" class="bui-range" min="0" max="255" b-model="page.num">
+        <span b-text="page.num"></span>
+   
+</div>
+<script>
+  loader.define(function(){
+    // bui.ready(function(){
+    var bs = bui.store({
+        scope: "page", // 用于区分公共数据及当前数据的唯一值
+        data: {
+            message: "Hello bui.js",
+            num: 80,
+        },
+        // log: true,
+        methods: {
+            reverseMessage: function(e) {
+                var a = this.message.split(' ').reverse().join(' ')
+                this.message = a;
+            }
+        },
+        watch: {},
+        computed: {},
+        templates: {},
+        mounted: function() {
+            // 加载后执行
+            console.log('===========')
+        }
+    })
+
+  })
+</script>
+</body>
+</html>        
+        

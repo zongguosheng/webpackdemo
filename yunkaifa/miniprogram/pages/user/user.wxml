@@ -1,7 +1,0 @@
-<view class="userinfo">
-    <view class="li">昵称:<text>{{userinfo.username}}</text></view>
-    <view class="li">性别:<text>{{userinfo.sex}}</text></view>
-    <view class="li">电话:<text>{{userinfo.tel}}</text></view>
-    <view class="li"> 地址:<text>{{userinfo.address}}</text>
-    </view>
-</view>

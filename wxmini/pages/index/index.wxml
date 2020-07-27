@@ -1,0 +1,155 @@
+<!--index.wxml-->
+<view class="content">
+	<view class="limitbar">
+		<view class="select">
+			<label bindtap="openview" data-index="1">{{sortName}}
+				<icon class="iconfont iconsanjiao" style="color:#a8a8a8"></icon>
+			</label>
+			<label bindtap="openview" data-index="2">基本筛选
+				<icon class="iconfont iconsanjiao" style="color:#a8a8a8"></icon>
+			</label>
+			<label bindtap="openview" data-index="3">高级筛选
+				<icon class="iconfont iconsanjiao" style="color:#a8a8a8"></icon>
+			</label>
+		</view>
+		<view bindtap="close" class="modeal" hidden="{{isShow == 0}}"></view>
+		<view class="listbody {{isShow == 1 ? 'show' : ''}}">
+			<view class="list">
+				<view wx:for="{{sortList}}" bindtap="sortclick" data-sorttype="{{item.type}}" data-sortname="{{item.name}}" class="li" wx:key="id">{{item.name}}</view>
+			</view>
+		</view>
+		<view class="listbody {{isShow == 2 ? 'show' : ''}}">
+			<view class="list">
+				<view class="li">
+					<label>性别</label>
+					<picker value="{{index.sex}}" range="{{sex}}" data-type="sex" bindchange="bindSelectChange">
+						<view class="picker">
+							<input type="text" value="{{sex[index.sex]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+						</view>
+					</picker>
+				</view>
+				<view class="li">
+					<label>身高</label>
+					<picker value="{{index.ages}}" range="{{ages}}" data-type="ages" bindchange="bindSelectChange">
+						<view class="picker">
+							<input type="number" value="{{ages[index.ages]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+						</view>
+					</picker>
+				</view>
+				<view class="li">
+					<label>身高</label>
+					<picker value="{{index.height}}" range="{{height}}" data-type="height" bindchange="bindSelectChange">
+						<view class="picker">
+							<input type="number" value="{{height[index.height]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+						</view>
+					</picker>
+				</view>
+				<view class="li">
+					<label>体重</label>
+					<picker value="{{index.weight}}" range="{{weight}}" data-type="weight" bindchange="bindSelectChange">
+						<view class="picker">
+							<input type="number" value="{{weight[index.weight]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+						</view>
+					</picker>
+				</view>
+				<view class="li">
+					<label>所在地</label>
+					<view class="pickerrow">
+						<picker bindchange="bindPickerProvinceChange" range="{{provinces}}">
+							<view class="picker {{selProvince=='请选择'?'hui':''}}">
+								<input type="text" value="{{selProvince}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+							</view>
+						</picker>
+						<picker bindchange="bindPickerCityChange" range="{{citys}}">
+							<view class="picker {{selCity=='请选择'?'hui':''}}">
+								<input type="text" value="{{selCity}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+							</view>
+						</picker>
+						<picker bindchange="bindPickerChange" range="{{districts}}">
+							<view class="picker {{selDistrict=='请选择'?'hui':''}}">
+								<input type="text" value="{{selDistrict}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+							</view>
+						</picker>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="listbody {{isShow == 3 ? 'show' : ''}}">
+			<view class="list">
+				<view class="li">
+					<label>年收入</label>
+					<picker value="{{index.salary}}" range="{{salary}}" data-type="salary" bindchange="bindSelectChange">
+						<view class="picker">
+							<input type="number" value="{{salary[index.salary]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+						</view>
+					</picker>
+				</view>
+				<view class="li">
+					<label>学历</label>
+					<picker value="{{index.education}}" range="{{education}}" data-type="education" bindchange="bindSelectChange">
+						<view class="picker">
+							<input type="number" value="{{education[index.education]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+						</view>
+					</picker>
+				</view>
+				<view class="li">
+					<label>民族</label>
+					<picker value="{{index.nation}}" range="{{nation}}" data-type="nation" bindchange="bindSelectChange">
+						<view class="picker">
+							<input type="number" value="{{nation[index.nation]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+						</view>
+					</picker>
+				</view>
+				<view class="li">
+					<label>车</label>
+					<picker value="{{index.cars}}" range="{{cars}}" data-type="cars" bindchange="bindSelectChange">
+						<view class="picker">
+							<input type="number" value="{{cars[index.cars]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+						</view>
+					</picker>
+				</view>
+				<view class="li">
+					<label>房</label>
+					<picker value="{{index.houses}}" range="{{houses}}" data-type="houses" bindchange="bindSelectChange">
+						<view class="picker">
+							<input type="number" value="{{houses[index.houses]}}" placeholder="请选择" placeholder-class="placeholder" disabled="true"></input>
+						</view>
+					</picker>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="member-list">
+		<view wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" class="li" bindtap="gotoinfo">
+			<image src="{{item.picurl? imagePath+item.picurl : '../images/temp/img2.jpg'}}" mode="aspectFill"></image>
+			<view class="name">{{item.nickName}}
+				<icon class="iconfont iconshenfen" style="color: #6a96d8"></icon>
+			</view>
+			<view class="nameinfo">
+				<text>{{item.age}}岁</text>
+				<text>{{item.cityName}}</text>
+			</view>
+		</view>
+		<!-- <view class="li" bindtap="gotoinfo">
+			<image src="../images/temp/img2.jpg" mode="aspectFill"></image>
+			<view class="name">赵女士
+				<icon class="iconfont iconshenfen" style="color: #6a96d8"></icon>
+			</view>
+			<view class="nameinfo">
+				<text>26岁</text>
+				<text>人事/行政</text>
+				<text>涧西区</text>
+			</view>
+		</view>
+		<view class="li" bindtap="gotoinfo">
+			<image src="../images/temp/img1.jpg" mode="aspectFill"></image>
+			<view class="name">赵女士</view>
+			<view class="nameinfo">
+				<text>26岁</text>
+				<text>人事/行政</text>
+				<text>涧西区</text>
+			</view>
+		</view> -->
+	</view>
+</view>
